@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Be sure you did a make & make install.
+
+echo "start linuxcnc. \nThe "&" is used to not lock the script from going on. \n"
+cd ../../../scripts
+./rip-environment linuxcnc ../configs/sim/axis/axis_mm.ini &
+
+echo "wait for linuxcnc shared memory is fertig. \n"
+sleep 3
+
+echo "start qt_nml, using linuxcnc's shared memory. \n"
+./rip-environment qt_nml

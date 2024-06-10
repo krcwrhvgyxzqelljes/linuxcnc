@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo "Start linuxcnc. \n"
+cd ..
+cd scripts
+./rip-environment linuxcnc ../configs/sim/axis/axis_mm.ini
+

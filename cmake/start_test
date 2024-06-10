@@ -1,0 +1,43 @@
+#!/bin/sh
+
+echo "current folder:"
+echo $PWD
+echo "\n"
+
+echo "removing rtapi_app & linuxcnc_module_helper to overwrite. \n"
+cd ../bin
+rm -f rtapi_app
+rm -f linuxcnc_module_helper
+cd ..
+
+echo "Building linuxcnc with cmake. \n"
+cd cmake
+mkdir -p build
+cd build
+cmake -DBUILD_USPACE=ON ..
+make
+make install
+cd ..
+cd ..
+
+echo "current folder:"
+echo $PWD
+echo "\n"
+	
+# Recreate the Sudo Make Setuid command (needed for running real machines)
+# This version is from : https://github.com/grotius-cnc/hal-core/blob/main/make
+echo "Running equivalent of Sudo Make Setuid. \n"
+sudo chown 777 -R bin/rtapi_app
+sudo chown 777 -R bin/linuxcnc_module_helper
+sudo chmod 777 bin/rtapi_app
+sudo chmod 777 bin/linuxcnc_module_helper
+
+if [ $# -eq 0 ]
+then
+    echo "Start linuxcnc. \n"
+    cd scripts
+    ./rip-environment linuxcnc ../configs/sim/axis/axis_test.ini 2>&1 | tee ../cmake/run.log
+
+	# Example to start with custom trajectory planner or use in ini file : [TRAJ]TPMOD=user_tpcomp
+	# ./rip-environment linuxcnc -t tpmod_scurve ../configs/sim/axis/axis_mm.ini
+fi

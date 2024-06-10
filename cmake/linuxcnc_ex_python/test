@@ -1,0 +1,20 @@
+#!/bin/bash
+
+sudo ldconfig /home/user/linuxcnc/lib
+sudo ldconfig /home/user/linuxcnc/rtlib
+
+cd ..
+cd ..
+cd scripts
+. ./rip-environment
+cd .. 
+
+cd bin
+./halshow &
+./linuxcncsvr -ini /home/user/linuxcnc/cmake/linuxcnc_ex_python/settings.ini 
+./halui -ini /home/user/linuxcnc/cmake/linuxcnc_ex_python/settings.ini &
+
+
+
+
+

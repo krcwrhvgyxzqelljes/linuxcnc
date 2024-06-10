@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Find opencascade libs.
+export LD_LIBRARY_PATH=/usr/local/lib
+# Update the path's in the system.  After this the app will run from qt run.
+sudo ldconfig
+# Run the app.
+../../build/projects/qt_occ_cavalier/./qt_occ_cavalier

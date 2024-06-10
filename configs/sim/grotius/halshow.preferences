@@ -1,0 +1,30 @@
+# Halshow settings
+# This file is generated automatically.
+wm geometry . 891x894+0+88
+placeFrames 0.3633720930232558
+set ::ratio 0.3633720930232558
+set ::old_w_leftf 160
+set ::watchlist {
+    pin+tpmod_scurve_grotius.hal_guiacc
+    pin+tpmod_scurve_grotius.hal_guipos
+    pin+tpmod_scurve_grotius.hal_guivel
+    pin+tpmod_scurve_grotius.hal_maxjerk
+    pin+tpmod_scurve_grotius.hal_reverse_run
+    pin+tpmod_scurve_grotius.time
+    pin+tpmod_scurve_grotius.hal_maxvel
+    pin+tpmod_scurve_grotius.hal_maxacc
+    pin+tpmod_scurve_grotius.hal_blend_radius_G0
+    pin+tpmod_scurve_grotius.hal_blend_radius_G1_G2_G3
+    pin+tpmod_scurve_grotius.hal_current_gcode_line
+    pin+tpmod_scurve_grotius.hal_enable_chamfer
+    pin+tpmod_scurve_grotius.hal_enable_grotius_scurve
+    pin+tpmod_scurve_grotius.hal_enable_look_ahead
+    pin+tpmod_scurve_grotius.hal_enable_runners
+}
+set ::workmode watchhal
+set ::watchInterval 100
+set ::col1_width 100
+set ::ffmts 
+set ::ifmts 
+set ::alwaysOnTop 0
+set ::autoSaveWatchlist 1

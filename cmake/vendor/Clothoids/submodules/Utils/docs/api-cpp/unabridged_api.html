@@ -1,0 +1,2293 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Full API &#8212; Utils v1.4
+</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/cloud.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">Utils</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Full API</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="full-api">
+<h1>Full API<a class="headerlink" href="#full-api" title="Permalink to this headline">¶</a>
+</h1>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a>
+</h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_Eigen.html">Namespace Eigen</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="namespace_quickpool.html">Namespace quickpool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="namespace_quickpool__loop.html">Namespace quickpool::loop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__loop.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__loop.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="namespace_quickpool__mem.html">Namespace quickpool::mem</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__mem.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__mem.html#variables">Variables</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="namespace_quickpool__mem__aligned.html">Namespace quickpool::mem::aligned</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__mem__aligned.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__mem__aligned.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__mem__aligned.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="namespace_quickpool__mem__padding_impl.html">Namespace quickpool::mem::padding_impl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__mem__padding_impl.html#detailed-description">Detailed Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__mem__padding_impl.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__mem__padding_impl.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="namespace_quickpool__sched.html">Namespace quickpool::sched</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_quickpool__sched.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="namespace_rang.html">Namespace rang</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_rang.html#enums">Enums</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="namespace_std.html">Namespace std</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std.html#namespaces">Namespaces</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_std__conditional.html">Namespace std::conditional</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="namespace_Utils.html">Namespace Utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Utils.html#detailed-description">Detailed Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Utils.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Utils.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Utils.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Utils.html#typedefs">Typedefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Utils.html#variables">Variables</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="namespace_Utils__Table.html">Namespace Utils::Table</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Utils__Table.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Utils__Table.html#enums">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Utils__Table.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="classes-and-structs">
+<h2>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Permalink to this headline">¶</a>
+</h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="struct_a00163.html">Struct State</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00163.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="struct_a00167.html">Template Struct Worker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00167.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="struct_a00151.html">Template Struct allocator::rebind</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00151.html#nested-relationships">Nested Relationships</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00151.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="struct_a00155.html">Template Struct atomic</a><ul>
+<li class="toctree-l2">
+<a class="reference internal" href="struct_a00155.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct_a00155.html#base-types">Base Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_a00155.html#derived-type">Derived Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00155.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="struct_a00159.html">Template Struct relaxed_atomic</a><ul>
+<li class="toctree-l2">
+<a class="reference internal" href="struct_a00159.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct_a00159.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00159.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="struct_a00139.html">Struct empty_struct</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00139.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="struct_a00143.html">Template Struct padding</a><ul>
+<li class="toctree-l2">
+<a class="reference internal" href="struct_a00143.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct_a00143.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00143.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="struct_a00135.html">Template Struct padding_bytes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00135.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="struct_a00115.html">Struct Sturm::Interval</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00115.html#nested-relationships">Nested Relationships</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_a00115.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00147.html">Template Class allocator</a><ul>
+<li class="toctree-l2">
+<a class="reference internal" href="class_a00147.html#nested-relationships">Nested Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_a00147.html#nested-types">Nested Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="class_a00147.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_a00147.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_a00147.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00171.html">Template Class RingBuffer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00171.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00179.html">Class TaskManager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00179.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00175.html">Class TaskQueue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00175.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00183.html">Class ThreadPool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00183.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00219.html">Class Barrier</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00219.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00211.html">Template Class BinarySearch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00211.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00119.html">Class Console</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00119.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00123.html">Template Class Malloc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00123.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00127.html">Template Class mex_class_handle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00127.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00107.html">Template Class Poly</a><ul>
+<li class="toctree-l2">
+<a class="reference internal" href="class_a00107.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_a00107.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_a00107.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00131.html">Template Class Quaternion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00131.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00247.html">Class Runtime_Error</a><ul>
+<li class="toctree-l2">
+<a class="reference internal" href="class_a00247.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_a00247.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_a00247.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00243.html">Class Runtime_TraceError</a><ul>
+<li class="toctree-l2">
+<a class="reference internal" href="class_a00243.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_a00243.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_a00243.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00223.html">Class SimpleSemaphore</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00223.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00203.html">Class SpinLock</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00203.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00215.html">Class SpinLock_barrier</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00215.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00111.html">Template Class Sturm</a><ul>
+<li class="toctree-l2">
+<a class="reference internal" href="class_a00111.html#nested-relationships">Nested Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_a00111.html#nested-types">Nested Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_a00111.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00191.html">Class Cell</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00191.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00195.html">Class Row</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00195.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00187.html">Class Style</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00187.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00199.html">Class Table</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00199.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00231.html">Class ThreadPool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00231.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00235.html">Class TicToc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00235.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00239.html">Class Tokenizer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00239.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00207.html">Class WaitWorker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00207.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="class_a00227.html">Class Worker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_a00227.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a>
+</h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="enum_a00102_1ad33ed681a0b63f07283bbb55d19da7d2.html">Enum bg</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_a00102_1ad33ed681a0b63f07283bbb55d19da7d2.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="enum_a00102_1a42edf1c1b0d8e843ceb1208259177f08.html">Enum bgB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_a00102_1a42edf1c1b0d8e843ceb1208259177f08.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="enum_a00102_1a9a0ad8048ed47f032f5bdb687ba64164.html">Enum control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_a00102_1a9a0ad8048ed47f032f5bdb687ba64164.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="enum_a00102_1a41a68f6ed991b29fa720fcfbcd319ef9.html">Enum fg</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_a00102_1a41a68f6ed991b29fa720fcfbcd319ef9.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="enum_a00102_1a3b83d0d73d49b5a75c3b92031f2c77ee.html">Enum fgB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_a00102_1a3b83d0d73d49b5a75c3b92031f2c77ee.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="enum_a00102_1add4e682fec2856474978ff76efcc8b4e.html">Enum style</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_a00102_1add4e682fec2856474978ff76efcc8b4e.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="enum_a00102_1af70222b38ecff8fc5aef0958d052b433.html">Enum winTerm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_a00102_1af70222b38ecff8fc5aef0958d052b433.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="enum_a00103_1a838fbfaceda96a277539361a0fcd4722.html">Enum Alignment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_a00103_1a838fbfaceda96a277539361a0fcd4722.html#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a>
+</h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00053_1a8e4008f543eb9390f97254abc8d02bef.html">Function operator&lt;&lt;(Utils::ostream_type&amp;, Utils::Table::Row const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00053_1a8e4008f543eb9390f97254abc8d02bef.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00053_1aeefa54d0236e93a19c33fa888e54d8ff.html">Function operator&lt;&lt;(Utils::ostream_type&amp;, Utils::Table::Table const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00053_1aeefa54d0236e93a19c33fa888e54d8ff.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00096_1abc737ea3d3b4a958f05d435681d7098d.html">Function quickpool::done</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00096_1abc737ea3d3b4a958f05d435681d7098d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00096_1a7e1597aaed04ba7dddb4e5beb0e3be63.html">Function quickpool::get_active_threads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00096_1a7e1597aaed04ba7dddb4e5beb0e3be63.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00100_1a381238e2b958aa9893499a10247e74bd.html">Template Function quickpool::loop::create_workers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00100_1a381238e2b958aa9893499a10247e74bd.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00099_1a5b7c68e8d877188bf161814385bff665.html">Function quickpool::mem::aligned::alloc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00099_1a5b7c68e8d877188bf161814385bff665.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00099_1ae4f11d1713fb4c79fa626a1906d09a7e.html">Function quickpool::mem::aligned::free</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00099_1ae4f11d1713fb4c79fa626a1906d09a7e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00098_1abbafda6c8ea715fd0a75facd81dc8f59.html">Function quickpool::mem::padding_impl::mod</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00098_1abbafda6c8ea715fd0a75facd81dc8f59.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00096_1a3432dfdfadaf9705389263e726926b28.html">Template Function quickpool::parallel_for</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00096_1a3432dfdfadaf9705389263e726926b28.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00096_1a5542d71824605f77ed621c725d77ed69.html">Template Function quickpool::parallel_for_each</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00096_1a5542d71824605f77ed621c725d77ed69.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00096_1a06e138ab2370dc5055a64995ad6c9286.html">Template Function quickpool::push</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00096_1a06e138ab2370dc5055a64995ad6c9286.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00096_1a56d0ddf0c5f3dc5f4cf2ada1c8cde29a.html">Function quickpool::set_active_threads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00096_1a56d0ddf0c5f3dc5f4cf2ada1c8cde29a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00096_1a2a7dcef03a6a02c06a999ef6f244a291.html">Function quickpool::wait</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00096_1a2a7dcef03a6a02c06a999ef6f244a291.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a690a5b8b0523d88dcbc896704c9ecdc7.html">Function Utils::basename</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a690a5b8b0523d88dcbc896704c9ecdc7.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1ab6f1f691e81f8ece139f12f04e8a82cc.html">Function Utils::checkNaN(double const *const, char const *const, int, int, char const *const)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1ab6f1f691e81f8ece139f12f04e8a82cc.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a87a2c0e4a24e24615d37d9d6512b9b6e.html">Function Utils::checkNaN(float const *const, char const *const, int, int, char const *const)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a87a2c0e4a24e24615d37d9d6512b9b6e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1adb44d34b9ac367af9f90b735e8246f71.html">Function Utils::cpuInfo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1adb44d34b9ac367af9f90b735e8246f71.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a9bc4acdb1ad1f2bed1410d8dadb52c34.html">Template Function Utils::divide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a9bc4acdb1ad1f2bed1410d8dadb52c34.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a0354d9eae9e387121329cf5818906b36.html">Function Utils::foundNaN(double const *const, int)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a0354d9eae9e387121329cf5818906b36.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a268d255407067af8bc38d6af278dadc1.html">Function Utils::foundNaN(float const *const, int)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a268d255407067af8bc38d6af278dadc1.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aaa4870cf1c3ec57efcaef4d83909a21d.html">Template Function Utils::GCD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aaa4870cf1c3ec57efcaef4d83909a21d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a4e97142c438da664514a23b18e2d78b5.html">Function Utils::has_3Dnow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a4e97142c438da664514a23b18e2d78b5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aba2fd2867ebadf79e3a410432dee6be6.html">Function Utils::has_3DnowExt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aba2fd2867ebadf79e3a410432dee6be6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a7c7bf98506a28c7c0bd193b43938dd2d.html">Function Utils::has_MMX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a7c7bf98506a28c7c0bd193b43938dd2d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a5a6ed6aad87692dc9f985b77ea5ecaf6.html">Function Utils::has_MMXplus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a5a6ed6aad87692dc9f985b77ea5ecaf6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1af8d9d1e93dc2f0ca1a48d6238171d594.html">Function Utils::has_SSE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1af8d9d1e93dc2f0ca1a48d6238171d594.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a1b9f64aa51c59f99bdf74e6b6a98ac07.html">Function Utils::has_SSE2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a1b9f64aa51c59f99bdf74e6b6a98ac07.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1add73bdf6e760cf02aaadbe84ba81db91.html">Function Utils::has_SSE3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1add73bdf6e760cf02aaadbe84ba81db91.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a8eab2179398335e92627aebb490fc847.html">Function Utils::has_SSE41</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a8eab2179398335e92627aebb490fc847.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a934692c46987c2baa575b77885abfbec.html">Function Utils::has_SSE42</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a934692c46987c2baa575b77885abfbec.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a4be6d569a0d8b16aa0f576ec81da5466.html">Function Utils::has_SSE4a</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a4be6d569a0d8b16aa0f576ec81da5466.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a13a58d92d56d3912de212376678f8ec5.html">Function Utils::has_SSE5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a13a58d92d56d3912de212376678f8ec5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a663f9a4dab142985c3e1aefe6c090afd.html">Function Utils::has_SSSE3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a663f9a4dab142985c3e1aefe6c090afd.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1ac2aacbd589c58cfda69bd58d4c2cc89e.html">Template Function Utils::Inf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1ac2aacbd589c58cfda69bd58d4c2cc89e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1ad4adadc1f5136ae37fa104a17f717f33.html">Function Utils::info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1ad4adadc1f5136ae37fa104a17f717f33.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a2273c22b72457f9ac5df0dc253926dfc.html">Function Utils::is_alpha</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a2273c22b72457f9ac5df0dc253926dfc.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a95163262604423118dc5d78a09349f1b.html">Function Utils::is_alphanum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a95163262604423118dc5d78a09349f1b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a2d369134c716726f4186b4362f1fa9fc.html">Function Utils::is_digits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a2d369134c716726f4186b4362f1fa9fc.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a3146d2c1ba9eb881d6df9c790d9dc5f3.html">Function Utils::is_lower</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a3146d2c1ba9eb881d6df9c790d9dc5f3.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a7ab8d407139379119c4ea2ad7bb63560.html">Function Utils::is_upper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a7ab8d407139379119c4ea2ad7bb63560.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aab3818e2eca2c81afd667f177c8c2997.html">Function Utils::is_xdigits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aab3818e2eca2c81afd667f177c8c2997.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a85e123cb2c703e6384a49ed6326bee36.html">Function Utils::isFinite(double)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a85e123cb2c703e6384a49ed6326bee36.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1ad45897acf6d2357760353724689af926.html">Function Utils::isFinite(float)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1ad45897acf6d2357760353724689af926.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1abed5e7270def2486569943d200c0743b.html">Function Utils::isInfinite(double)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1abed5e7270def2486569943d200c0743b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a30b4948ccd19406666738222dae43625.html">Function Utils::isInfinite(float)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a30b4948ccd19406666738222dae43625.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a98d297a5fa2b81ee92b440c49cc5c423.html">Function Utils::isInteger(double)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a98d297a5fa2b81ee92b440c49cc5c423.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a89143614c938e2d0177849efe160078f.html">Function Utils::isInteger(float)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a89143614c938e2d0177849efe160078f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a5554e2e150387fcec3bfc6a089d63323.html">Function Utils::isNaN(double)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a5554e2e150387fcec3bfc6a089d63323.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1ad55b6b673b567e276bc4d3c0e82101ac.html">Function Utils::isNaN(float)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1ad55b6b673b567e276bc4d3c0e82101ac.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a737d53515ff1a55132413540e13e119c.html">Function Utils::isRegular(double)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a737d53515ff1a55132413540e13e119c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a205d79095365126c2c1c5e06291ebb82.html">Function Utils::isRegular(float)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a205d79095365126c2c1c5e06291ebb82.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a6bad3d08160bb41eda478c995a727be8.html">Function Utils::isUnsigned(double)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a6bad3d08160bb41eda478c995a727be8.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aa7bc3aa3171ed52db8c869c69dd52342.html">Function Utils::isUnsigned(float)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aa7bc3aa3171ed52db8c869c69dd52342.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aada79a18d295166c60c57362689ad7fd.html">Function Utils::isZero(double)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aada79a18d295166c60c57362689ad7fd.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a542ce83f0a8760f17b0dffd5eec4d991.html">Function Utils::isZero(float)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a542ce83f0a8760f17b0dffd5eec4d991.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1ac48424f9b5e82381d95f8c3f805df7da.html">Template Function Utils::machineEps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1ac48424f9b5e82381d95f8c3f805df7da.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a1fa85a532b4b2fdd3eb8bc2252942348.html">Template Function Utils::maximumValue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a1fa85a532b4b2fdd3eb8bc2252942348.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a44fc6a8ac5c4ab90310f8debf27ea5a5.html">Template Function Utils::mex_convert_mx_to_handle_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a44fc6a8ac5c4ab90310f8debf27ea5a5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a6c47af4523cedfa8d36245790265666e.html">Template Function Utils::mex_convert_mx_to_ptr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a6c47af4523cedfa8d36245790265666e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a5b5febf5b8f69b8f33523a30c964c0fa.html">Template Function Utils::mex_convert_ptr_to_mx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a5b5febf5b8f69b8f33523a30c964c0fa.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a56fb7a35c390ddaf0deeef6814a25ccb.html">Function Utils::mex_create_matrix_int32</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a56fb7a35c390ddaf0deeef6814a25ccb.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aabc9c74f210b1a4b18659666c74f6599.html">Function Utils::mex_create_matrix_int64</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aabc9c74f210b1a4b18659666c74f6599.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a0399b829a4e30826ce41d2a092d8f14f.html">Function Utils::mex_create_matrix_value</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a0399b829a4e30826ce41d2a092d8f14f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aa4d3bbf7b47c571da6de5cca560c1bbc.html">Template Function Utils::mex_destroy_object</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aa4d3bbf7b47c571da6de5cca560c1bbc.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a7fd5de1e71c9dd381af1268b71cb0a6b.html">Function Utils::mex_get_bool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a7fd5de1e71c9dd381af1268b71cb0a6b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aa64889cc9f426066585703b4c023370c.html">Function Utils::mex_get_int64</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aa64889cc9f426066585703b4c023370c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1acd0c9db4f3742a95217739f2999e8368.html">Function Utils::mex_get_scalar_value</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1acd0c9db4f3742a95217739f2999e8368.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a4ad416bcb80117e096a22271c23d1b9e.html">Function Utils::mex_is_scalar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a4ad416bcb80117e096a22271c23d1b9e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1af35e3254635eda0c72c4ef355f6e94fb.html">Function Utils::mex_matrix_pointer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1af35e3254635eda0c72c4ef355f6e94fb.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a51e076ec3eaa88d8698082ef3f3fa22e.html">Function Utils::mex_set_scalar_bool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a51e076ec3eaa88d8698082ef3f3fa22e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a104bcd04439162b71f5f6a5a67ce2057.html">Function Utils::mex_set_scalar_int32</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a104bcd04439162b71f5f6a5a67ce2057.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1acb1925954fe07f4a9758a9cc34284a94.html">Function Utils::mex_set_scalar_int64</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1acb1925954fe07f4a9758a9cc34284a94.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1ae8ece753a60a923abb506f37bab563e7.html">Function Utils::mex_set_scalar_value</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1ae8ece753a60a923abb506f37bab563e7.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1af5fb0d640a0af571c583ae372d12f9dd.html">Function Utils::mex_vector_pointer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1af5fb0d640a0af571c583ae372d12f9dd.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a3c1f7495b694dc45db206ed90e10b910.html">Template Function Utils::minimumValue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a3c1f7495b694dc45db206ed90e10b910.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a8b9a28a18d7ba1b5d5bc16704fcc3f75.html">Template Function Utils::NaN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a8b9a28a18d7ba1b5d5bc16704fcc3f75.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1ab9e45d551623404fca93f9666f80b085.html">Template Function Utils::operator*(Poly&lt;Real&gt; const&amp;, Poly&lt;Real&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1ab9e45d551623404fca93f9666f80b085.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1af1672cfd9feb5c7979b47fff3056eebd.html">Template Function Utils::operator*(Real, Poly&lt;Real&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1af1672cfd9feb5c7979b47fff3056eebd.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aba1351991a61a24af392dc691009a86c.html">Template Function Utils::operator*(Poly&lt;Real&gt; const&amp;, Real)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aba1351991a61a24af392dc691009a86c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a05b23b599e4326c05ed83cfecc42b239.html">Template Function Utils::operator*(Quaternion&lt;T&gt; const&amp;, Quaternion&lt;T&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a05b23b599e4326c05ed83cfecc42b239.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a42063a052662084a030b09f00b45acda.html">Template Function Utils::operator+(Poly&lt;Real&gt; const&amp;, Poly&lt;Real&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a42063a052662084a030b09f00b45acda.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1afddf1f04b00a151ce4200ab855c2d1e2.html">Template Function Utils::operator+(Poly&lt;Real&gt; const&amp;, Real)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1afddf1f04b00a151ce4200ab855c2d1e2.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a04c1946104700f52c2c76e7fd51606b1.html">Template Function Utils::operator+(Real, Poly&lt;Real&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a04c1946104700f52c2c76e7fd51606b1.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a82b10b82157e2ac2a38f033a7ba4a983.html">Template Function Utils::operator-(Poly&lt;Real&gt; const&amp;, Poly&lt;Real&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a82b10b82157e2ac2a38f033a7ba4a983.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aef83f2d517036aeb39459ea998b9290f.html">Template Function Utils::operator-(Poly&lt;Real&gt; const&amp;, Real)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aef83f2d517036aeb39459ea998b9290f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1ae093ee299eb54729f547a781f7569737.html">Template Function Utils::operator-(Real, Poly&lt;Real&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1ae093ee299eb54729f547a781f7569737.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aab5a736ecc4dc96616aa81a453694d66.html">Template Function Utils::operator&lt;&lt;(std::basic_ostream&lt;Char&gt;&amp;, Poly&lt;Real&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aab5a736ecc4dc96616aa81a453694d66.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a9d3399526411447c3a7cd747c0a516a0.html">Template Function Utils::operator&lt;&lt;(std::basic_ostream&lt;Char&gt;&amp;, Sturm&lt;Real&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a9d3399526411447c3a7cd747c0a516a0.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a4a2cf8e472a8df5a15b7d71c6f59e9ba.html">Template Function Utils::operator&lt;&lt;(ostream&amp;, Quaternion&lt;T&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a4a2cf8e472a8df5a15b7d71c6f59e9ba.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1ac8e186fbb9c36bd457fc718b23a5265b.html">Function Utils::outBytes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1ac8e186fbb9c36bd457fc718b23a5265b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a074ef3256c4cebff30d5eedda8693188.html">Function Utils::print_trace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a074ef3256c4cebff30d5eedda8693188.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a03a56310c0cbbe89c1fc727df845a55e.html">Function Utils::printTrace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a03a56310c0cbbe89c1fc727df845a55e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1af02d906cfff6cfdda238bfe093af5df6.html">Template Function Utils::search_interval</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1af02d906cfff6cfdda238bfe093af5df6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a9ebe53f5e8fe4744f45d6d3ecf2258c2.html">Template Function Utils::searchInterval</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a9ebe53f5e8fe4744f45d6d3ecf2258c2.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a249dc69f8d1c7433862c297d4e187ec0.html">Function Utils::sleep_for_milliseconds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a249dc69f8d1c7433862c297d4e187ec0.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a31bb8bf0d19075c88dc3bef01c305230.html">Function Utils::sleep_for_seconds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a31bb8bf0d19075c88dc3bef01c305230.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a33626c868cd55decc7a5dbb2bbabad5b.html">Function Utils::split_string</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a33626c868cd55decc7a5dbb2bbabad5b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a2982f0d481573b831d0bd86bd85696da.html">Template Function Utils::sqrtMachineEps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a2982f0d481573b831d0bd86bd85696da.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1a73e1f44dc263656444ff55351aee4c4c.html">Function Utils::to_lower</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1a73e1f44dc263656444ff55351aee4c4c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="function_a00095_1aebd03f8a85e3e969be5d166a4b920ea9.html">Function Utils::to_upper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_a00095_1aebd03f8a85e3e969be5d166a4b920ea9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a>
+</h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00097_1a886419527e3a8c3443cdfb8c01edf29c.html">Variable quickpool::mem::acquire</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00097_1a886419527e3a8c3443cdfb8c01edf29c.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00097_1a8698defb2ec44fb3e5916998f70fe718.html">Variable quickpool::mem::relaxed</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00097_1a8698defb2ec44fb3e5916998f70fe718.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00097_1a87cc15b9c03678a00337fe6613cf6c7a.html">Variable quickpool::mem::release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00097_1a87cc15b9c03678a00337fe6613cf6c7a.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00097_1a3cbb25f193b04fae3c71e696b39234b3.html">Variable quickpool::mem::seq_cst</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00097_1a3cbb25f193b04fae3c71e696b39234b3.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1a28a88a723be345346e88d882d27c6206.html">Variable Utils::AllocatedBytes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1a28a88a723be345346e88d882d27c6206.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1a348db37b291dbec29309c2f7b09faa8c.html">Variable Utils::CountAlloc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1a348db37b291dbec29309c2f7b09faa8c.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1ad9aeae3ce8ef3cc9e42cfbf398b13d75.html">Variable Utils::CountFreed</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1ad9aeae3ce8ef3cc9e42cfbf398b13d75.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1ad989aa6e67efc8ff8e5dbd0a1312c458.html">Variable Utils::m_1_pi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1ad989aa6e67efc8ff8e5dbd0a1312c458.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1a8d98de03b31388725232b35c0f2dc94b.html">Variable Utils::m_1_sqrt2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1a8d98de03b31388725232b35c0f2dc94b.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1abeada3fa03cc2632a34313d6a633c96e.html">Variable Utils::m_2_pi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1abeada3fa03cc2632a34313d6a633c96e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1a468784ad6002a12b73d4a209f265ec3e.html">Variable Utils::m_2_sqrtpi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1a468784ad6002a12b73d4a209f265ec3e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1afdc5c233ee7b9359454818a514394c45.html">Variable Utils::m_2pi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1afdc5c233ee7b9359454818a514394c45.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1a0da9269062912ba9152831175d8c0c41.html">Variable Utils::m_e</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1a0da9269062912ba9152831175d8c0c41.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1a41ea9b3bd3e0ba29c5b14e2d3fb2a5c1.html">Variable Utils::m_pi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1a41ea9b3bd3e0ba29c5b14e2d3fb2a5c1.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1ae2f22e9754030bd24ecf24ccb9ea1215.html">Variable Utils::m_pi_2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1ae2f22e9754030bd24ecf24ccb9ea1215.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1aad6cdf8c1c0c782e8f4502c0cfdf2445.html">Variable Utils::m_pi_4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1aad6cdf8c1c0c782e8f4502c0cfdf2445.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1a27a1d2547b3b8b48324ba8e679b2b897.html">Variable Utils::m_sqrt2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1a27a1d2547b3b8b48324ba8e679b2b897.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1aace00d1a915654bc297082230ef1aeda.html">Variable Utils::m_sqrtpi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1aace00d1a915654bc297082230ef1aeda.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1accf01cb8f00638e16c51c933aaf21a68.html">Variable Utils::MallocDebug</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1accf01cb8f00638e16c51c933aaf21a68.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1aebcf52effadbf6aa74550734f1a0b7d6.html">Variable Utils::MallocMutex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1aebcf52effadbf6aa74550734f1a0b7d6.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="variable_a00095_1a3eb02e9b62c70fa2d7c2e95c4b658d02.html">Variable Utils::MaximumAllocatedBytes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_a00095_1a3eb02e9b62c70fa2d7c2e95c4b658d02.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">¶</a>
+</h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1ad6d7d5ce6dfa6c5a813e07429bb7ef5d.html">Define arg_in_0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1ad6d7d5ce6dfa6c5a813e07429bb7ef5d.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1aa0bd24e601d19da32c88a5faa26e3ae9.html">Define arg_in_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1aa0bd24e601d19da32c88a5faa26e3ae9.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1abf03ef917988812e0dffdf3fbea7533a.html">Define arg_in_10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1abf03ef917988812e0dffdf3fbea7533a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1ae9baa5503ec118113cd5736971c0ad7e.html">Define arg_in_11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1ae9baa5503ec118113cd5736971c0ad7e.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1ad3c51073bccf0af1ccecaad1912290d4.html">Define arg_in_12</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1ad3c51073bccf0af1ccecaad1912290d4.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1af9e7dd057d8ce2cf24512867c85f00b5.html">Define arg_in_13</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1af9e7dd057d8ce2cf24512867c85f00b5.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a76a0a6ed72d8a0e903aa38090b46b5d9.html">Define arg_in_14</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a76a0a6ed72d8a0e903aa38090b46b5d9.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a03c6e12a62e46a59458b9b2ea2699d78.html">Define arg_in_15</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a03c6e12a62e46a59458b9b2ea2699d78.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1ae7f0f89db1916df020bbdfa62ed464fd.html">Define arg_in_16</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1ae7f0f89db1916df020bbdfa62ed464fd.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a36103110dcfa0ed35ab8d7020419f35f.html">Define arg_in_17</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a36103110dcfa0ed35ab8d7020419f35f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1af285c1165f332b2be5e49208ca03a1ee.html">Define arg_in_18</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1af285c1165f332b2be5e49208ca03a1ee.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a1a381135fb774570bbf88f5f05d9c844.html">Define arg_in_19</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a1a381135fb774570bbf88f5f05d9c844.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a309004f2517a07b6ed25cb10c4cb8ffb.html">Define arg_in_2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a309004f2517a07b6ed25cb10c4cb8ffb.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1af000c59e184b8a82e4f7e47c4336cc1e.html">Define arg_in_3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1af000c59e184b8a82e4f7e47c4336cc1e.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1ade12f945e0dd19dbea38d911a159098f.html">Define arg_in_4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1ade12f945e0dd19dbea38d911a159098f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1abaae2e1a346bf00a201dc9865394c14f.html">Define arg_in_5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1abaae2e1a346bf00a201dc9865394c14f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a50c84ba78e1e781f71258972fef870dc.html">Define arg_in_6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a50c84ba78e1e781f71258972fef870dc.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a8e2b486f887c58e5e21984c8f8d94487.html">Define arg_in_7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a8e2b486f887c58e5e21984c8f8d94487.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a72b8fa7b919f97d38e57a4da8a785ff9.html">Define arg_in_8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a72b8fa7b919f97d38e57a4da8a785ff9.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1acec5dd28f46b7799ec20154f39df1828.html">Define arg_in_9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1acec5dd28f46b7799ec20154f39df1828.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1aea35d7ab30ebb2fee8317a3a074d0e1f.html">Define arg_out_0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1aea35d7ab30ebb2fee8317a3a074d0e1f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1ab661e80e3b0703fd65554c8d965e2d05.html">Define arg_out_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1ab661e80e3b0703fd65554c8d965e2d05.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1af84cfde564a1e003e1622a5d5b8dcda4.html">Define arg_out_10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1af84cfde564a1e003e1622a5d5b8dcda4.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a703f530530ca3afe2189a7a439fc7804.html">Define arg_out_11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a703f530530ca3afe2189a7a439fc7804.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a53e402ca4e0264e49aafb12ceee7d326.html">Define arg_out_12</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a53e402ca4e0264e49aafb12ceee7d326.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1abf2dedbaacc73c8bf97d3f2baec6530a.html">Define arg_out_13</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1abf2dedbaacc73c8bf97d3f2baec6530a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1ae79586233878d747266be8e4d139e432.html">Define arg_out_14</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1ae79586233878d747266be8e4d139e432.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a1def44cdb30763909399b4715ed79dd3.html">Define arg_out_15</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a1def44cdb30763909399b4715ed79dd3.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1ab5ee3ab880e70f88dfd6e294603289ed.html">Define arg_out_16</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1ab5ee3ab880e70f88dfd6e294603289ed.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1afa9e2e81d14b332ba49161897c9ae9b7.html">Define arg_out_17</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1afa9e2e81d14b332ba49161897c9ae9b7.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a3483661ced42e6a511a28c50a10639b9.html">Define arg_out_18</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a3483661ced42e6a511a28c50a10639b9.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a54cf1eb0eea205510a876584b47b0fbe.html">Define arg_out_19</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a54cf1eb0eea205510a876584b47b0fbe.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1aa692d0341c3ed571466a4d94f57f7a31.html">Define arg_out_2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1aa692d0341c3ed571466a4d94f57f7a31.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1adf6c8713d30f1776ede590c993ad0e3a.html">Define arg_out_3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1adf6c8713d30f1776ede590c993ad0e3a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a6e46ab30aaadec7c47be3b4b9662ee2d.html">Define arg_out_4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a6e46ab30aaadec7c47be3b4b9662ee2d.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1ad861d1f3b098507eba4d8834ced39d41.html">Define arg_out_5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1ad861d1f3b098507eba4d8834ced39d41.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1ab8216bf561d6a3316c7c9e53bb5c7f3b.html">Define arg_out_6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1ab8216bf561d6a3316c7c9e53bb5c7f3b.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1aa9a8ca750b13758e8ab262da64773e6d.html">Define arg_out_7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1aa9a8ca750b13758e8ab262da64773e6d.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1aa9b4fe07ab29b6af24db1521828a7427.html">Define arg_out_8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1aa9b4fe07ab29b6af24db1521828a7427.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a24bb8af1dac82683e256a62c585ad1d9.html">Define arg_out_9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a24bb8af1dac82683e256a62c585ad1d9.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a97b9e4bddb6c47ac0e5c1eda444d8e68.html">Define CLASS_HANDLE_SIGNATURE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a97b9e4bddb6c47ac0e5c1eda444d8e68.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00059_1a9401ec3a5293fffb1126273cf44788cf.html">Define UTILS_CONSTEXPR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00059_1a9401ec3a5293fffb1126273cf44788cf.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00014_1a508bfb177038dae82760c68aee60a6c4.html">Define UTILS_CPU_INFO_dot_HH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00014_1a508bfb177038dae82760c68aee60a6c4.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a7fb3a3526f212b9650353eee54aa7f65.html">Define UTILS_MEX_ASSERT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a7fb3a3526f212b9650353eee54aa7f65.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00086_1a23d725bf757ea16957380bd63d878bf4.html">Define UTILS_MEX_ASSERT0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00086_1a23d725bf757ea16957380bd63d878bf4.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00059_1a18d1c9d1e228a9399b62137808e2e872.html">Define UTILS_OVERRIDE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00059_1a18d1c9d1e228a9399b62137808e2e872.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00026_1a7285a2d1ba4063e2af2f6f1596ebe6f3.html">Define UTILS_POLY_dot_HH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00026_1a7285a2d1ba4063e2af2f6f1596ebe6f3.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="define_a00059_1a72ddd1f7ad357033dd5a5324a288a259.html">Define UTILS_PURE_VIRTUAL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_a00059_1a72ddd1f7ad357033dd5a5324a288a259.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a>
+</h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="typedef_a00099_1ae1137880c9156011a38971750d487acc.html">Typedef quickpool::mem::aligned::vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_a00099_1ae1137880c9156011a38971750d487acc.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="typedef_a00095_1afbe62aab0108b13ba8ff0c855ba4810d.html">Typedef Utils::istream_type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_a00095_1afbe62aab0108b13ba8ff0c855ba4810d.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="typedef_a00095_1a179392f6832508fe7dce65f0d33bf7ad.html">Typedef Utils::ostream_type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_a00095_1a179392f6832508fe7dce65f0d33bf7ad.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1">
+<a class="reference internal" href="typedef_a00103_1a5a4db58cab586bc52b6bf6675d8d0d7a.html">Typedef Utils::Table::integer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_a00103_1a5a4db58cab586bc52b6bf6675d8d0d7a.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="../index.html" title="index">
+          <img class="logo" src="../_static/dc48Ky8di.png" alt="Logo"/>
+        </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<div class="sphinx-toc sphinxglobaltoc">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rang.html">rang - Colors for your Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zstr.html">Zstr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="root.html">C++ API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">Utils</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Full API</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Enrico Bertolazzi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

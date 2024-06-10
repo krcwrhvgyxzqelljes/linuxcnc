@@ -1,0 +1,29 @@
+require "rake"
+require "fileutils"
+
+require_relative "../../cmake_utils/Rakefile_common.rb"
+
+VER = "10.1.0"
+
+desc "install FMT"
+task :install_common do
+  puts "Copy FMT source".yellow
+  if not Dir.exist?("fmt-#{VER}") then
+    extract_zip("fmt-#{VER}.zip");
+  end
+  #FileUtils.cp   "fmt-#{VER}/src/fmt.cc",    '../../src'
+  FileUtils.cp   "fmt-#{VER}/src/format.cc", '../../src/Utils/format.cxx'
+  FileUtils.cp   "fmt-#{VER}/src/os.cc",     '../../src/Utils/os.cxx'
+  FileUtils.cp_r "fmt-#{VER}/include/fmt",   '../../src/Utils'
+end
+
+task :install_osx   => :install_common do end
+task :install_linux => :install_common do end
+task :install_mingw => :install_common do end
+task :install_win   => :install_common do end
+
+task :clean       do end
+task :clean_osx   do end
+task :clean_linux do end
+task :clean_mingw do end
+task :clean_win   do end

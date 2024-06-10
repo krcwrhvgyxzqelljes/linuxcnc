@@ -1,0 +1,4 @@
+/home/user/linuxcnc/cmake/vendor/scurve/build-scurve_auto_plot-Desktop-Debug/CMakeFiles/scurve_auto_plot.dir
+/home/user/linuxcnc/cmake/vendor/scurve/build-scurve_auto_plot-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/user/linuxcnc/cmake/vendor/scurve/build-scurve_auto_plot-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/user/linuxcnc/cmake/vendor/scurve/build-scurve_auto_plot-Desktop-Debug/CMakeFiles/scurve_auto_plot_autogen.dir

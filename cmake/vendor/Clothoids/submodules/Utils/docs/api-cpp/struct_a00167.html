@@ -1,0 +1,304 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Template Struct Worker &#8212; Utils v1.4
+</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/cloud.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Struct allocator::rebind" href="struct_a00151.html" />
+    <link rel="prev" title="Struct State" href="struct_a00163.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="struct_a00151.html" title="Template Struct allocator::rebind"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="struct_a00163.html" title="Struct State"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">Utils</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" accesskey="U">C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Struct Worker</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="template-struct-worker">
+<span id="exhale-struct-a00167"></span><h1>Template Struct Worker<a class="headerlink" href="#template-struct-worker" title="Permalink to this headline">¶</a>
+</h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_Utils_quickpool.hxx.html#file-utils-quickpool-hxx"><span class="std std-ref">File quickpool.hxx</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a>
+</h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN9quickpool4loop6WorkerE">
+<span id="_CPPv3I0EN9quickpool4loop6WorkerE"></span><span id="_CPPv2I0EN9quickpool4loop6WorkerE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Function</span></span></span><span class="p"><span class="pre">&gt;</span></span><br><span class="target" id="a00167"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">quickpool</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">loop</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Worker</span></span></span><a class="headerlink" href="#_CPPv4I0EN9quickpool4loop6WorkerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p><a class="reference internal" href="#a00167"><span class="std std-ref">Worker</span></a> class for parallel loops.</p>
+<p>When a worker completes its own range, it steals half of the remaining range of another worker. The number of steals (= only source of contention) is therefore only logarithmic in the number of tasks. The algorithm uses double-width compare-and-swap, which is lock-free on most modern processor architectures.</p>
+<p></p>
+<dl class="field-list simple">
+<dt class="field-odd">tparam type</dt>
+<dd class="field-odd">
+<p>of function processing the loop (required to account for type-erasure). </p>
+</dd>
+</dl>
+
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool4loop6Worker6WorkerEv">
+<span id="_CPPv3N9quickpool4loop6Worker6WorkerEv"></span><span id="_CPPv2N9quickpool4loop6Worker6WorkerEv"></span><span id="quickpool::loop::Worker::Worker"></span><span class="target" id="a00167_1a277e5e77f4df03bbaacaa8523c2a8618"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Worker</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool4loop6Worker6WorkerEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool4loop6Worker6WorkerEii8Function">
+<span id="_CPPv3N9quickpool4loop6Worker6WorkerEii8Function"></span><span id="_CPPv2N9quickpool4loop6Worker6WorkerEii8Function"></span><span id="quickpool::loop::Worker::Worker__i.i.Function"></span><span class="target" id="a00167_1afb5b93ba1a850e1658e92492f105617b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Worker</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">begin</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">end</span></span>, <a class="reference internal" href="#_CPPv4I0EN9quickpool4loop6WorkerE" title="quickpool::loop::Worker::Function"><span class="n"><span class="pre">Function</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">fun</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool4loop6Worker6WorkerEii8Function" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool4loop6Worker6WorkerERR6Worker">
+<span id="_CPPv3N9quickpool4loop6Worker6WorkerERR6Worker"></span><span id="_CPPv2N9quickpool4loop6Worker6WorkerERR6Worker"></span><span id="quickpool::loop::Worker::Worker__WorkerRR"></span><span class="target" id="a00167_1ab144711f47a95e753d8ec7e74ce01e7c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Worker</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9quickpool4loop6Worker6WorkerERR6Worker" title="quickpool::loop::Worker::Worker"><span class="n"><span class="pre">Worker</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool4loop6Worker6WorkerERR6Worker" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9quickpool4loop6Worker10tasks_leftEv">
+<span id="_CPPv3NK9quickpool4loop6Worker10tasks_leftEv"></span><span id="_CPPv2NK9quickpool4loop6Worker10tasks_leftEv"></span><span id="quickpool::loop::Worker::tasks_leftC"></span><span class="target" id="a00167_1a7131793c8ceb2eef6f30f9103f446082"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tasks_left</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9quickpool4loop6Worker10tasks_leftEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9quickpool4loop6Worker4doneEv">
+<span id="_CPPv3NK9quickpool4loop6Worker4doneEv"></span><span id="_CPPv2NK9quickpool4loop6Worker4doneEv"></span><span id="quickpool::loop::Worker::doneC"></span><span class="target" id="a00167_1af406cf54590d7e9ad7481a882cba5d3b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">done</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9quickpool4loop6Worker4doneEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool4loop6Worker3runENSt10shared_ptrIN3mem7aligned6vectorI6WorkerEEEE">
+<span id="_CPPv3N9quickpool4loop6Worker3runENSt10shared_ptrIN3mem7aligned6vectorI6WorkerEEEE"></span><span id="_CPPv2N9quickpool4loop6Worker3runENSt10shared_ptrIN3mem7aligned6vectorI6WorkerEEEE"></span><span id="quickpool::loop::Worker::run__std::shared_ptr:mem::aligned::vector:Worker::"></span><span class="target" id="a00167_1a3636ed3ebad0e6bb5509e91484196503"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">mem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">aligned</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_a00099_1ae1137880c9156011a38971750d487acc.html#_CPPv4I0_6size_tEN9quickpool3mem7aligned6vectorE" title="quickpool::mem::aligned::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN9quickpool4loop6WorkerE" title="quickpool::loop::Worker"><span class="n"><span class="pre">Worker</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">others</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool4loop6Worker3runENSt10shared_ptrIN3mem7aligned6vectorI6WorkerEEEE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>others</strong> – pointer to the vector of all workers. </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool4loop6Worker11steal_rangeERN3mem7aligned6vectorI6WorkerEE">
+<span id="_CPPv3N9quickpool4loop6Worker11steal_rangeERN3mem7aligned6vectorI6WorkerEE"></span><span id="_CPPv2N9quickpool4loop6Worker11steal_rangeERN3mem7aligned6vectorI6WorkerEE"></span><span id="quickpool::loop::Worker::steal_range__mem::aligned::vector:Worker:R"></span><span class="target" id="a00167_1a08892c962d81cb088f22e3e808798a44"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">steal_range</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">aligned</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_a00099_1ae1137880c9156011a38971750d487acc.html#_CPPv4I0_6size_tEN9quickpool3mem7aligned6vectorE" title="quickpool::mem::aligned::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN9quickpool4loop6WorkerE" title="quickpool::loop::Worker"><span class="n"><span class="pre">Worker</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">workers</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool4loop6Worker11steal_rangeERN3mem7aligned6vectorI6WorkerEE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>workers</strong> – vector of all workers. </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool4loop6Worker8all_doneERKN3mem7aligned6vectorI6WorkerEE">
+<span id="_CPPv3N9quickpool4loop6Worker8all_doneERKN3mem7aligned6vectorI6WorkerEE"></span><span id="_CPPv2N9quickpool4loop6Worker8all_doneERKN3mem7aligned6vectorI6WorkerEE"></span><span id="quickpool::loop::Worker::all_done__mem::aligned::vector:Worker:CR"></span><span class="target" id="a00167_1a402af71e8d638233c7c580f60d18afc6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">all_done</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">aligned</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_a00099_1ae1137880c9156011a38971750d487acc.html#_CPPv4I0_6size_tEN9quickpool3mem7aligned6vectorE" title="quickpool::mem::aligned::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN9quickpool4loop6WorkerE" title="quickpool::loop::Worker"><span class="n"><span class="pre">Worker</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">workers</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool4loop6Worker8all_doneERKN3mem7aligned6vectorI6WorkerEE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>workers</strong> – vector of all workers. </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool4loop6Worker11find_victimERN3mem7aligned6vectorI6WorkerEE">
+<span id="_CPPv3N9quickpool4loop6Worker11find_victimERN3mem7aligned6vectorI6WorkerEE"></span><span id="_CPPv2N9quickpool4loop6Worker11find_victimERN3mem7aligned6vectorI6WorkerEE"></span><span id="quickpool::loop::Worker::find_victim__mem::aligned::vector:Worker:R"></span><span class="target" id="a00167_1aa7a36f1c71a5a0252af5d30148bc4418"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9quickpool4loop6WorkerE" title="quickpool::loop::Worker"><span class="n"><span class="pre">Worker</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">find_victim</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">aligned</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_a00099_1ae1137880c9156011a38971750d487acc.html#_CPPv4I0_6size_tEN9quickpool3mem7aligned6vectorE" title="quickpool::mem::aligned::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN9quickpool4loop6WorkerE" title="quickpool::loop::Worker"><span class="n"><span class="pre">Worker</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">workers</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool4loop6Worker11find_victimERN3mem7aligned6vectorI6WorkerEE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>targets the worker with the largest remaining range to minimize number of steal events. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>others</strong> – vector of all workers. </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool4loop6Worker5stateE">
+<span id="_CPPv3N9quickpool4loop6Worker5stateE"></span><span id="_CPPv2N9quickpool4loop6Worker5stateE"></span><span id="quickpool::loop::Worker::state__mem::aligned::relaxed_atomic:State:"></span><span class="target" id="a00167_1a3f944576f0c993f4c1a3282c0c76eeb2"></span><span class="n"><span class="pre">mem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">aligned</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="struct_a00159.html#_CPPv4I0EN9quickpool3mem7aligned14relaxed_atomicE" title="quickpool::mem::aligned::relaxed_atomic"><span class="n"><span class="pre">relaxed_atomic</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="struct_a00163.html#_CPPv4N9quickpool4loop5StateE" title="quickpool::loop::State"><span class="n"><span class="pre">State</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">state</span></span></span><a class="headerlink" href="#_CPPv4N9quickpool4loop6Worker5stateE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>worker state <code class="docutils literal notranslate"><span class="pre">{pos,</span> <span class="pre">end}</span></code> </p>
+</dd>
+</dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool4loop6Worker1fE">
+<span id="_CPPv3N9quickpool4loop6Worker1fE"></span><span id="_CPPv2N9quickpool4loop6Worker1fE"></span><span id="quickpool::loop::Worker::f__Function"></span><span class="target" id="a00167_1af8217146f3f54c42ec22ed7a8aa3a19a"></span><a class="reference internal" href="#_CPPv4I0EN9quickpool4loop6WorkerE" title="quickpool::loop::Worker::Function"><span class="n"><span class="pre">Function</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f</span></span></span><a class="headerlink" href="#_CPPv4N9quickpool4loop6Worker1fE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+</dd>
+</dl>
+
+</section>
+</section>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="../index.html" title="index">
+          <img class="logo" src="../_static/dc48Ky8di.png" alt="Logo"/>
+        </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<div class="sphinx-toc sphinxglobaltoc">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rang.html">rang - Colors for your Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zstr.html">Zstr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="root.html">C++ API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="struct_a00151.html" title="Template Struct allocator::rebind"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="struct_a00163.html" title="Struct State"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">Utils</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" >C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Struct Worker</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Enrico Bertolazzi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

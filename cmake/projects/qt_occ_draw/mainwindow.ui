@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>945</width>
+    <height>787</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>3d draw</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(51, 57, 59);
+color: rgb(255, 255, 255);
+</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>30</width>
+    <height>30</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(51, 57, 59);
+color: rgb(255, 255, 255);
+</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0" colspan="2">
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_occ"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>945</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuview">
+    <property name="title">
+     <string>view</string>
+    </property>
+    <widget class="QMenu" name="menuviewmode">
+     <property name="title">
+      <string>viewmode</string>
+     </property>
+     <addaction name="actionorthographic"/>
+     <addaction name="actionperspective"/>
+    </widget>
+    <addaction name="menuviewmode"/>
+    <addaction name="actionview_3d"/>
+    <addaction name="actiontop"/>
+    <addaction name="actionbottom"/>
+    <addaction name="actionfront"/>
+    <addaction name="actionback"/>
+    <addaction name="actionleft"/>
+    <addaction name="actionright"/>
+    <addaction name="actionzoom_plus"/>
+    <addaction name="actionzoom_min"/>
+    <addaction name="actionzoom_all"/>
+   </widget>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionopen"/>
+    <addaction name="actionsave"/>
+   </widget>
+   <widget class="QMenu" name="menuplane">
+    <property name="title">
+     <string>plane</string>
+    </property>
+    <addaction name="actionset_plane_top"/>
+    <addaction name="actionset_plane_left"/>
+    <addaction name="actionset_plane_front"/>
+    <addaction name="actionclick_plane_origin"/>
+    <addaction name="actionreset_plane"/>
+   </widget>
+   <widget class="QMenu" name="menuortho">
+    <property name="title">
+     <string>ortho</string>
+    </property>
+    <addaction name="action_ortho_on"/>
+    <addaction name="action_ortho_off"/>
+   </widget>
+   <widget class="QMenu" name="menusnap">
+    <property name="title">
+     <string>snap</string>
+    </property>
+    <addaction name="action_snap_on"/>
+    <addaction name="action_snap_off"/>
+   </widget>
+   <widget class="QMenu" name="menudraw">
+    <property name="title">
+     <string>draw</string>
+    </property>
+    <addaction name="actionEsc"/>
+    <addaction name="action1p_point"/>
+    <addaction name="action2p_3d_line"/>
+    <addaction name="actionlinestrip"/>
+    <addaction name="action3p_3d_arc"/>
+    <addaction name="action2p_pc_arc"/>
+    <addaction name="action1p_pc_circe"/>
+    <addaction name="actionellipse"/>
+    <addaction name="actionpolygon"/>
+    <addaction name="actionspline"/>
+    <addaction name="actionbezier"/>
+   </widget>
+   <widget class="QMenu" name="menumodify">
+    <property name="title">
+     <string>modify</string>
+    </property>
+    <addaction name="actionfillet"/>
+    <addaction name="actionchamfer"/>
+    <addaction name="actionoffset"/>
+    <addaction name="actionmirror"/>
+    <addaction name="actionscale"/>
+    <addaction name="actioncopy"/>
+    <addaction name="actionpaste"/>
+   </widget>
+   <widget class="QMenu" name="menuhelp">
+    <property name="title">
+     <string>help</string>
+    </property>
+    <addaction name="actionshift_right_mouse_rotate_3d"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menuview"/>
+   <addaction name="menuplane"/>
+   <addaction name="menuortho"/>
+   <addaction name="menusnap"/>
+   <addaction name="menudraw"/>
+   <addaction name="menumodify"/>
+   <addaction name="menuhelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionorthographic">
+   <property name="text">
+    <string>orthographic</string>
+   </property>
+  </action>
+  <action name="actionperspective">
+   <property name="text">
+    <string>perspective</string>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>save</string>
+   </property>
+  </action>
+  <action name="actionset_plane_top">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/view-top.svg</normaloff>:/vendor/icons/view-top.svg</iconset>
+   </property>
+   <property name="text">
+    <string>set plane top-bottom XY</string>
+   </property>
+  </action>
+  <action name="actionset_plane_left">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/view-left.svg</normaloff>:/vendor/icons/view-left.svg</iconset>
+   </property>
+   <property name="text">
+    <string>set plane left-right YZ</string>
+   </property>
+  </action>
+  <action name="actionset_plane_front">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/view-front.svg</normaloff>:/vendor/icons/view-front.svg</iconset>
+   </property>
+   <property name="text">
+    <string>set plane front-back XZ</string>
+   </property>
+  </action>
+  <action name="action_ortho_on">
+   <property name="text">
+    <string>ortho_on</string>
+   </property>
+   <property name="toolTip">
+    <string>ortho on</string>
+   </property>
+  </action>
+  <action name="action_ortho_off">
+   <property name="text">
+    <string>orhto_off</string>
+   </property>
+   <property name="toolTip">
+    <string>ortho off</string>
+   </property>
+  </action>
+  <action name="action_snap_on">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>snap on</string>
+   </property>
+  </action>
+  <action name="action_snap_off">
+   <property name="text">
+    <string>snap off</string>
+   </property>
+  </action>
+  <action name="action2p_3d_line">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/line.svg</normaloff>:/vendor/icons/line.svg</iconset>
+   </property>
+   <property name="text">
+    <string>2p_line</string>
+   </property>
+  </action>
+  <action name="action3p_3d_arc">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/arc.svg</normaloff>:/vendor/icons/arc.svg</iconset>
+   </property>
+   <property name="text">
+    <string>3p_arc</string>
+   </property>
+  </action>
+  <action name="action1p_point">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/point.svg</normaloff>:/vendor/icons/point.svg</iconset>
+   </property>
+   <property name="text">
+    <string>1p_point</string>
+   </property>
+  </action>
+  <action name="action2p_pc_arc">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/circle.svg</normaloff>:/vendor/icons/circle.svg</iconset>
+   </property>
+   <property name="text">
+    <string>2p_pc_circle</string>
+   </property>
+  </action>
+  <action name="action1p_pc_circe">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/rectangle.svg</normaloff>:/vendor/icons/rectangle.svg</iconset>
+   </property>
+   <property name="text">
+    <string>2p_rectangular</string>
+   </property>
+  </action>
+  <action name="actionEsc">
+   <property name="text">
+    <string>Esc_abort</string>
+   </property>
+  </action>
+  <action name="actionfillet">
+   <property name="text">
+    <string>fillet</string>
+   </property>
+  </action>
+  <action name="actionchamfer">
+   <property name="text">
+    <string>chamfer</string>
+   </property>
+  </action>
+  <action name="actionoffset">
+   <property name="text">
+    <string>offset</string>
+   </property>
+  </action>
+  <action name="actionmirror">
+   <property name="text">
+    <string>mirror</string>
+   </property>
+  </action>
+  <action name="actionscale">
+   <property name="text">
+    <string>scale</string>
+   </property>
+  </action>
+  <action name="actioncopy">
+   <property name="text">
+    <string>copy</string>
+   </property>
+  </action>
+  <action name="actionpaste">
+   <property name="text">
+    <string>paste</string>
+   </property>
+  </action>
+  <action name="actiontop">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/view-top.svg</normaloff>:/vendor/icons/view-top.svg</iconset>
+   </property>
+   <property name="text">
+    <string>top</string>
+   </property>
+  </action>
+  <action name="actionbottom">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/view-bottom.svg</normaloff>:/vendor/icons/view-bottom.svg</iconset>
+   </property>
+   <property name="text">
+    <string>bottom</string>
+   </property>
+  </action>
+  <action name="actionfront">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/view-front.svg</normaloff>:/vendor/icons/view-front.svg</iconset>
+   </property>
+   <property name="text">
+    <string>front</string>
+   </property>
+  </action>
+  <action name="actionback">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/view-back.svg</normaloff>:/vendor/icons/view-back.svg</iconset>
+   </property>
+   <property name="text">
+    <string>back</string>
+   </property>
+  </action>
+  <action name="actionleft">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/view-left.svg</normaloff>:/vendor/icons/view-left.svg</iconset>
+   </property>
+   <property name="text">
+    <string>left</string>
+   </property>
+  </action>
+  <action name="actionright">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/view-right.svg</normaloff>:/vendor/icons/view-right.svg</iconset>
+   </property>
+   <property name="text">
+    <string>right</string>
+   </property>
+  </action>
+  <action name="actionzoom_plus">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/zoom_plus.svg</normaloff>:/vendor/icons/zoom_plus.svg</iconset>
+   </property>
+   <property name="text">
+    <string>zoom plus</string>
+   </property>
+  </action>
+  <action name="actionzoom_min">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/zoom_min.svg</normaloff>:/vendor/icons/zoom_min.svg</iconset>
+   </property>
+   <property name="text">
+    <string>zoom min</string>
+   </property>
+  </action>
+  <action name="actionzoom_all">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/zoom_extend.svg</normaloff>:/vendor/icons/zoom_extend.svg</iconset>
+   </property>
+   <property name="text">
+    <string>zoom all</string>
+   </property>
+  </action>
+  <action name="actionview_3d">
+   <property name="icon">
+    <iconset resource="../qt_gremlin/icons.qrc">
+     <normaloff>:/vendor/icons/view-iso.svg</normaloff>:/vendor/icons/view-iso.svg</iconset>
+   </property>
+   <property name="text">
+    <string>view 3d</string>
+   </property>
+  </action>
+  <action name="actionellipse">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/ellipse.svg</normaloff>:/vendor/icons/ellipse.svg</iconset>
+   </property>
+   <property name="text">
+    <string>3p_pc_ellipse</string>
+   </property>
+  </action>
+  <action name="actionpolygon">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/polygon.svg</normaloff>:/vendor/icons/polygon.svg</iconset>
+   </property>
+   <property name="text">
+    <string>2p_polygon</string>
+   </property>
+  </action>
+  <action name="actionlinestrip">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/linestrip.svg</normaloff>:/vendor/icons/linestrip.svg</iconset>
+   </property>
+   <property name="text">
+    <string>linestrip</string>
+   </property>
+  </action>
+  <action name="actionspline">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/spline.svg</normaloff>:/vendor/icons/spline.svg</iconset>
+   </property>
+   <property name="text">
+    <string>xp_spline</string>
+   </property>
+  </action>
+  <action name="actionbezier">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/cubicbezcurve.svg</normaloff>:/vendor/icons/cubicbezcurve.svg</iconset>
+   </property>
+   <property name="text">
+    <string>4p_bezier</string>
+   </property>
+  </action>
+  <action name="actionclick_plane_origin">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/flag-green.png</normaloff>:/vendor/icons/flag-green.png</iconset>
+   </property>
+   <property name="text">
+    <string>click plane origin</string>
+   </property>
+  </action>
+  <action name="actionshift_right_mouse_rotate_3d">
+   <property name="text">
+    <string>shift+right_mouse=rotate 3d</string>
+   </property>
+  </action>
+  <action name="actionreset_plane">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/vendor/icons/go-home.png</normaloff>:/vendor/icons/go-home.png</iconset>
+   </property>
+   <property name="text">
+    <string>reset plane</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../qt_gremlin/icons.qrc"/>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Find opencascade lib, installed from ~/cmake/vendor/ dir.
+LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH
+
+cd ../../../scripts
+echo "starting lcnc master."
+./rip-environment linuxcnc ../configs/sim/axis/axis_mm.ini &
+echo "starting qt_lcnc-controller app."
+./rip-environment qt_lcnc_controller
+

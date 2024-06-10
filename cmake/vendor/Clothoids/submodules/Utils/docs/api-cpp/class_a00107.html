@@ -1,0 +1,446 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Template Class Poly &#8212; Utils v1.4
+</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/cloud.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class Quaternion" href="class_a00131.html" />
+    <link rel="prev" title="Template Class mex_class_handle" href="class_a00127.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00131.html" title="Template Class Quaternion"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00127.html" title="Template Class mex_class_handle"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">Utils</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" accesskey="U">C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Class Poly</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="template-class-poly">
+<span id="exhale-class-a00107"></span><h1>Template Class Poly<a class="headerlink" href="#template-class-poly" title="Permalink to this headline">¶</a>
+</h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_Utils_Poly.hh.html#file-utils-poly-hh"><span class="std std-ref">File Utils_Poly.hh</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a>
+</h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a>
+</h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">Eigen::Matrix&lt;</span> <span class="pre">Real,</span> <span class="pre">Eigen::Dynamic,</span> <span class="pre">1</span> <span class="pre">&gt;</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a>
+</h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5Utils4PolyE">
+<span id="_CPPv3I0EN5Utils4PolyE"></span><span id="_CPPv2I0EN5Utils4PolyE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Real</span></span></span><span class="p"><span class="pre">&gt;</span></span><br><span class="target" id="a00107"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">Utils</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Poly</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Matrix</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Dynamic</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN5Utils4PolyE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly7IntegerE">
+<span id="_CPPv3N5Utils4Poly7IntegerE"></span><span id="_CPPv2N5Utils4Poly7IntegerE"></span><span id="Utils::Poly::Integer"></span><span class="target" id="a00107_1a4abcfab1071229d3409201d682a749c9"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Integer</span></span></span><a class="headerlink" href="#_CPPv4N5Utils4Poly7IntegerE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly6dvec_tE">
+<span id="_CPPv3N5Utils4Poly6dvec_tE"></span><span id="_CPPv2N5Utils4Poly6dvec_tE"></span><span id="Utils::Poly::dvec_t"></span><span class="target" id="a00107_1a3e64bcad7eb3061c5b17f6b2d48aa693"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Matrix</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Dynamic</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dvec_t</span></span></span><a class="headerlink" href="#_CPPv4N5Utils4Poly6dvec_tE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly6Poly_tE">
+<span id="_CPPv3N5Utils4Poly6Poly_tE"></span><span id="_CPPv2N5Utils4Poly6Poly_tE"></span><span id="Utils::Poly::Poly_t"></span><span class="target" id="a00107_1a16340e03110f8287422257a75b0cba41"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly"><span class="n"><span class="pre">Poly</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Poly_t</span></span></span><a class="headerlink" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly4PolyEv">
+<span id="_CPPv3N5Utils4Poly4PolyEv"></span><span id="_CPPv2N5Utils4Poly4PolyEv"></span><span id="Utils::Poly::Poly"></span><span class="target" id="a00107_1a6cdec52c75fe4a9b33dbdf3ef3bd29b4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Poly</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly4PolyEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly4PolyEi">
+<span id="_CPPv3N5Utils4Poly4PolyEi"></span><span id="_CPPv2N5Utils4Poly4PolyEi"></span><span id="Utils::Poly::Poly__i"></span><span class="target" id="a00107_1abed0d4298ac031d4dcc9ca0ebeec9f47"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Poly</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">order</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly4PolyEi" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly4PolyERK6Poly_t">
+<span id="_CPPv3N5Utils4Poly4PolyERK6Poly_t"></span><span id="_CPPv2N5Utils4Poly4PolyERK6Poly_t"></span><span id="Utils::Poly::Poly__Poly_tCR"></span><span class="target" id="a00107_1a167a179fcf05ddbdd23cfb57677df709"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Poly</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly4PolyERK6Poly_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly4PolyERK6dvec_t">
+<span id="_CPPv3N5Utils4Poly4PolyERK6dvec_t"></span><span id="_CPPv2N5Utils4Poly4PolyERK6dvec_t"></span><span id="Utils::Poly::Poly__dvec_tCR"></span><span class="target" id="a00107_1a7829a8c3658185e8e01469151648223b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Poly</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5Utils4Poly6dvec_tE" title="Utils::Poly::dvec_t"><span class="n"><span class="pre">dvec_t</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly4PolyERK6dvec_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly8to_eigenEv">
+<span id="_CPPv3NK5Utils4Poly8to_eigenEv"></span><span id="_CPPv2NK5Utils4Poly8to_eigenEv"></span><span id="Utils::Poly::to_eigenC"></span><span class="target" id="a00107_1a2181d623d42bd55c9f7f327da5422772"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5Utils4Poly6dvec_tE" title="Utils::Poly::dvec_t"><span class="n"><span class="pre">dvec_t</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">to_eigen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly8to_eigenEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly9set_orderE7Integer">
+<span id="_CPPv3N5Utils4Poly9set_orderE7Integer"></span><span id="_CPPv2N5Utils4Poly9set_orderE7Integer"></span><span id="Utils::Poly::set_order__Integer"></span><span class="target" id="a00107_1a912bb330a51ae319305209b875d493a9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_order</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5Utils4Poly7IntegerE" title="Utils::Poly::Integer"><span class="n"><span class="pre">Integer</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">order</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly9set_orderE7Integer" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly10set_degreeE7Integer">
+<span id="_CPPv3N5Utils4Poly10set_degreeE7Integer"></span><span id="_CPPv2N5Utils4Poly10set_degreeE7Integer"></span><span id="Utils::Poly::set_degree__Integer"></span><span class="target" id="a00107_1a3e8298aeee8d25154041516db178578b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_degree</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5Utils4Poly7IntegerE" title="Utils::Poly::Integer"><span class="n"><span class="pre">Integer</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">degree</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly10set_degreeE7Integer" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly10set_scalarE4Real">
+<span id="_CPPv3N5Utils4Poly10set_scalarE4Real"></span><span id="_CPPv2N5Utils4Poly10set_scalarE4Real"></span><span id="Utils::Poly::set_scalar__Real"></span><span class="target" id="a00107_1a14e2aa732f67bf22bb0a5dffc74bfe6c"></span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set_scalar</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly10set_scalarE4Real" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly12set_monomialE4Real">
+<span id="_CPPv3N5Utils4Poly12set_monomialE4Real"></span><span id="_CPPv2N5Utils4Poly12set_monomialE4Real"></span><span id="Utils::Poly::set_monomial__Real"></span><span class="target" id="a00107_1aa380993ebf3d8c94dfd1a1a420d4a181"></span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">set_monomial</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly12set_monomialE4Real" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly6coeffsEv">
+<span id="_CPPv3NK5Utils4Poly6coeffsEv"></span><span id="_CPPv2NK5Utils4Poly6coeffsEv"></span><span id="Utils::Poly::coeffsC"></span><span class="target" id="a00107_1ae39e3646fa22a43fed7130be581db894"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5Utils4Poly6dvec_tE" title="Utils::Poly::dvec_t"><span class="n"><span class="pre">dvec_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">coeffs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly6coeffsEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly6degreeEv">
+<span id="_CPPv3NK5Utils4Poly6degreeEv"></span><span id="_CPPv2NK5Utils4Poly6degreeEv"></span><span id="Utils::Poly::degreeC"></span><span class="target" id="a00107_1a975b25d30210ea80add629ecdb8ba450"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5Utils4Poly7IntegerE" title="Utils::Poly::Integer"><span class="n"><span class="pre">Integer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">degree</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly6degreeEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly5orderEv">
+<span id="_CPPv3NK5Utils4Poly5orderEv"></span><span id="_CPPv2NK5Utils4Poly5orderEv"></span><span id="Utils::Poly::orderC"></span><span class="target" id="a00107_1ab0d96d45c93118e06402ceb1223cd61d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5Utils4Poly7IntegerE" title="Utils::Poly::Integer"><span class="n"><span class="pre">Integer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">order</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly5orderEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly4evalE4Real">
+<span id="_CPPv3NK5Utils4Poly4evalE4Real"></span><span id="_CPPv2NK5Utils4Poly4evalE4Real"></span><span id="Utils::Poly::eval__RealC"></span><span class="target" id="a00107_1a4517f33e59b3ff5ce57875dc6ac705e8"></span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eval</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly4evalE4Real" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly6eval_DE4Real">
+<span id="_CPPv3NK5Utils4Poly6eval_DE4Real"></span><span id="_CPPv2NK5Utils4Poly6eval_DE4Real"></span><span id="Utils::Poly::eval_D__RealC"></span><span class="target" id="a00107_1a449b182eb072dc993d717c324ee0929a"></span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eval_D</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly6eval_DE4Real" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly4evalE4RealR4RealR4Real">
+<span id="_CPPv3NK5Utils4Poly4evalE4RealR4RealR4Real"></span><span id="_CPPv2NK5Utils4Poly4evalE4RealR4RealR4Real"></span><span id="Utils::Poly::eval__Real.RealR.RealRC"></span><span class="target" id="a00107_1af187497dbbe6650fd24d6d69ae542193"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eval</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span>, <a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Dp</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly4evalE4RealR4RealR4Real" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly13leading_coeffEv">
+<span id="_CPPv3NK5Utils4Poly13leading_coeffEv"></span><span id="_CPPv2NK5Utils4Poly13leading_coeffEv"></span><span id="Utils::Poly::leading_coeffC"></span><span class="target" id="a00107_1a92c88a9e1ee6c6ec426b54c234c2d400"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">leading_coeff</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly13leading_coeffEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly10derivativeER6Poly_t">
+<span id="_CPPv3NK5Utils4Poly10derivativeER6Poly_t"></span><span id="_CPPv2NK5Utils4Poly10derivativeER6Poly_t"></span><span id="Utils::Poly::derivative__Poly_tRC"></span><span class="target" id="a00107_1a5d92262b56a6a00ec5987725d9e21be3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">derivative</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly10derivativeER6Poly_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly8integralER6Poly_t">
+<span id="_CPPv3NK5Utils4Poly8integralER6Poly_t"></span><span id="_CPPv2NK5Utils4Poly8integralER6Poly_t"></span><span id="Utils::Poly::integral__Poly_tRC"></span><span class="target" id="a00107_1aeb17db90a1a0651bbc7ead90c72b01df"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">integral</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly8integralER6Poly_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly9normalizeEv">
+<span id="_CPPv3N5Utils4Poly9normalizeEv"></span><span id="_CPPv2N5Utils4Poly9normalizeEv"></span><span id="Utils::Poly::normalize__void"></span><span class="target" id="a00107_1a783c241a989da2b4eb0d5406c713422a"></span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">normalize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly9normalizeEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Scale polynomial <span class="math notranslate nohighlight">\( p(x) = \sum_{i=0}^n a_i x^i \)</span> in such a way <span class="math notranslate nohighlight">\( \max_{i=0}^n (|a_i|/S) = 1 \)</span>. Return the scaling value <span class="math notranslate nohighlight">\( S \)</span> </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly5purgeE4Real">
+<span id="_CPPv3N5Utils4Poly5purgeE4Real"></span><span id="_CPPv2N5Utils4Poly5purgeE4Real"></span><span id="Utils::Poly::purge__Real"></span><span class="target" id="a00107_1ab4173ce23169e05421f004437832e351"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">purge</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">epsi</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly5purgeE4Real" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>On the polynomial <span class="math notranslate nohighlight">\( p(x) = \sum_{i=0}^n a_i x^i \)</span> purge (set to 0) elements such that <span class="math notranslate nohighlight">\( |a_i| \leq \epsilon \)</span>. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly13adjust_degreeEv">
+<span id="_CPPv3N5Utils4Poly13adjust_degreeEv"></span><span id="_CPPv2N5Utils4Poly13adjust_degreeEv"></span><span id="Utils::Poly::adjust_degree__void"></span><span class="target" id="a00107_1a48e9b69c012765f11e1516652609c449"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">adjust_degree</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly13adjust_degreeEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Change the polynomial order of the polynomial <span class="math notranslate nohighlight">\( p(x) = \sum_{i=0}^n a_i x^i \)</span> in such a way that <span class="math notranslate nohighlight">\( a_n \neq 0 \)</span>. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5Utils4Poly15sign_variationsEv">
+<span id="_CPPv3NK5Utils4Poly15sign_variationsEv"></span><span id="_CPPv2NK5Utils4Poly15sign_variationsEv"></span><span id="Utils::Poly::sign_variations__voidC"></span><span class="target" id="a00107_1af375e1728107da28f110a14a5ce6d4af"></span><a class="reference internal" href="#_CPPv4N5Utils4Poly7IntegerE" title="Utils::Poly::Integer"><span class="n"><span class="pre">Integer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sign_variations</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5Utils4Poly15sign_variationsEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Count the sign variations of the polynomial <span class="math notranslate nohighlight">\( p(x) = \sum_{i=0}^n a_i x^i \)</span> i.e. the number of sign change of the sequance <span class="math notranslate nohighlight">\( [a_0,a_1,\ldots,a_n] \)</span>. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4Poly10make_monicEv">
+<span id="_CPPv3N5Utils4Poly10make_monicEv"></span><span id="_CPPv2N5Utils4Poly10make_monicEv"></span><span id="Utils::Poly::make_monic__void"></span><span class="target" id="a00107_1a48f4be02ac9e1b26e0029e77229b2c02"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">make_monic</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4Poly10make_monicEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>Change the polynomial in such a way <span class="math notranslate nohighlight">\( p(x) = x^n + \sum_{i=0}^{n-1} a_i x^i \)</span>. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4PolyaSERK6Poly_t">
+<span id="_CPPv3N5Utils4PolyaSERK6Poly_t"></span><span id="_CPPv2N5Utils4PolyaSERK6Poly_t"></span><span id="Utils::Poly::assign-operator__Poly_tCR"></span><span class="target" id="a00107_1af76ba1f282b97af51ec889f67e716eee"></span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4PolyaSERK6Poly_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4PolymiEv">
+<span id="_CPPv3N5Utils4PolymiEv"></span><span id="_CPPv2N5Utils4PolymiEv"></span><span id="Utils::Poly::sub-operator"></span><span class="target" id="a00107_1af055c6b70638d171bc4e3d9d95f60114"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4PolymiEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4PolypLERK6Poly_t">
+<span id="_CPPv3N5Utils4PolypLERK6Poly_t"></span><span id="_CPPv2N5Utils4PolypLERK6Poly_t"></span><span id="Utils::Poly::add-assign-operator__Poly_tCR"></span><span class="target" id="a00107_1ad4d43f5a678fb848b377e10089888e82"></span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4PolypLERK6Poly_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4PolymIERK6Poly_t">
+<span id="_CPPv3N5Utils4PolymIERK6Poly_t"></span><span id="_CPPv2N5Utils4PolymIERK6Poly_t"></span><span id="Utils::Poly::sub-assign-operator__Poly_tCR"></span><span class="target" id="a00107_1aa4243e9f9af89240e55da644ed324dbd"></span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4PolymIERK6Poly_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4PolymLERK6Poly_t">
+<span id="_CPPv3N5Utils4PolymLERK6Poly_t"></span><span id="_CPPv2N5Utils4PolymLERK6Poly_t"></span><span id="Utils::Poly::mul-assign-operator__Poly_tCR"></span><span class="target" id="a00107_1a8501b00419c090d88ec939e78e408910"></span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4PolymLERK6Poly_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4PolypLE4Real">
+<span id="_CPPv3N5Utils4PolypLE4Real"></span><span id="_CPPv2N5Utils4PolypLE4Real"></span><span id="Utils::Poly::add-assign-operator__Real"></span><span class="target" id="a00107_1aa4cce6b5a1fd907ba8d1c34e441b212c"></span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4PolypLE4Real" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4PolymIE4Real">
+<span id="_CPPv3N5Utils4PolymIE4Real"></span><span id="_CPPv2N5Utils4PolymIE4Real"></span><span id="Utils::Poly::sub-assign-operator__Real"></span><span class="target" id="a00107_1a96adfb056587c967400bda43cd3cc550"></span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4PolymIE4Real" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5Utils4PolymLE4Real">
+<span id="_CPPv3N5Utils4PolymLE4Real"></span><span id="_CPPv2N5Utils4PolymLE4Real"></span><span id="Utils::Poly::mul-assign-operator__Real"></span><span class="target" id="a00107_1a84c461d94a44cf9308d9d07a6ee005a9"></span><a class="reference internal" href="#_CPPv4N5Utils4Poly6Poly_tE" title="Utils::Poly::Poly_t"><span class="n"><span class="pre">Poly_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN5Utils4PolyE" title="Utils::Poly::Real"><span class="n"><span class="pre">Real</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5Utils4PolymLE4Real" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+</dd>
+</dl>
+
+</section>
+</section>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="../index.html" title="index">
+          <img class="logo" src="../_static/dc48Ky8di.png" alt="Logo"/>
+        </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<div class="sphinx-toc sphinxglobaltoc">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rang.html">rang - Colors for your Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zstr.html">Zstr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="root.html">C++ API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00131.html" title="Template Class Quaternion"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00127.html" title="Template Class mex_class_handle"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">Utils</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" >C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template Class Poly</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Enrico Bertolazzi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

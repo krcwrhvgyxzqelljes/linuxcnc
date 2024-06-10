@@ -1,0 +1,271 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class TaskQueue &#8212; Utils v1.4
+</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/cloud.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class ThreadPool" href="class_a00183.html" />
+    <link rel="prev" title="Class TaskManager" href="class_a00179.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00183.html" title="Class ThreadPool"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00179.html" title="Class TaskManager"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">Utils</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" accesskey="U">C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Class TaskQueue</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-taskqueue">
+<span id="exhale-class-a00175"></span><h1>Class TaskQueue<a class="headerlink" href="#class-taskqueue" title="Permalink to this headline">¶</a>
+</h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_Utils_quickpool.hxx.html#file-utils-quickpool-hxx"><span class="std std-ref">File quickpool.hxx</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a>
+</h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool5sched9TaskQueueE">
+<span id="_CPPv3N9quickpool5sched9TaskQueueE"></span><span id="_CPPv2N9quickpool5sched9TaskQueueE"></span><span id="quickpool::sched::TaskQueue"></span><span class="target" id="a00175"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">quickpool</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">sched</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">TaskQueue</span></span></span><a class="headerlink" href="#_CPPv4N9quickpool5sched9TaskQueueE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>A multi-producer, multi-consumer queue; pops are lock free. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool5sched9TaskQueue9TaskQueueE6size_t">
+<span id="_CPPv3N9quickpool5sched9TaskQueue9TaskQueueE6size_t"></span><span id="_CPPv2N9quickpool5sched9TaskQueue9TaskQueueE6size_t"></span><span id="quickpool::sched::TaskQueue::TaskQueue__s"></span><span class="target" id="a00175_1a81614e7022313a985d53ebb93626ffc2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TaskQueue</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">capacity</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">256</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool5sched9TaskQueue9TaskQueueE6size_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>capacity</strong> – must be a power of two. </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool5sched9TaskQueueD0Ev">
+<span id="_CPPv3N9quickpool5sched9TaskQueueD0Ev"></span><span id="_CPPv2N9quickpool5sched9TaskQueueD0Ev"></span><span id="quickpool::sched::TaskQueue::~TaskQueue"></span><span class="target" id="a00175_1a1f16c9f8d92ccc3febc1ccdec7de75dc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~TaskQueue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N9quickpool5sched9TaskQueueD0Ev" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool5sched9TaskQueue9TaskQueueERK9TaskQueue">
+<span id="_CPPv3N9quickpool5sched9TaskQueue9TaskQueueERK9TaskQueue"></span><span id="_CPPv2N9quickpool5sched9TaskQueue9TaskQueueERK9TaskQueue"></span><span id="quickpool::sched::TaskQueue::TaskQueue__TaskQueueCR"></span><span class="target" id="a00175_1ab8b2e743569256c464451176ff04fa02"></span><span class="sig-name descname"><span class="n"><span class="pre">TaskQueue</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9quickpool5sched9TaskQueue9TaskQueueERK9TaskQueue" title="quickpool::sched::TaskQueue::TaskQueue"><span class="n"><span class="pre">TaskQueue</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N9quickpool5sched9TaskQueue9TaskQueueERK9TaskQueue" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool5sched9TaskQueueaSERK9TaskQueue">
+<span id="_CPPv3N9quickpool5sched9TaskQueueaSERK9TaskQueue"></span><span id="_CPPv2N9quickpool5sched9TaskQueueaSERK9TaskQueue"></span><span id="quickpool::sched::TaskQueue::assign-operator__TaskQueueCR"></span><span class="target" id="a00175_1a0edf3dc8dc4cd8c37463ba98befd2703"></span><a class="reference internal" href="#_CPPv4N9quickpool5sched9TaskQueueE" title="quickpool::sched::TaskQueue"><span class="n"><span class="pre">TaskQueue</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9quickpool5sched9TaskQueueE" title="quickpool::sched::TaskQueue"><span class="n"><span class="pre">TaskQueue</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N9quickpool5sched9TaskQueueaSERK9TaskQueue" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9quickpool5sched9TaskQueue5emptyEv">
+<span id="_CPPv3NK9quickpool5sched9TaskQueue5emptyEv"></span><span id="_CPPv2NK9quickpool5sched9TaskQueue5emptyEv"></span><span id="quickpool::sched::TaskQueue::emptyC"></span><span class="target" id="a00175_1aa000c0ccde76348dd6c6945c8734efe1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">empty</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9quickpool5sched9TaskQueue5emptyEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>checks if queue is empty. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool5sched9TaskQueue4pushERR4Task">
+<span id="_CPPv3N9quickpool5sched9TaskQueue4pushERR4Task"></span><span id="_CPPv2N9quickpool5sched9TaskQueue4pushERR4Task"></span><span id="quickpool::sched::TaskQueue::push__TaskRR"></span><span class="target" id="a00175_1a1c0e9c987ef1d2f5a4f81780e857d0a2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Task</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">task</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool5sched9TaskQueue4pushERR4Task" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>pushes a task to the bottom of the queue; returns false if queue is currently locked; enlarges the queue if full. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool5sched9TaskQueue7try_popER4Task">
+<span id="_CPPv3N9quickpool5sched9TaskQueue7try_popER4Task"></span><span id="_CPPv2N9quickpool5sched9TaskQueue7try_popER4Task"></span><span id="quickpool::sched::TaskQueue::try_pop__TaskR"></span><span class="target" id="a00175_1a2bff422c12edad980e9124449363f1d4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">try_pop</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Task</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">task</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool5sched9TaskQueue7try_popER4Task" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>pops a task from the top of the queue; returns false if lost race. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool5sched9TaskQueue4waitEv">
+<span id="_CPPv3N9quickpool5sched9TaskQueue4waitEv"></span><span id="_CPPv2N9quickpool5sched9TaskQueue4waitEv"></span><span id="quickpool::sched::TaskQueue::wait"></span><span class="target" id="a00175_1a7a0d03c055e406df98a1a6330513dcec"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wait</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool5sched9TaskQueue4waitEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>waits for tasks or stop signal. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool5sched9TaskQueue4stopEv">
+<span id="_CPPv3N9quickpool5sched9TaskQueue4stopEv"></span><span id="_CPPv2N9quickpool5sched9TaskQueue4stopEv"></span><span id="quickpool::sched::TaskQueue::stop"></span><span class="target" id="a00175_1ab460af5ca2d6e3db1ab710f71b00a180"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool5sched9TaskQueue4stopEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>stops the queue and wakes up all workers waiting for jobs. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool5sched9TaskQueue7wake_upEv">
+<span id="_CPPv3N9quickpool5sched9TaskQueue7wake_upEv"></span><span id="_CPPv2N9quickpool5sched9TaskQueue7wake_upEv"></span><span id="quickpool::sched::TaskQueue::wake_up"></span><span class="target" id="a00175_1a61811e446b6fd3dcc92a8a40f1ed02b2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wake_up</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool5sched9TaskQueue7wake_upEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+</div>
+</dd>
+</dl>
+
+</section>
+</section>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="../index.html" title="index">
+          <img class="logo" src="../_static/dc48Ky8di.png" alt="Logo"/>
+        </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<div class="sphinx-toc sphinxglobaltoc">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rang.html">rang - Colors for your Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zstr.html">Zstr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="root.html">C++ API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00183.html" title="Class ThreadPool"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00179.html" title="Class TaskManager"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">Utils</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" >C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Class TaskQueue</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Enrico Bertolazzi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

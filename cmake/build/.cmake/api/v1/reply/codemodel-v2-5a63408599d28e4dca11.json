@@ -1,0 +1,172 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "components/tpmod_scurve_grotius",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-components.tpmod_scurve_grotius-10ffad092906b01b4319.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "components/tpmod_scurve_grotius",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "components/tpmod_scurve_c++",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-components.tpmod_scurve_c++-4f238e5052dff88923fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "components/tpmod_scurve_c++",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "projects/qt_lcnc_controller",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-projects.qt_lcnc_controller-7847180dd6fe890002cd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "projects/qt_lcnc_controller",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "- LINUX_CNC -"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "tpmod_scurve_grotius",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "tpmod_scurve_cplusplus",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "qt_lcnc_controller",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "qt_lcnc_controller::@981d1977e5c126f97906",
+					"jsonFile" : "target-qt_lcnc_controller-2a67f9ac8a0543f63e89.json",
+					"name" : "qt_lcnc_controller",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "qt_lcnc_controller_autogen::@981d1977e5c126f97906",
+					"jsonFile" : "target-qt_lcnc_controller_autogen-172e45159ab93d4c66cc.json",
+					"name" : "qt_lcnc_controller_autogen",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "tpmod_scurve_cplusplus::@4c00b8238c6866869ebd",
+					"jsonFile" : "target-tpmod_scurve_cplusplus-fe635cace3787088436f.json",
+					"name" : "tpmod_scurve_cplusplus",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tpmod_scurve_grotius::@9f976c48a704071ba798",
+					"jsonFile" : "target-tpmod_scurve_grotius-5137ff9ccb63edac9b97.json",
+					"name" : "tpmod_scurve_grotius",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/user/linuxcnc/cmake/build",
+		"source" : "/home/user/linuxcnc/cmake"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

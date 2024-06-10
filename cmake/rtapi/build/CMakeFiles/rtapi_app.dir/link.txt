@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/rtapi_app.dir/home/user/linuxcnc/src/rtapi/uspace_rtapi_string.c.o -o rtapi_app  -pthread -lrt -ludev -ldl 

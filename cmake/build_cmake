@@ -1,0 +1,54 @@
+#!/bin/sh
+
+echo "removing excisting rtapi & module helper."
+echo "bin folder:"
+echo $PWD
+echo "\n"
+cd ../bin
+rm -f rtapi_app
+rm -f linuxcnc_module_helper
+cd ..
+
+echo "compiling & installing linuxcnc with cmake."
+echo "cmake folder:"
+echo $PWD
+echo "\n"
+cd cmake
+mkdir -p build
+cd build
+cmake -DCORE=ON ..
+make
+# sudo make install
+cd ..
+cd ..
+
+echo $PWD
+
+cd cmake
+mkdir -p build
+cd build
+cmake -DCOMPONENTS=ON ..
+make
+make install
+cd ..
+cd ..
+
+echo $PWD
+
+cd src
+echo "set rtapi & module helper group rights."
+echo "src folder:"
+echo $PWD
+echo "\n"
+	
+sudo make setuid	
+cd ..
+cd scripts
+
+echo "set linuxcnc file path & start linuxcnc"
+echo "script folder:"
+echo $PWD
+echo "\n"
+
+./rip-environment linuxcnc 
+

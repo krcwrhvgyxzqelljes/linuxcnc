@@ -1,0 +1,115 @@
+require 'rake/clean'
+
+require_relative "../cmake_utils/Rakefile_common.rb"
+
+task :default => :install
+
+task :install do
+  case OS
+  when :mac
+    Rake::Task[:install_osx].invoke()
+  when :linux
+    Rake::Task[:install_linux].invoke()
+  when :win
+    Rake::Task[:install_win].invoke()
+  when :mingw
+    Rake::Task[:install_mingw].invoke()
+  else
+    raise "Unsupported platform #{OS}"
+  end
+end
+
+desc "install 3rd parties for OSX"
+task :install_osx do
+  FileUtils.cd "Eigen"
+  sh "rake install_osx"
+  FileUtils.cd "../fmt"
+  sh "rake install_osx"
+  FileUtils.cd "../zstr"
+  sh "rake install_osx"
+  FileUtils.cd ".."
+end
+
+desc "install 3rd parties for LINUX"
+task :install_linux do
+  FileUtils.cd "Eigen"
+  sh "rake install_linux"
+  FileUtils.cd "../fmt"
+  sh "rake install_linux"
+  FileUtils.cd "../zstr"
+  sh "rake install_linux"
+  FileUtils.cd ".."
+end
+
+desc "install 3rd parties for MINGW"
+task :install_mingw do
+  FileUtils.cd "Eigen"
+  sh "rake install_mingw"
+  FileUtils.cd "../fmt"
+  sh "rake install_mingw"
+  FileUtils.cd "../zstr"
+  sh "rake install_mingw"
+  FileUtils.cd ".."
+  #FileUtils.mkdir_p "../lib3rd/include"
+  #FileUtils.mkdir_p "../lib3rd/lib"
+  #FileUtils.mkdir_p "../lib3rd/dll"
+  ## copy zlib into zstr folder
+  #base = "zlib-ng/mingw";
+  #FileUtils.cp "#{base}/include/zlib.h",      "../src/Utils/zstr/zlib.h"
+  #FileUtils.cp "#{base}/include/zconf.h",     "../src/Utils/zstr/zconf.h"
+  #FileUtils.cp "#{base}/bin/libzlib1.dll",    "../lib3rd/dll"
+  #FileUtils.cp "#{base}/lib/libz.a",          "../lib3rd/lib"
+  #FileUtils.cp "#{base}/lib/libzlib.dll.a",   "../lib3rd/lib"
+end
+
+desc "install 3rd parties for WINDOWS"
+task :install_win do
+  FileUtils.cd "Eigen"
+  sh "rake install_win"
+  FileUtils.cd "../fmt"
+  sh "rake install_win"
+  FileUtils.cd "../zstr"
+  sh "rake install_win"
+  FileUtils.cd ".."
+  FileUtils.mkdir_p "../lib3rd/include"
+  FileUtils.mkdir_p "../lib3rd/lib"
+  FileUtils.mkdir_p "../lib3rd/dll"
+  # copy zlib into zstr folder
+  base = "zlib-ng/win";
+  FileUtils.cp "#{base}/include/zlib.h",      "../src/Utils/zstr/zlib.h"
+  FileUtils.cp "#{base}/include/zconf.h",     "../src/Utils/zstr/zconf.h"
+  FileUtils.cp "#{base}/bin/zlib1.dll",       "../lib3rd/dll"
+  FileUtils.cp "#{base}/bin/zlibd1.dll",      "../lib3rd/dll"
+  FileUtils.cp "#{base}/lib/zlib.lib",        "../lib3rd/lib"
+  FileUtils.cp "#{base}/lib/zlibd.lib",       "../lib3rd/lib"
+  FileUtils.cp "#{base}/lib/zlibstatic.lib",  "../lib3rd/lib"
+  FileUtils.cp "#{base}/lib/zlibstaticd.lib", "../lib3rd/lib"
+end
+
+desc "clean 3rd parties for OSX"
+task :clean_osx do
+  FileUtils.cd "Eigen"
+  sh "rake clean_osx"
+  FileUtils.cd ".."
+end
+
+desc "clean 3rd parties for LINUX"
+task :clean_linux do
+  FileUtils.cd "Eigen"
+  sh "rake clean_linux"
+  FileUtils.cd ".."
+end
+
+desc "clean 3rd parties for MINGW"
+task :clean_mingw do
+  FileUtils.cd "Eigen"
+  sh "rake clean_mingw"
+  FileUtils.cd ".."
+end
+
+desc "clean 3rd parties for WINDOWS"
+task :clean_win do
+  FileUtils.cd "Eigen"
+  sh "rake clean_win"
+  FileUtils.cd ".."
+end

@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../../vendor/icons/opinion-no.png</file>
+        <file>../../vendor/icons/opinion-okay.png</file>
+        <file>../../vendor/icons/view-back.svg</file>
+        <file>../../vendor/icons/view-bottom.svg</file>
+        <file>../../vendor/icons/view-front.svg</file>
+        <file>../../vendor/icons/view-iso.svg</file>
+        <file>../../vendor/icons/view-left.svg</file>
+        <file>../../vendor/icons/view-right.svg</file>
+        <file>../../vendor/icons/view-top.svg</file>
+        <file>../../vendor/icons/zoom_extend.svg</file>
+        <file>../../vendor/icons/zoom_min.svg</file>
+        <file>../../vendor/icons/zoom_plus.svg</file>
+        <file>../../vendor/icons/zoom-in.svg</file>
+        <file>../../vendor/icons/zoom-out.svg</file>
+    </qresource>
+</RCC>

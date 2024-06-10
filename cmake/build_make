@@ -1,0 +1,21 @@
+#!/bin/sh
+echo "current folder:"
+echo $PWD
+echo "\n"
+
+echo "run check and set scripts. \n"
+cd ..
+cd src
+./autogen.sh
+./configure --enable-non-distributable=yes --with-realtime=uspace
+	# Use lcnc's original make process for now. The problem is there are .comp files
+	# that on some pc's will not be installed --install using halcompile. Halcompile fails to find a file.
+	# To resolve installion problems for now we use the original compilation first, then later on
+	# we overwrite it with the cmake build system.
+	# Another problem is that halcompile --preprocess .comp to .c files don't always work correctly.
+make -j2
+sudo make setuid
+cd ..
+
+
+

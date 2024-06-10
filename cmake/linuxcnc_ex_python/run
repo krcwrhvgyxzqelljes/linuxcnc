@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd ..
+cd ..
+cd scripts
+. ./rip-environment
+cd .. 
+
+cd cmake/linuxcnc_ex_python
+
+# Start halshow. This will also setup the nml server trough the linuxcnc_test python script.
+./linuxcnc_test settings.ini
+

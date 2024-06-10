@@ -1,0 +1,7 @@
+/home/user/linuxcnc/cmake/rtapi/build/CMakeFiles/rtapi_app.dir
+/home/user/linuxcnc/cmake/rtapi/build/CMakeFiles/edit_cache.dir
+/home/user/linuxcnc/cmake/rtapi/build/CMakeFiles/rebuild_cache.dir
+/home/user/linuxcnc/cmake/rtapi/build/CMakeFiles/list_install_components.dir
+/home/user/linuxcnc/cmake/rtapi/build/CMakeFiles/install.dir
+/home/user/linuxcnc/cmake/rtapi/build/CMakeFiles/install/local.dir
+/home/user/linuxcnc/cmake/rtapi/build/CMakeFiles/install/strip.dir

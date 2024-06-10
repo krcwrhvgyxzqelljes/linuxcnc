@@ -1,0 +1,54 @@
+#!/usr/bin/bash
+cd ../../../
+
+#!/bin/sh
+echo "current folder:"
+echo $PWD
+echo "\n"
+
+echo "removing rtapi_app & linuxcnc_module_helper to overwrite. \n"
+cd bin
+rm -f rtapi_app
+rm -f linuxcnc_module_helper
+cd ..
+
+echo "Building linuxcnc with cmake. \n"
+cd cmake
+mkdir -p build
+cd build
+cmake -DBUILD_USPACE=ON ..
+make
+make install
+cd ..
+cd ..
+
+echo "current folder:"
+echo $PWD
+echo "\n"
+	
+	# Recreate the Sudo Make Setuid command (needed for running real machines)
+	# This version is from : https://github.com/grotius-cnc/hal-core/blob/main/make
+echo "Running equivalent of Sudo Make Setuid. \n"
+sudo chown 777 -R bin/rtapi_app
+sudo chown 777 -R bin/linuxcnc_module_helper
+sudo chmod 777 bin/rtapi_app
+sudo chmod 777 bin/linuxcnc_module_helper
+
+echo "Start component. \n"
+
+cd scripts 
+. ./rip-environment
+./halrun -U
+
+cd ..
+cd bin
+./halcmd stop
+./halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
+./halcmd loadrt cyberdyne
+./halcmd addf the_function servo-thread
+./halcmd start
+./halcmd show
+
+halscope &
+halshow 
+

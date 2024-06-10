@@ -1,0 +1,369 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class ThreadPool &#8212; Utils v1.4
+</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/cloud.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class Barrier" href="class_a00219.html" />
+    <link rel="prev" title="Class TaskQueue" href="class_a00175.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             accesskey="C">toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00219.html" title="Class Barrier"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00175.html" title="Class TaskQueue"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">Utils</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" accesskey="U">C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Class ThreadPool</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-threadpool">
+<span id="exhale-class-a00183"></span><h1>Class ThreadPool<a class="headerlink" href="#class-threadpool" title="Permalink to this headline">¶</a>
+</h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_Utils_quickpool.hxx.html#file-utils-quickpool-hxx"><span class="std std-ref">File quickpool.hxx</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a>
+</h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPoolE">
+<span id="_CPPv3N9quickpool10ThreadPoolE"></span><span id="_CPPv2N9quickpool10ThreadPoolE"></span><span id="quickpool::ThreadPool"></span><span class="target" id="a00183"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">quickpool</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">ThreadPool</span></span></span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPoolE" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>A work stealing thread pool. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPool10ThreadPoolE6size_t">
+<span id="_CPPv3N9quickpool10ThreadPool10ThreadPoolE6size_t"></span><span id="_CPPv2N9quickpool10ThreadPool10ThreadPoolE6size_t"></span><span id="quickpool::ThreadPool::ThreadPool__s"></span><span class="target" id="a00183_1ace792be7b69bb4e18c1770d898e84303"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ThreadPool</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">threads</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">thread</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">hardware_concurrency</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPool10ThreadPoolE6size_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>constructs a thread pool. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>threads</strong> – number of worker threads to create; defaults to number of available (virtual) hardware cores. </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPoolD0Ev">
+<span id="_CPPv3N9quickpool10ThreadPoolD0Ev"></span><span id="_CPPv2N9quickpool10ThreadPoolD0Ev"></span><span id="quickpool::ThreadPool::~ThreadPool"></span><span class="target" id="a00183_1ad9a473379c68e120e29530b02ed4f2fe"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ThreadPool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPoolD0Ev" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPool10ThreadPoolERR10ThreadPool">
+<span id="_CPPv3N9quickpool10ThreadPool10ThreadPoolERR10ThreadPool"></span><span id="_CPPv2N9quickpool10ThreadPool10ThreadPoolERR10ThreadPool"></span><span id="quickpool::ThreadPool::ThreadPool__ThreadPoolRR"></span><span class="target" id="a00183_1a81374a2e9bd678f174d6e8cf6b3280c0"></span><span class="sig-name descname"><span class="n"><span class="pre">ThreadPool</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9quickpool10ThreadPool10ThreadPoolERR10ThreadPool" title="quickpool::ThreadPool::ThreadPool"><span class="n"><span class="pre">ThreadPool</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPool10ThreadPoolERR10ThreadPool" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPool10ThreadPoolERK10ThreadPool">
+<span id="_CPPv3N9quickpool10ThreadPool10ThreadPoolERK10ThreadPool"></span><span id="_CPPv2N9quickpool10ThreadPool10ThreadPoolERK10ThreadPool"></span><span id="quickpool::ThreadPool::ThreadPool__ThreadPoolCR"></span><span class="target" id="a00183_1a97e0fa319f7d41125c8d7487884ae649"></span><span class="sig-name descname"><span class="n"><span class="pre">ThreadPool</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9quickpool10ThreadPool10ThreadPoolERK10ThreadPool" title="quickpool::ThreadPool::ThreadPool"><span class="n"><span class="pre">ThreadPool</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPool10ThreadPoolERK10ThreadPool" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPoolaSERK10ThreadPool">
+<span id="_CPPv3N9quickpool10ThreadPoolaSERK10ThreadPool"></span><span id="_CPPv2N9quickpool10ThreadPoolaSERK10ThreadPool"></span><span id="quickpool::ThreadPool::assign-operator__ThreadPoolCR"></span><span class="target" id="a00183_1a20ad3cbded84917fd6fdd0bb94105305"></span><a class="reference internal" href="#_CPPv4N9quickpool10ThreadPoolE" title="quickpool::ThreadPool"><span class="n"><span class="pre">ThreadPool</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9quickpool10ThreadPoolE" title="quickpool::ThreadPool"><span class="n"><span class="pre">ThreadPool</span></span></a><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPoolaSERK10ThreadPool" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPoolaSERR10ThreadPool">
+<span id="_CPPv3N9quickpool10ThreadPoolaSERR10ThreadPool"></span><span id="_CPPv2N9quickpool10ThreadPoolaSERR10ThreadPool"></span><span id="quickpool::ThreadPool::assign-operator__ThreadPoolRR"></span><span class="target" id="a00183_1ade77dd49ae6b4fa8c4a955cc183ff21c"></span><a class="reference internal" href="#_CPPv4N9quickpool10ThreadPoolE" title="quickpool::ThreadPool"><span class="n"><span class="pre">ThreadPool</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9quickpool10ThreadPoolE" title="quickpool::ThreadPool"><span class="n"><span class="pre">ThreadPool</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPoolaSERR10ThreadPool" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd></dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPool18set_active_threadsE6size_t">
+<span id="_CPPv3N9quickpool10ThreadPool18set_active_threadsE6size_t"></span><span id="_CPPv2N9quickpool10ThreadPool18set_active_threadsE6size_t"></span><span id="quickpool::ThreadPool::set_active_threads__s"></span><span class="target" id="a00183_1aaed4dbfa25b36013a801d69709c0fb0d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_active_threads</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">threads</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPool18set_active_threadsE6size_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>sets the number of active worker threads in the thread pool. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>threads</strong> – the number of worker threads. Has no effect when not called from owner thread. </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9quickpool10ThreadPool18get_active_threadsEv">
+<span id="_CPPv3NK9quickpool10ThreadPool18get_active_threadsEv"></span><span id="_CPPv2NK9quickpool10ThreadPool18get_active_threadsEv"></span><span id="quickpool::ThreadPool::get_active_threadsC"></span><span class="target" id="a00183_1a9fa5b73a745b2382fecfadd2afb34735"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_active_threads</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9quickpool10ThreadPool18get_active_threadsEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>retrieves the number of active worker threads in the thread pool. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0DpEN9quickpool10ThreadPool4pushEvRR8FunctionDpRR4Args">
+<span id="_CPPv3I0DpEN9quickpool10ThreadPool4pushERR8FunctionDpRR4Args"></span><span id="_CPPv2I0DpEN9quickpool10ThreadPool4pushERR8FunctionDpRR4Args"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Function</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">&gt;</span></span><br><span class="target" id="a00183_1a3a79d3a078643e271b238ee1be47986e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0DpEN9quickpool10ThreadPool4pushEvRR8FunctionDpRR4Args" title="quickpool::ThreadPool::push::Function"><span class="n"><span class="pre">Function</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">f</span></span>, <a class="reference internal" href="#_CPPv4I0DpEN9quickpool10ThreadPool4pushEvRR8FunctionDpRR4Args" title="quickpool::ThreadPool::push::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0DpEN9quickpool10ThreadPool4pushEvRR8FunctionDpRR4Args" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>pushes a job to the thread pool. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>f</strong> – a function. </p></li>
+<li><p><strong>args</strong> – (optional) arguments passed to <code class="docutils literal notranslate"><span class="pre">f</span></code>. </p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN9quickpool10ThreadPool12parallel_forEvii13UnaryFunction">
+<span id="_CPPv3I0EN9quickpool10ThreadPool12parallel_forEii13UnaryFunction"></span><span id="_CPPv2I0EN9quickpool10ThreadPool12parallel_forEii13UnaryFunction"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UnaryFunction</span></span></span><span class="p"><span class="pre">&gt;</span></span><br><span class="target" id="a00183_1acb9d7efe2053b8d961ed98bcc2cf2618"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parallel_for</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">begin</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">end</span></span>, <a class="reference internal" href="#_CPPv4I0EN9quickpool10ThreadPool12parallel_forEvii13UnaryFunction" title="quickpool::ThreadPool::parallel_for::UnaryFunction"><span class="n"><span class="pre">UnaryFunction</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN9quickpool10ThreadPool12parallel_forEvii13UnaryFunction" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>computes an index-based parallel for loop. </p>
+<p>Waits until all tasks have finished, unless called from a thread that didn’t create the pool. If this is taken into account, parallel loops can be nested.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>begin</strong> – first index of the loop. </p></li>
+<li><p><strong>end</strong> – the loop runs in the range <code class="docutils literal notranslate"><span class="pre">[begin,</span> <span class="pre">end)</span></code>. </p></li>
+<li><p><strong>f</strong> – a function taking <code class="docutils literal notranslate"><span class="pre">int</span></code> argument (the ‘loop body’). </p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN9quickpool10ThreadPool17parallel_for_eachEvR5Items13UnaryFunction">
+<span id="_CPPv3I00EN9quickpool10ThreadPool17parallel_for_eachER5Items13UnaryFunction"></span><span id="_CPPv2I00EN9quickpool10ThreadPool17parallel_for_eachER5Items13UnaryFunction"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Items</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UnaryFunction</span></span></span><span class="p"><span class="pre">&gt;</span></span><br><span class="target" id="a00183_1ad08862259cb77c023523789c0632a6f7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parallel_for_each</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00EN9quickpool10ThreadPool17parallel_for_eachEvR5Items13UnaryFunction" title="quickpool::ThreadPool::parallel_for_each::Items"><span class="n"><span class="pre">Items</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">items</span></span>, <a class="reference internal" href="#_CPPv4I00EN9quickpool10ThreadPool17parallel_for_eachEvR5Items13UnaryFunction" title="quickpool::ThreadPool::parallel_for_each::UnaryFunction"><span class="n"><span class="pre">UnaryFunction</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00EN9quickpool10ThreadPool17parallel_for_eachEvR5Items13UnaryFunction" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>computes a iterator-based parallel for loop. </p>
+<p>Waits until all tasks have finished, unless called from a thread that didn’t create the pool. If this is taken into account, parallel loops can be nested.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<ul class="simple">
+<li><p><strong>items</strong> – an object allowing for <code class="docutils literal notranslate"><span class="pre">std::begin()</span></code> and <code class="docutils literal notranslate"><span class="pre">std::end()</span></code>. </p></li>
+<li><p><strong>f</strong> – function to be applied as <code class="docutils literal notranslate"><span class="pre">f(*it)</span></code> for the iterator in the range <code class="docutils literal notranslate"><span class="pre">[begin,</span> <span class="pre">end)</span></code> (the ‘loop body’). </p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPool4waitE6size_t">
+<span id="_CPPv3N9quickpool10ThreadPool4waitE6size_t"></span><span id="_CPPv2N9quickpool10ThreadPool4waitE6size_t"></span><span id="quickpool::ThreadPool::wait__s"></span><span class="target" id="a00183_1a118c926c7a49a5ac952291e207c4f4b1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wait</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">millis</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPool4waitE6size_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>waits for all jobs currently running on the thread pool. Has no effect when called from threads other than the one that created the pool. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd">
+<p><strong>millis</strong> – if &gt; 0: stops waiting after millis ms. </p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9quickpool10ThreadPool4doneEv">
+<span id="_CPPv3NK9quickpool10ThreadPool4doneEv"></span><span id="_CPPv2NK9quickpool10ThreadPool4doneEv"></span><span id="quickpool::ThreadPool::doneC"></span><span class="target" id="a00183_1ac0f882945e639b1092e543b11cf3abe8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">done</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9quickpool10ThreadPool4doneEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>checks whether all jobs are done. </p>
+</dd>
+</dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPool15global_instanceEv">
+<span id="_CPPv3N9quickpool10ThreadPool15global_instanceEv"></span><span id="_CPPv2N9quickpool10ThreadPool15global_instanceEv"></span><span id="quickpool::ThreadPool::global_instance"></span><span class="target" id="a00183_1aaedf538722fc3ddfd760be43331e23ca"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9quickpool10ThreadPoolE" title="quickpool::ThreadPool"><span class="n"><span class="pre">ThreadPool</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">global_instance</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPool15global_instanceEv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>returns a reference to the global thread pool instance. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPoolnwE6size_t">
+<span id="_CPPv3N9quickpool10ThreadPoolnwE6size_t"></span><span id="_CPPv2N9quickpool10ThreadPoolnwE6size_t"></span><span id="quickpool::ThreadPool::new-operator__s"></span><span class="target" id="a00183_1a2c706212c55a8365e9f98720962f68e5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="o"><span class="pre">new</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPoolnwE6size_t" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>allocator respecting memory alignment. </p>
+</dd>
+</dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9quickpool10ThreadPooldlEPv">
+<span id="_CPPv3N9quickpool10ThreadPooldlEPv"></span><span id="_CPPv2N9quickpool10ThreadPooldlEPv"></span><span id="quickpool::ThreadPool::delete-operator__voidP"></span><span class="target" id="a00183_1a6c1369433f01eb78516e809a98aa1fb6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="o"><span class="pre">delete</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9quickpool10ThreadPooldlEPv" title="Permalink to this definition">¶</a><br>
+</dt>
+<dd>
+<p>deallocator respecting memory alignment. </p>
+</dd>
+</dl>
+
+</div>
+</dd>
+</dl>
+
+</section>
+</section>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="../index.html" title="index">
+          <img class="logo" src="../_static/dc48Ky8di.png" alt="Logo"/>
+        </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<div class="sphinx-toc sphinxglobaltoc">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rang.html">rang - Colors for your Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zstr.html">Zstr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="root.html">C++ API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../index.html" title="Table Of Contents"
+             >toc</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00219.html" title="Class Barrier"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="class_a00175.html" title="Class TaskQueue"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">Utils</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="root.html" >C++ API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Class ThreadPool</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Enrico Bertolazzi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

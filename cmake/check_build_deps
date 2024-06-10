@@ -1,0 +1,13 @@
+#!/bin/sh
+
+sudo apt-get install dpkg-dev
+
+echo "Check what dependencies has to be installed. \n"
+cd ..
+cd debian
+./configure uspace
+cd ..
+dpkg-checkbuilddeps
+
+echo "Now run : $ sudo apt-get install ... to install your deps. \n"
+
