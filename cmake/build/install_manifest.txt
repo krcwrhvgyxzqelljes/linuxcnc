@@ -1,0 +1,2 @@
+/home/user/linuxcnc/cmake/build/components/tpmod_scurve_c++/../../../../rtlib/tpmod_scurve_cplusplus.so
+/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller/../../../../bin/qt_lcnc_controller

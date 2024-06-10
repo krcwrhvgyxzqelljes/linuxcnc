@@ -1,0 +1,10 @@
+~/linuxcnc/src/
+
+./autogen.sh
+./configure
+make
+sudo make setuid
+
+copy ~/linuxcnc/cmake/vendor/Clothoids/lib/dll to ~/linuxcnc/lib
+copy ~/linuxcnc/cmake/vendor/Clothoids/lib3rd/dll/libquarticRootsFlocke_linux.so to ~/linuxcnc/lib
+copy ~/linuxcnc/cmake/vendor/Clothoids/lib3rd/dll/libUtils_linux.so to ~/linuxcnc/lib

@@ -122,18 +122,6 @@ set_target_properties(posemath PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES ${SRC_DIR}/../../../include
 )
 
-add_library(clothoid SHARED IMPORTED) # or STATIC instead of SHARED
-set_target_properties(clothoid PROPERTIES
-    IMPORTED_LOCATION ${SRC_DIR}/../../../lib/libclothoid.so
-    INTERFACE_INCLUDE_DIRECTORIES ${SRC_DIR}/../../../include
-)
-
-add_library(scurvy SHARED IMPORTED) # or STATIC instead of SHARED
-set_target_properties(scurvy PROPERTIES
-    IMPORTED_LOCATION ${SRC_DIR}/../../../lib/libscurvy.so
-    INTERFACE_INCLUDE_DIRECTORIES ${SRC_DIR}/../../../include
-)
-
 add_library(clothoids SHARED IMPORTED) # or STATIC instead of SHARED
 set_target_properties(clothoids PROPERTIES
     IMPORTED_LOCATION ${SRC_DIR}/../../vendor/Clothoids/build/libClothoids_linux.so
@@ -256,8 +244,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     -I/usr/lib ${PYTHON_LIB} Boost::python${BOOST_PYTHON_LIB_SUFFIX} -lcrypt -ldl -lutil -lm -lreadline  -lpthread
     linuxcncini linuxcnc_a  rs274_ tooldata posemath pyplugin
     nml linuxcncini linuxcnchal -Wl,-rpath=../../../lib/
-    clothoid scurvy clothoids
-    flocke utils
+    clothoids flocke utils
 )
 
 # Make install

@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"components/tpmod_scurve_c++/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 116,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/build-cmake-Desktop-Debug/components/tpmod_scurve_c++/../../../../rtlib",
+			"paths" : 
+			[
+				"components/tpmod_scurve_c++/tpmod_scurve_cplusplus.so"
+			],
+			"targetId" : "tpmod_scurve_cplusplus::@4c00b8238c6866869ebd",
+			"targetIndex" : 2,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "components/tpmod_scurve_c++",
+		"source" : "components/tpmod_scurve_c++"
+	}
+}

@@ -96,6 +96,7 @@ typedef struct {
 
     EmcPose currentPos;
     EmcPose goalPos;
+    EmcPose last_pos;
 
     int queueSize;
     double cycleTime;
@@ -134,6 +135,9 @@ typedef struct {
 
 
     syncdio_t syncdio; //record tpSetDout's here
+
+    int gcode_upcoming_line_nr;
+    int gcode_current_executed_line_nr;
 
 } TP_STRUCT;
 

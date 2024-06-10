@@ -19,6 +19,13 @@ struct StandaloneInterpInternals
   StandaloneInterpInternals();
   /* Dummy world model */
 
+  //! Retrieve values for line and arc.
+  EmcPose pose;
+  double cx,cy;
+  //! Line=0, arc=1, none=-1
+  int type;
+  int rotation;
+
   CANON_PLANE _active_plane;
   int _active_slot;
   int _selected_tool;
@@ -63,8 +70,8 @@ struct StandaloneInterpInternals
   bool optional_program_stop;
   /* optional block delete */
   bool block_delete;
-  double motion_tolerance;
-  double naivecam_tolerance;
+  double motion_tolerance;      // G64 P
+  double naivecam_tolerance;    // G64 Q
   /* Dummy status variables */
   double _traverse_rate;
 

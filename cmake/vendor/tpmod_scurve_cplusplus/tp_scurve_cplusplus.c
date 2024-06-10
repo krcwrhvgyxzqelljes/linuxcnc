@@ -207,9 +207,8 @@ int tpCreate(TP_STRUCT * const tp, int _queueSize,int id){
 int tpClear(TP_STRUCT * const tp){
 
     printf("tpClear. \n");
-    tp->traject_lenght=0;
-    tp->gcode_lastPos=tp->currentPos;
-    // vector_clear(vector_ptr);
+    tp->last_pos=tp->currentPos;
+    vector_clear(ptr);
     // vector_ptr=NULL;
 
     return 0;
@@ -361,8 +360,7 @@ int tpResume(TP_STRUCT * const tp){
 int tpAbort(TP_STRUCT * const tp){
     printf("tpAbort. \n");
     vector_clear(ptr);
-    tp->traject_lenght=0;
-    tp->gcode_lastPos=tp->currentPos;
+    tp->last_pos=tp->currentPos;
     return 0;
 }
 

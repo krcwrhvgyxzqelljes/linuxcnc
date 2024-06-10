@@ -239,6 +239,18 @@ void STRAIGHT_TRAVERSE( int line_number,
   _sai._program_position_a = a; /*AA*/
   _sai._program_position_b = b; /*BB*/
   _sai._program_position_c = c; /*CC*/
+
+  _sai.pose.tran.x=x;
+  _sai.pose.tran.y=y;
+  _sai.pose.tran.z=z;
+  _sai.pose.a=a;
+  _sai.pose.b=b;
+  _sai.pose.c=c;
+  _sai.pose.u=u;
+  _sai.pose.v=v;
+  _sai.pose.w=w;
+
+  _sai.type=3; //! G0.
 }
 
 /* Machining Attributes */
@@ -344,6 +356,7 @@ void ARC_FEED(int line_number,
  , double u, double v, double w
 )
 {
+
   ECHO_WITH_ARGS("%.4f, %.4f, %.4f, %.4f, %d, %.4f"
          ", %.4f" /*AA*/
          ", %.4f" /*BB*/
@@ -375,6 +388,22 @@ void ARC_FEED(int line_number,
   _sai._program_position_a = a; /*AA*/
   _sai._program_position_b = b; /*BB*/
   _sai._program_position_c = c; /*CC*/
+
+  _sai.pose.tran.x=first_end;
+  _sai.pose.tran.y=second_end;
+  _sai.pose.tran.z=axis_end_point;;
+  _sai.pose.a=a;
+  _sai.pose.b=b;
+  _sai.pose.c=c;
+  _sai.pose.u=u;
+  _sai.pose.v=v;
+  _sai.pose.w=w;
+
+  _sai.cx=first_axis;
+  _sai.cy=second_axis;
+
+  _sai.type=2;
+  _sai.rotation=rotation;
 }
 
 void STRAIGHT_FEED(int line_number,
@@ -400,6 +429,20 @@ void STRAIGHT_FEED(int line_number,
   _sai._program_position_a = a; /*AA*/
   _sai._program_position_b = b; /*BB*/
   _sai._program_position_c = c; /*CC*/
+
+  _sai.pose.tran.x=x;
+  _sai.pose.tran.y=y;
+  _sai.pose.tran.z=z;
+  _sai.pose.a=a;
+  _sai.pose.b=b;
+  _sai.pose.c=c;
+  _sai.pose.u=u;
+  _sai.pose.v=v;
+  _sai.pose.w=w;
+  _sai.cx=0;
+  _sai.cy=0;
+  _sai.type=1;
+  _sai.rotation=0;
 }
 
 
@@ -526,7 +569,7 @@ void SET_TOOL_TABLE_ENTRY(int idx, int toolno, EmcPose offset, double diameter,
 #else //}{
     CANON_TOOL_TABLE tdata;
     if (tooldata_get(&tdata,idx) != IDX_OK) {
-        UNEXPECTED_MSG; 
+        UNEXPECTED_MSG;
     }
     tdata.toolno = toolno;
     tdata.offset = offset;
@@ -791,10 +834,10 @@ void GET_EXTERNAL_PARAMETER_FILE_NAME(
 {
     // Paranoid checks
     if (0 == file_name)
-	return;
+    return;
 
     if (max_size < 0)
-	return;
+    return;
 
   if (strlen(_parameter_file_name) < (size_t)max_size)
     strcpy(file_name, _parameter_file_name);
@@ -1114,20 +1157,20 @@ void CANON_ERROR(const char *fmt, ...)
     va_list ap;
 
     if (fmt != NULL) {
-	va_start(ap, fmt);
-	char *err;
-	int res = vasprintf(&err, fmt, ap);
-	if(res < 0) err = 0;
-	va_end(ap);
-	if(err)
-	{
+    va_start(ap, fmt);
+    char *err;
+    int res = vasprintf(&err, fmt, ap);
+    if(res < 0) err = 0;
+    va_end(ap);
+    if(err)
+    {
         PRINT("CANON_ERROR(%s)\n", err);
-	    free(err);
-	}
-	else
-	{
+        free(err);
+    }
+    else
+    {
         PRINT("CANON_ERROR(vasprintf failed: %s)\n", strerror(errno));
-	}
+    }
     }
 }
 

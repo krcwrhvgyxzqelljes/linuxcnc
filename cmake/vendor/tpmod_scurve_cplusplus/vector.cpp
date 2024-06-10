@@ -50,19 +50,19 @@ int vector_add_line(TP_STRUCT *
     s.g64_q=tag.fields_float[4];
 
     // Points.
-    s.p0={tp->gcode_lastPos.tran.x,tp->gcode_lastPos.tran.y,tp->gcode_lastPos.tran.z};
+    s.p0={tp->last_pos.tran.x,tp->last_pos.tran.y,tp->last_pos.tran.z};
     s.pc={0,0,0};
     s.p1={end.tran.x,end.tran.y,end.tran.z};
     //s.pw=draw_primitives::get_line_midpoint(s.p0,s.p1);
 
     // Extern.
-    s.a0=tp->gcode_lastPos.a;
-    s.b0=tp->gcode_lastPos.b;
-    s.c0=tp->gcode_lastPos.c;
+    s.a0=tp->last_pos.a;
+    s.b0=tp->last_pos.b;
+    s.c0=tp->last_pos.c;
 
-    s.u0=tp->gcode_lastPos.u;
-    s.v0=tp->gcode_lastPos.v;
-    s.w0=tp->gcode_lastPos.w;
+    s.u0=tp->last_pos.u;
+    s.v0=tp->last_pos.v;
+    s.w0=tp->last_pos.w;
 
     s.a1=end.a;
     s.b1=end.b;
@@ -99,7 +99,7 @@ int vector_add_circle( TP_STRUCT * const tp,
     s.g64_q=tag.fields_float[4];
 
     // Points.
-    s.p0={tp->gcode_lastPos.tran.x,tp->gcode_lastPos.tran.y,tp->gcode_lastPos.tran.z};
+    s.p0={tp->last_pos.tran.x,tp->last_pos.tran.y,tp->last_pos.tran.z};
     s.pc={center.x,center.y,center.z};
     s.p1={end.tran.x,end.tran.y,end.tran.z};
 
@@ -120,13 +120,13 @@ int vector_add_circle( TP_STRUCT * const tp,
     }
 
     // Extern.
-    s.a0=tp->gcode_lastPos.a;
-    s.b0=tp->gcode_lastPos.b;
-    s.c0=tp->gcode_lastPos.c;
+    s.a0=tp->last_pos.a;
+    s.b0=tp->last_pos.b;
+    s.c0=tp->last_pos.c;
 
-    s.u0=tp->gcode_lastPos.u;
-    s.v0=tp->gcode_lastPos.v;
-    s.w0=tp->gcode_lastPos.w;
+    s.u0=tp->last_pos.u;
+    s.v0=tp->last_pos.v;
+    s.w0=tp->last_pos.w;
 
     s.a1=end.a;
     s.b1=end.b;

@@ -91,7 +91,7 @@ include_directories("/usr/include/boost")
 
 # In development, based on the tpmod_scurve_skynet.
 # Known bug : jogging before program start, solves a position jump when pressing program stop.
-add_subdirectory(${SRC_DIR}/components/tpmod_scurve_grotius)
+# add_subdirectory(${SRC_DIR}/components/tpmod_scurve_grotius)
 add_subdirectory(${SRC_DIR}/components/tpmod_scurve_c++)
 
 ##add_subdirectory(${SRC_DIR}/components/tpmod_T800) # experimental scurve lib using ruckig-dev, enabling velocity ends.
