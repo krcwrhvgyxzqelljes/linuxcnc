@@ -2053,6 +2053,8 @@ int tpAddLine(TP_STRUCT * const tp, EmcPose end, int canon_motion_type,
     }
     tp_info_print("== AddLine ==\n");
 
+    printf("add line.");
+
     // Initialize new tc struct for the line segment
     TC_STRUCT tc = {0};
     tcInit(&tc,
@@ -2136,6 +2138,8 @@ int tpAddCircle(TP_STRUCT * const tp,
 
     tp_info_print("== AddCircle ==\n");
     tp_debug_print("ini_maxvel = %f\n",ini_maxvel);
+
+    printf("add arc.");
 
     TC_STRUCT tc = {0};
 

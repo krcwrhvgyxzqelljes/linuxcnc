@@ -187,9 +187,6 @@ public:
     static void offset_3d_point_on_line(gp_Pnt A, gp_Pnt B, double offset_a, gp_Pnt &C);
     static void offset_line_on_a_plane(gp_Pnt line_p0, gp_Pnt line_p1, gp_Pnt plane_p0, double offset, gp_Pnt &offset_line_p0, gp_Pnt &offset_line_p1);
 
-    // Rotate functions:
-    static gp_Pnt rotate_3d_point_around_line(gp_Pnt thePointToRotate, double theta, gp_Pnt theLineP1, gp_Pnt theLineP2);
-
     // Plane functions:
     static bool create_3d_plane(gp_Pnt p_origin, gp_Pnt p2, gp_Pnt p3, gp_Pln &plane);
     static gp_Pnt projectPointOnPlane(gp_Pnt point, gp_Pnt planeOrigin, gp_Vec planeNormal);

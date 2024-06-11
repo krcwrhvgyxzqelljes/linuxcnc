@@ -153,19 +153,19 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/libnml/posemath/sincos.c.s"
 	cd /home/user/linuxcnc/cmake/build/components/tpmod_scurve_c++ && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/linuxcnc/src/libnml/posemath/sincos.c -o CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/libnml/posemath/sincos.c.s
 
-components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/flags.make
-components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o: /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c
-components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/linuxcnc/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o"
-	cd /home/user/linuxcnc/cmake/build/components/tpmod_scurve_c++ && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o -MF CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o.d -o CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o -c /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c
+components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/flags.make
+components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o: /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c
+components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/linuxcnc/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o"
+	cd /home/user/linuxcnc/cmake/build/components/tpmod_scurve_c++ && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o -MF CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o.d -o CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o -c /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c
 
-components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.i"
-	cd /home/user/linuxcnc/cmake/build/components/tpmod_scurve_c++ && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c > CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.i
+components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.i"
+	cd /home/user/linuxcnc/cmake/build/components/tpmod_scurve_c++ && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c > CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.i
 
-components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.s"
-	cd /home/user/linuxcnc/cmake/build/components/tpmod_scurve_c++ && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c -o CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.s
+components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.s"
+	cd /home/user/linuxcnc/cmake/build/components/tpmod_scurve_c++ && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c -o CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.s
 
 components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/add_circle.cpp.o: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/flags.make
 components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/add_circle.cpp.o: /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/add_circle.cpp
@@ -231,7 +231,7 @@ tpmod_scurve_cplusplus_OBJECTS = \
 "CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/emc/nml_intf/emcpose.c.o" \
 "CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/libnml/posemath/_posemath.c.o" \
 "CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/libnml/posemath/sincos.c.o" \
-"CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o" \
+"CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o" \
 "CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/add_circle.cpp.o" \
 "CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/add_line.cpp.o" \
 "CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/vector.cpp.o" \
@@ -246,7 +246,7 @@ components/tpmod_scurve_c++/tpmod_scurve_cplusplus.so: components/tpmod_scurve_c
 components/tpmod_scurve_c++/tpmod_scurve_cplusplus.so: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/emc/nml_intf/emcpose.c.o
 components/tpmod_scurve_c++/tpmod_scurve_cplusplus.so: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/libnml/posemath/_posemath.c.o
 components/tpmod_scurve_c++/tpmod_scurve_cplusplus.so: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/libnml/posemath/sincos.c.o
-components/tpmod_scurve_c++/tpmod_scurve_cplusplus.so: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o
+components/tpmod_scurve_c++/tpmod_scurve_cplusplus.so: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o
 components/tpmod_scurve_c++/tpmod_scurve_cplusplus.so: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/add_circle.cpp.o
 components/tpmod_scurve_c++/tpmod_scurve_cplusplus.so: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/add_line.cpp.o
 components/tpmod_scurve_c++/tpmod_scurve_cplusplus.so: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/vector.cpp.o

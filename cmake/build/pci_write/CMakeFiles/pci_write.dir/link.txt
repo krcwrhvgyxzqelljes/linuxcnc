@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/pci_write.dir/home/user/linuxcnc/src/hal/utils/upci.c.o CMakeFiles/pci_write.dir/home/user/linuxcnc/src/hal/utils/pci_write.c.o -o pci_write-0 

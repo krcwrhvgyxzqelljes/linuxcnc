@@ -1,0 +1,4 @@
+G0 X0 Y0 (rapid move)
+F10 (set feed rate)
+G9 X11 Y22 Z33 P0.1 Q0.2 R44.5 L321 E123.33 (L=integer type)
+M30

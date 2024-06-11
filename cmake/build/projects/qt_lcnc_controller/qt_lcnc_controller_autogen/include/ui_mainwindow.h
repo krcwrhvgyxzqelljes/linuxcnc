@@ -104,47 +104,39 @@ public:
     QLabel *label_rapid_override;
     QSlider *horizontalSlider_feed_override;
     QGridLayout *gridLayout_16;
+    QToolButton *toolButton_view_bottom;
+    QToolButton *toolButton_emergency;
+    QToolButton *toolButton_machine_on;
     QDoubleSpinBox *doubleSpinBox_p1x;
     QToolButton *toolButton_view_3d;
-    QToolButton *toolButton_zoom_min;
-    QLabel *label_6;
-    QToolButton *toolButton_machine_on;
-    QLabel *label_emergency_status;
-    QLabel *label_7;
-    QToolButton *toolButton_file_open;
-    QDoubleSpinBox *doubleSpinBox_offset;
-    QToolButton *toolButton_emergency;
-    QToolButton *toolButton_view_top;
-    QToolButton *toolButton_stop;
-    QLabel *label_filtered_out;
     QDoubleSpinBox *doubleSpinBox_distribution;
-    QLabel *label_4;
-    QToolButton *toolButton_view_left;
-    QLabel *label_segments_in;
-    QDoubleSpinBox *doubleSpinBox_p2x;
-    QPushButton *pushButton_calc;
+    QToolButton *toolButton_view_top;
+    QDoubleSpinBox *doubleSpinBox_offset;
     QToolButton *toolButton_zoom_plus;
-    QToolButton *toolButton_view_bottom;
-    QToolButton *toolButton_view_right;
-    QToolButton *toolButton_view_front;
-    QDoubleSpinBox *doubleSpinBox_p1y;
-    QSpacerItem *horizontalSpacer;
-    QLabel *label_9;
-    QToolButton *toolButton_reload;
+    QLabel *label_6;
     QToolButton *toolButton_pause;
     QDoubleSpinBox *doubleSpinBox_filter;
-    QLabel *label_8;
-    QCheckBox *checkBox;
-    QDoubleSpinBox *doubleSpinBox_p2y;
-    QLabel *label_segments_out;
     QToolButton *toolButton_fit_all;
-    QToolButton *toolButton_view_back;
-    QPushButton *pushButton_test;
+    QDoubleSpinBox *doubleSpinBox_p2x;
+    QToolButton *toolButton_view_right;
     QLabel *label_machine_on_status;
-    QLabel *label_5;
     QToolButton *toolButton_run;
-    QLabel *label_10;
-    QLabel *label_cleaned_procent;
+    QCheckBox *checkBox;
+    QToolButton *toolButton_stop;
+    QLabel *label_emergency_status;
+    QPushButton *pushButton_calc;
+    QLabel *label_5;
+    QToolButton *toolButton_file_open;
+    QDoubleSpinBox *doubleSpinBox_p1y;
+    QToolButton *toolButton_view_left;
+    QToolButton *toolButton_view_front;
+    QSpacerItem *horizontalSpacer;
+    QLabel *label_4;
+    QToolButton *toolButton_zoom_min;
+    QDoubleSpinBox *doubleSpinBox_p2y;
+    QPushButton *pushButton_test;
+    QToolButton *toolButton_view_back;
+    QToolButton *toolButton_reload;
     QFrame *frame_2;
     QGridLayout *gridLayout;
     QGridLayout *gridLayout_occ;
@@ -159,7 +151,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1384, 874);
+        MainWindow->resize(1384, 894);
         MainWindow->setAutoFillBackground(false);
         MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(51, 57, 59);\n"
 "color: rgb(255, 255, 255);\n"
@@ -549,37 +541,29 @@ public:
 
         gridLayout_16 = new QGridLayout();
         gridLayout_16->setObjectName(QString::fromUtf8("gridLayout_16"));
-        doubleSpinBox_p1x = new QDoubleSpinBox(centralwidget);
-        doubleSpinBox_p1x->setObjectName(QString::fromUtf8("doubleSpinBox_p1x"));
-        doubleSpinBox_p1x->setMinimum(-100.000000000000000);
-        doubleSpinBox_p1x->setMaximum(100.000000000000000);
-        doubleSpinBox_p1x->setSingleStep(1.000000000000000);
-        doubleSpinBox_p1x->setValue(55.000000000000000);
-
-        gridLayout_16->addWidget(doubleSpinBox_p1x, 0, 20, 1, 1);
-
-        toolButton_view_3d = new QToolButton(centralwidget);
-        toolButton_view_3d->setObjectName(QString::fromUtf8("toolButton_view_3d"));
+        toolButton_view_bottom = new QToolButton(centralwidget);
+        toolButton_view_bottom->setObjectName(QString::fromUtf8("toolButton_view_bottom"));
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/vendor/icons/view-iso.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_view_3d->setIcon(icon2);
-        toolButton_view_3d->setIconSize(QSize(28, 28));
+        icon2.addFile(QString::fromUtf8(":/vendor/icons/view-bottom.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_view_bottom->setIcon(icon2);
+        toolButton_view_bottom->setIconSize(QSize(28, 28));
 
-        gridLayout_16->addWidget(toolButton_view_3d, 0, 18, 1, 1);
+        gridLayout_16->addWidget(toolButton_view_bottom, 0, 15, 1, 1);
 
-        toolButton_zoom_min = new QToolButton(centralwidget);
-        toolButton_zoom_min->setObjectName(QString::fromUtf8("toolButton_zoom_min"));
+        toolButton_emergency = new QToolButton(centralwidget);
+        toolButton_emergency->setObjectName(QString::fromUtf8("toolButton_emergency"));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(toolButton_emergency->sizePolicy().hasHeightForWidth());
+        toolButton_emergency->setSizePolicy(sizePolicy2);
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/vendor/icons/zoom_min.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_zoom_min->setIcon(icon3);
-        toolButton_zoom_min->setIconSize(QSize(28, 28));
+        icon3.addFile(QString::fromUtf8(":/share/axis/images/tool_estop.gif"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_emergency->setIcon(icon3);
+        toolButton_emergency->setIconSize(QSize(28, 28));
+        toolButton_emergency->setCheckable(true);
 
-        gridLayout_16->addWidget(toolButton_zoom_min, 0, 10, 1, 1);
-
-        label_6 = new QLabel(centralwidget);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
-
-        gridLayout_16->addWidget(label_6, 2, 23, 1, 1);
+        gridLayout_16->addWidget(toolButton_emergency, 0, 0, 1, 1);
 
         toolButton_machine_on = new QToolButton(centralwidget);
         toolButton_machine_on->setObjectName(QString::fromUtf8("toolButton_machine_on"));
@@ -591,25 +575,40 @@ public:
 
         gridLayout_16->addWidget(toolButton_machine_on, 0, 2, 1, 1);
 
-        label_emergency_status = new QLabel(centralwidget);
-        label_emergency_status->setObjectName(QString::fromUtf8("label_emergency_status"));
-        label_emergency_status->setStyleSheet(QString::fromUtf8("background-color: rgb(170, 0, 0);"));
+        doubleSpinBox_p1x = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_p1x->setObjectName(QString::fromUtf8("doubleSpinBox_p1x"));
+        doubleSpinBox_p1x->setMinimum(-100.000000000000000);
+        doubleSpinBox_p1x->setMaximum(100.000000000000000);
+        doubleSpinBox_p1x->setSingleStep(1.000000000000000);
+        doubleSpinBox_p1x->setValue(55.000000000000000);
 
-        gridLayout_16->addWidget(label_emergency_status, 0, 1, 1, 1);
+        gridLayout_16->addWidget(doubleSpinBox_p1x, 0, 20, 1, 1);
 
-        label_7 = new QLabel(centralwidget);
-        label_7->setObjectName(QString::fromUtf8("label_7"));
-
-        gridLayout_16->addWidget(label_7, 2, 21, 1, 1);
-
-        toolButton_file_open = new QToolButton(centralwidget);
-        toolButton_file_open->setObjectName(QString::fromUtf8("toolButton_file_open"));
+        toolButton_view_3d = new QToolButton(centralwidget);
+        toolButton_view_3d->setObjectName(QString::fromUtf8("toolButton_view_3d"));
         QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/share/axis/images/tool_open.gif"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_file_open->setIcon(icon5);
-        toolButton_file_open->setIconSize(QSize(28, 28));
+        icon5.addFile(QString::fromUtf8(":/vendor/icons/view-iso.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_view_3d->setIcon(icon5);
+        toolButton_view_3d->setIconSize(QSize(28, 28));
 
-        gridLayout_16->addWidget(toolButton_file_open, 0, 4, 1, 1);
+        gridLayout_16->addWidget(toolButton_view_3d, 0, 18, 1, 1);
+
+        doubleSpinBox_distribution = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_distribution->setObjectName(QString::fromUtf8("doubleSpinBox_distribution"));
+        doubleSpinBox_distribution->setMaximum(1000.000000000000000);
+        doubleSpinBox_distribution->setSingleStep(0.100000000000000);
+        doubleSpinBox_distribution->setValue(1.000000000000000);
+
+        gridLayout_16->addWidget(doubleSpinBox_distribution, 0, 24, 1, 1);
+
+        toolButton_view_top = new QToolButton(centralwidget);
+        toolButton_view_top->setObjectName(QString::fromUtf8("toolButton_view_top"));
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/vendor/icons/view-top.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_view_top->setIcon(icon6);
+        toolButton_view_top->setIconSize(QSize(28, 28));
+
+        gridLayout_16->addWidget(toolButton_view_top, 0, 14, 1, 1);
 
         doubleSpinBox_offset = new QDoubleSpinBox(centralwidget);
         doubleSpinBox_offset->setObjectName(QString::fromUtf8("doubleSpinBox_offset"));
@@ -620,153 +619,25 @@ public:
 
         gridLayout_16->addWidget(doubleSpinBox_offset, 1, 24, 1, 1);
 
-        toolButton_emergency = new QToolButton(centralwidget);
-        toolButton_emergency->setObjectName(QString::fromUtf8("toolButton_emergency"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(toolButton_emergency->sizePolicy().hasHeightForWidth());
-        toolButton_emergency->setSizePolicy(sizePolicy2);
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/share/axis/images/tool_estop.gif"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_emergency->setIcon(icon6);
-        toolButton_emergency->setIconSize(QSize(28, 28));
-        toolButton_emergency->setCheckable(true);
-
-        gridLayout_16->addWidget(toolButton_emergency, 0, 0, 1, 1);
-
-        toolButton_view_top = new QToolButton(centralwidget);
-        toolButton_view_top->setObjectName(QString::fromUtf8("toolButton_view_top"));
-        QIcon icon7;
-        icon7.addFile(QString::fromUtf8(":/vendor/icons/view-top.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_view_top->setIcon(icon7);
-        toolButton_view_top->setIconSize(QSize(28, 28));
-
-        gridLayout_16->addWidget(toolButton_view_top, 0, 14, 1, 1);
-
-        toolButton_stop = new QToolButton(centralwidget);
-        toolButton_stop->setObjectName(QString::fromUtf8("toolButton_stop"));
-        QIcon icon8;
-        icon8.addFile(QString::fromUtf8(":/share/axis/images/tool_stop.gif"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_stop->setIcon(icon8);
-        toolButton_stop->setIconSize(QSize(28, 28));
-        toolButton_stop->setCheckable(false);
-
-        gridLayout_16->addWidget(toolButton_stop, 0, 8, 1, 1);
-
-        label_filtered_out = new QLabel(centralwidget);
-        label_filtered_out->setObjectName(QString::fromUtf8("label_filtered_out"));
-
-        gridLayout_16->addWidget(label_filtered_out, 2, 22, 1, 1);
-
-        doubleSpinBox_distribution = new QDoubleSpinBox(centralwidget);
-        doubleSpinBox_distribution->setObjectName(QString::fromUtf8("doubleSpinBox_distribution"));
-        doubleSpinBox_distribution->setMaximum(1000.000000000000000);
-        doubleSpinBox_distribution->setSingleStep(0.100000000000000);
-        doubleSpinBox_distribution->setValue(1.000000000000000);
-
-        gridLayout_16->addWidget(doubleSpinBox_distribution, 0, 24, 1, 1);
-
-        label_4 = new QLabel(centralwidget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-
-        gridLayout_16->addWidget(label_4, 0, 23, 1, 1);
-
-        toolButton_view_left = new QToolButton(centralwidget);
-        toolButton_view_left->setObjectName(QString::fromUtf8("toolButton_view_left"));
-        QIcon icon9;
-        icon9.addFile(QString::fromUtf8(":/vendor/icons/view-left.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_view_left->setIcon(icon9);
-        toolButton_view_left->setIconSize(QSize(28, 28));
-
-        gridLayout_16->addWidget(toolButton_view_left, 0, 16, 1, 1);
-
-        label_segments_in = new QLabel(centralwidget);
-        label_segments_in->setObjectName(QString::fromUtf8("label_segments_in"));
-
-        gridLayout_16->addWidget(label_segments_in, 3, 22, 1, 1);
-
-        doubleSpinBox_p2x = new QDoubleSpinBox(centralwidget);
-        doubleSpinBox_p2x->setObjectName(QString::fromUtf8("doubleSpinBox_p2x"));
-        doubleSpinBox_p2x->setMinimum(-100.000000000000000);
-        doubleSpinBox_p2x->setMaximum(100.000000000000000);
-        doubleSpinBox_p2x->setSingleStep(1.000000000000000);
-        doubleSpinBox_p2x->setValue(70.000000000000000);
-
-        gridLayout_16->addWidget(doubleSpinBox_p2x, 1, 20, 1, 1);
-
-        pushButton_calc = new QPushButton(centralwidget);
-        pushButton_calc->setObjectName(QString::fromUtf8("pushButton_calc"));
-
-        gridLayout_16->addWidget(pushButton_calc, 2, 25, 1, 1);
-
         toolButton_zoom_plus = new QToolButton(centralwidget);
         toolButton_zoom_plus->setObjectName(QString::fromUtf8("toolButton_zoom_plus"));
-        QIcon icon10;
-        icon10.addFile(QString::fromUtf8(":/vendor/icons/zoom_plus.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_zoom_plus->setIcon(icon10);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/vendor/icons/zoom_plus.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_zoom_plus->setIcon(icon7);
         toolButton_zoom_plus->setIconSize(QSize(28, 28));
 
         gridLayout_16->addWidget(toolButton_zoom_plus, 0, 9, 1, 1);
 
-        toolButton_view_bottom = new QToolButton(centralwidget);
-        toolButton_view_bottom->setObjectName(QString::fromUtf8("toolButton_view_bottom"));
-        QIcon icon11;
-        icon11.addFile(QString::fromUtf8(":/vendor/icons/view-bottom.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_view_bottom->setIcon(icon11);
-        toolButton_view_bottom->setIconSize(QSize(28, 28));
+        label_6 = new QLabel(centralwidget);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
 
-        gridLayout_16->addWidget(toolButton_view_bottom, 0, 15, 1, 1);
-
-        toolButton_view_right = new QToolButton(centralwidget);
-        toolButton_view_right->setObjectName(QString::fromUtf8("toolButton_view_right"));
-        QIcon icon12;
-        icon12.addFile(QString::fromUtf8(":/vendor/icons/view-right.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_view_right->setIcon(icon12);
-        toolButton_view_right->setIconSize(QSize(28, 28));
-
-        gridLayout_16->addWidget(toolButton_view_right, 0, 17, 1, 1);
-
-        toolButton_view_front = new QToolButton(centralwidget);
-        toolButton_view_front->setObjectName(QString::fromUtf8("toolButton_view_front"));
-        QIcon icon13;
-        icon13.addFile(QString::fromUtf8(":/vendor/icons/view-front.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_view_front->setIcon(icon13);
-        toolButton_view_front->setIconSize(QSize(28, 28));
-
-        gridLayout_16->addWidget(toolButton_view_front, 0, 12, 1, 1);
-
-        doubleSpinBox_p1y = new QDoubleSpinBox(centralwidget);
-        doubleSpinBox_p1y->setObjectName(QString::fromUtf8("doubleSpinBox_p1y"));
-        doubleSpinBox_p1y->setMinimum(-100.000000000000000);
-        doubleSpinBox_p1y->setMaximum(100.000000000000000);
-        doubleSpinBox_p1y->setValue(60.000000000000000);
-
-        gridLayout_16->addWidget(doubleSpinBox_p1y, 0, 21, 1, 1);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_16->addItem(horizontalSpacer, 0, 25, 1, 1);
-
-        label_9 = new QLabel(centralwidget);
-        label_9->setObjectName(QString::fromUtf8("label_9"));
-
-        gridLayout_16->addWidget(label_9, 4, 21, 1, 1);
-
-        toolButton_reload = new QToolButton(centralwidget);
-        toolButton_reload->setObjectName(QString::fromUtf8("toolButton_reload"));
-        QIcon icon14;
-        icon14.addFile(QString::fromUtf8(":/share/axis/images/tool_reload.gif"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_reload->setIcon(icon14);
-        toolButton_reload->setIconSize(QSize(28, 28));
-
-        gridLayout_16->addWidget(toolButton_reload, 0, 5, 1, 1);
+        gridLayout_16->addWidget(label_6, 2, 23, 1, 1);
 
         toolButton_pause = new QToolButton(centralwidget);
         toolButton_pause->setObjectName(QString::fromUtf8("toolButton_pause"));
-        QIcon icon15;
-        icon15.addFile(QString::fromUtf8(":/share/axis/images/tool_pause.gif"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_pause->setIcon(icon15);
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/share/axis/images/tool_pause.gif"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_pause->setIcon(icon8);
         toolButton_pause->setIconSize(QSize(28, 28));
         toolButton_pause->setCheckable(true);
 
@@ -780,15 +651,131 @@ public:
 
         gridLayout_16->addWidget(doubleSpinBox_filter, 2, 24, 1, 1);
 
-        label_8 = new QLabel(centralwidget);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
+        toolButton_fit_all = new QToolButton(centralwidget);
+        toolButton_fit_all->setObjectName(QString::fromUtf8("toolButton_fit_all"));
+        QIcon icon9;
+        icon9.addFile(QString::fromUtf8(":/vendor/icons/zoom_extend.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_fit_all->setIcon(icon9);
+        toolButton_fit_all->setIconSize(QSize(28, 28));
 
-        gridLayout_16->addWidget(label_8, 3, 21, 1, 1);
+        gridLayout_16->addWidget(toolButton_fit_all, 0, 11, 1, 1);
+
+        doubleSpinBox_p2x = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_p2x->setObjectName(QString::fromUtf8("doubleSpinBox_p2x"));
+        doubleSpinBox_p2x->setMinimum(-100.000000000000000);
+        doubleSpinBox_p2x->setMaximum(100.000000000000000);
+        doubleSpinBox_p2x->setSingleStep(1.000000000000000);
+        doubleSpinBox_p2x->setValue(70.000000000000000);
+
+        gridLayout_16->addWidget(doubleSpinBox_p2x, 1, 20, 1, 1);
+
+        toolButton_view_right = new QToolButton(centralwidget);
+        toolButton_view_right->setObjectName(QString::fromUtf8("toolButton_view_right"));
+        QIcon icon10;
+        icon10.addFile(QString::fromUtf8(":/vendor/icons/view-right.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_view_right->setIcon(icon10);
+        toolButton_view_right->setIconSize(QSize(28, 28));
+
+        gridLayout_16->addWidget(toolButton_view_right, 0, 17, 1, 1);
+
+        label_machine_on_status = new QLabel(centralwidget);
+        label_machine_on_status->setObjectName(QString::fromUtf8("label_machine_on_status"));
+        label_machine_on_status->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 170, 0);"));
+
+        gridLayout_16->addWidget(label_machine_on_status, 0, 3, 1, 1);
+
+        toolButton_run = new QToolButton(centralwidget);
+        toolButton_run->setObjectName(QString::fromUtf8("toolButton_run"));
+        QIcon icon11;
+        icon11.addFile(QString::fromUtf8(":/share/axis/images/tool_run.gif"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_run->setIcon(icon11);
+        toolButton_run->setIconSize(QSize(28, 28));
+
+        gridLayout_16->addWidget(toolButton_run, 0, 6, 1, 1);
 
         checkBox = new QCheckBox(centralwidget);
         checkBox->setObjectName(QString::fromUtf8("checkBox"));
 
         gridLayout_16->addWidget(checkBox, 1, 22, 1, 1);
+
+        toolButton_stop = new QToolButton(centralwidget);
+        toolButton_stop->setObjectName(QString::fromUtf8("toolButton_stop"));
+        QIcon icon12;
+        icon12.addFile(QString::fromUtf8(":/share/axis/images/tool_stop.gif"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_stop->setIcon(icon12);
+        toolButton_stop->setIconSize(QSize(28, 28));
+        toolButton_stop->setCheckable(false);
+
+        gridLayout_16->addWidget(toolButton_stop, 0, 8, 1, 1);
+
+        label_emergency_status = new QLabel(centralwidget);
+        label_emergency_status->setObjectName(QString::fromUtf8("label_emergency_status"));
+        label_emergency_status->setStyleSheet(QString::fromUtf8("background-color: rgb(170, 0, 0);"));
+
+        gridLayout_16->addWidget(label_emergency_status, 0, 1, 1, 1);
+
+        pushButton_calc = new QPushButton(centralwidget);
+        pushButton_calc->setObjectName(QString::fromUtf8("pushButton_calc"));
+
+        gridLayout_16->addWidget(pushButton_calc, 2, 25, 1, 1);
+
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+
+        gridLayout_16->addWidget(label_5, 1, 23, 1, 1);
+
+        toolButton_file_open = new QToolButton(centralwidget);
+        toolButton_file_open->setObjectName(QString::fromUtf8("toolButton_file_open"));
+        QIcon icon13;
+        icon13.addFile(QString::fromUtf8(":/share/axis/images/tool_open.gif"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_file_open->setIcon(icon13);
+        toolButton_file_open->setIconSize(QSize(28, 28));
+
+        gridLayout_16->addWidget(toolButton_file_open, 0, 4, 1, 1);
+
+        doubleSpinBox_p1y = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox_p1y->setObjectName(QString::fromUtf8("doubleSpinBox_p1y"));
+        doubleSpinBox_p1y->setMinimum(-100.000000000000000);
+        doubleSpinBox_p1y->setMaximum(100.000000000000000);
+        doubleSpinBox_p1y->setValue(60.000000000000000);
+
+        gridLayout_16->addWidget(doubleSpinBox_p1y, 0, 21, 1, 1);
+
+        toolButton_view_left = new QToolButton(centralwidget);
+        toolButton_view_left->setObjectName(QString::fromUtf8("toolButton_view_left"));
+        QIcon icon14;
+        icon14.addFile(QString::fromUtf8(":/vendor/icons/view-left.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_view_left->setIcon(icon14);
+        toolButton_view_left->setIconSize(QSize(28, 28));
+
+        gridLayout_16->addWidget(toolButton_view_left, 0, 16, 1, 1);
+
+        toolButton_view_front = new QToolButton(centralwidget);
+        toolButton_view_front->setObjectName(QString::fromUtf8("toolButton_view_front"));
+        QIcon icon15;
+        icon15.addFile(QString::fromUtf8(":/vendor/icons/view-front.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_view_front->setIcon(icon15);
+        toolButton_view_front->setIconSize(QSize(28, 28));
+
+        gridLayout_16->addWidget(toolButton_view_front, 0, 12, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_16->addItem(horizontalSpacer, 0, 25, 1, 1);
+
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        gridLayout_16->addWidget(label_4, 0, 23, 1, 1);
+
+        toolButton_zoom_min = new QToolButton(centralwidget);
+        toolButton_zoom_min->setObjectName(QString::fromUtf8("toolButton_zoom_min"));
+        QIcon icon16;
+        icon16.addFile(QString::fromUtf8(":/vendor/icons/zoom_min.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_zoom_min->setIcon(icon16);
+        toolButton_zoom_min->setIconSize(QSize(28, 28));
+
+        gridLayout_16->addWidget(toolButton_zoom_min, 0, 10, 1, 1);
 
         doubleSpinBox_p2y = new QDoubleSpinBox(centralwidget);
         doubleSpinBox_p2y->setObjectName(QString::fromUtf8("doubleSpinBox_p2y"));
@@ -798,19 +785,10 @@ public:
 
         gridLayout_16->addWidget(doubleSpinBox_p2y, 1, 21, 1, 1);
 
-        label_segments_out = new QLabel(centralwidget);
-        label_segments_out->setObjectName(QString::fromUtf8("label_segments_out"));
+        pushButton_test = new QPushButton(centralwidget);
+        pushButton_test->setObjectName(QString::fromUtf8("pushButton_test"));
 
-        gridLayout_16->addWidget(label_segments_out, 4, 22, 1, 1);
-
-        toolButton_fit_all = new QToolButton(centralwidget);
-        toolButton_fit_all->setObjectName(QString::fromUtf8("toolButton_fit_all"));
-        QIcon icon16;
-        icon16.addFile(QString::fromUtf8(":/vendor/icons/zoom_extend.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_fit_all->setIcon(icon16);
-        toolButton_fit_all->setIconSize(QSize(28, 28));
-
-        gridLayout_16->addWidget(toolButton_fit_all, 0, 11, 1, 1);
+        gridLayout_16->addWidget(pushButton_test, 0, 19, 1, 1);
 
         toolButton_view_back = new QToolButton(centralwidget);
         toolButton_view_back->setObjectName(QString::fromUtf8("toolButton_view_back"));
@@ -821,40 +799,14 @@ public:
 
         gridLayout_16->addWidget(toolButton_view_back, 0, 13, 1, 1);
 
-        pushButton_test = new QPushButton(centralwidget);
-        pushButton_test->setObjectName(QString::fromUtf8("pushButton_test"));
-
-        gridLayout_16->addWidget(pushButton_test, 0, 19, 1, 1);
-
-        label_machine_on_status = new QLabel(centralwidget);
-        label_machine_on_status->setObjectName(QString::fromUtf8("label_machine_on_status"));
-        label_machine_on_status->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 170, 0);"));
-
-        gridLayout_16->addWidget(label_machine_on_status, 0, 3, 1, 1);
-
-        label_5 = new QLabel(centralwidget);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-
-        gridLayout_16->addWidget(label_5, 1, 23, 1, 1);
-
-        toolButton_run = new QToolButton(centralwidget);
-        toolButton_run->setObjectName(QString::fromUtf8("toolButton_run"));
+        toolButton_reload = new QToolButton(centralwidget);
+        toolButton_reload->setObjectName(QString::fromUtf8("toolButton_reload"));
         QIcon icon18;
-        icon18.addFile(QString::fromUtf8(":/share/axis/images/tool_run.gif"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_run->setIcon(icon18);
-        toolButton_run->setIconSize(QSize(28, 28));
+        icon18.addFile(QString::fromUtf8(":/share/axis/images/tool_reload.gif"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_reload->setIcon(icon18);
+        toolButton_reload->setIconSize(QSize(28, 28));
 
-        gridLayout_16->addWidget(toolButton_run, 0, 6, 1, 1);
-
-        label_10 = new QLabel(centralwidget);
-        label_10->setObjectName(QString::fromUtf8("label_10"));
-
-        gridLayout_16->addWidget(label_10, 5, 21, 1, 1);
-
-        label_cleaned_procent = new QLabel(centralwidget);
-        label_cleaned_procent->setObjectName(QString::fromUtf8("label_cleaned_procent"));
-
-        gridLayout_16->addWidget(label_cleaned_procent, 5, 22, 1, 1);
+        gridLayout_16->addWidget(toolButton_reload, 0, 5, 1, 1);
 
 
         gridLayout_2->addLayout(gridLayout_16, 0, 0, 1, 2);
@@ -953,39 +905,31 @@ public:
         label_jog_speed->setText(QCoreApplication::translate("MainWindow", "0 mm/min", nullptr));
         label_spindle_override->setText(QCoreApplication::translate("MainWindow", "0%", nullptr));
         label_rapid_override->setText(QCoreApplication::translate("MainWindow", "0%", nullptr));
-        toolButton_view_3d->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        toolButton_zoom_min->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        label_6->setText(QCoreApplication::translate("MainWindow", "filter out <", nullptr));
-        toolButton_machine_on->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        label_emergency_status->setText(QCoreApplication::translate("MainWindow", "[]", nullptr));
-        label_7->setText(QCoreApplication::translate("MainWindow", "filtered out :", nullptr));
-        toolButton_file_open->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        toolButton_emergency->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        toolButton_view_top->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        toolButton_stop->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        label_filtered_out->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "distribution", nullptr));
-        toolButton_view_left->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        label_segments_in->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        pushButton_calc->setText(QCoreApplication::translate("MainWindow", "calc", nullptr));
-        toolButton_zoom_plus->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_view_bottom->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        toolButton_view_right->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        toolButton_view_front->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        label_9->setText(QCoreApplication::translate("MainWindow", "segments out:", nullptr));
-        toolButton_reload->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolButton_emergency->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolButton_machine_on->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolButton_view_3d->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolButton_view_top->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolButton_zoom_plus->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "filter out <", nullptr));
         toolButton_pause->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        label_8->setText(QCoreApplication::translate("MainWindow", "segments in:", nullptr));
-        checkBox->setText(QCoreApplication::translate("MainWindow", "clear drawing", nullptr));
-        label_segments_out->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         toolButton_fit_all->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        toolButton_view_back->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        pushButton_test->setText(QCoreApplication::translate("MainWindow", "test", nullptr));
+        toolButton_view_right->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label_machine_on_status->setText(QCoreApplication::translate("MainWindow", "[]", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "offset", nullptr));
         toolButton_run->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        label_10->setText(QCoreApplication::translate("MainWindow", "cleaned up %:", nullptr));
-        label_cleaned_procent->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        checkBox->setText(QCoreApplication::translate("MainWindow", "clear drawing", nullptr));
+        toolButton_stop->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        label_emergency_status->setText(QCoreApplication::translate("MainWindow", "[]", nullptr));
+        pushButton_calc->setText(QCoreApplication::translate("MainWindow", "calc", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "offset", nullptr));
+        toolButton_file_open->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolButton_view_left->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolButton_view_front->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "distribution", nullptr));
+        toolButton_zoom_min->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        pushButton_test->setText(QCoreApplication::translate("MainWindow", "test", nullptr));
+        toolButton_view_back->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolButton_reload->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label_machine_status->setText(QCoreApplication::translate("MainWindow", "machine status", nullptr));
     } // retranslateUi
 

@@ -572,6 +572,7 @@ int emcTaskPlanRead()
 		print_interp_error(retval);
 	    }
 	    retval = interp.read();
+
 	}
     }
     if (retval > INTERP_MIN_ERROR) {

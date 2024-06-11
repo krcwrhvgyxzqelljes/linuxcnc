@@ -82,7 +82,12 @@ ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/../../../src/libnml/posemath/_posemath.c
     ${SRC_DIR}/../../../src/libnml/posemath/sincos.c
 
-    ${SRC_DIR}/../../vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c
+    ${SRC_DIR}/../../vendor/tpmod_scurve_cplusplus/tpmod_scurve.c
+
+    ${SRC_DIR}/../../vendor/tpmod_scurve_cplusplus/hal_section.h
+    ${SRC_DIR}/../../vendor/tpmod_scurve_cplusplus/emc_section.h
+    ${SRC_DIR}/../../vendor/tpmod_scurve_cplusplus/def_section.h
+    ${SRC_DIR}/../../vendor/tpmod_scurve_cplusplus/deb_section.h
 
     ${SRC_DIR}/../../vendor/tpmod_scurve_cplusplus/add_circle.cpp
     ${SRC_DIR}/../../vendor/tpmod_scurve_cplusplus/add_line.cpp

@@ -162,43 +162,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named tpmod_scurve_cplusplus
+# Target rules for targets named librs274
 
 # Build rule for target.
-tpmod_scurve_cplusplus: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tpmod_scurve_cplusplus
-.PHONY : tpmod_scurve_cplusplus
+librs274: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 librs274
+.PHONY : librs274
 
 # fast build rule for target.
-tpmod_scurve_cplusplus/fast:
-	$(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build
-.PHONY : tpmod_scurve_cplusplus/fast
+librs274/fast:
+	$(MAKE) $(MAKESILENT) -f librs274/CMakeFiles/librs274.dir/build.make librs274/CMakeFiles/librs274.dir/build
+.PHONY : librs274/fast
 
 #=============================================================================
-# Target rules for targets named qt_lcnc_controller
+# Target rules for targets named qt_sai
 
 # Build rule for target.
-qt_lcnc_controller: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qt_lcnc_controller
-.PHONY : qt_lcnc_controller
+qt_sai: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qt_sai
+.PHONY : qt_sai
 
 # fast build rule for target.
-qt_lcnc_controller/fast:
-	$(MAKE) $(MAKESILENT) -f projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/build.make projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/build
-.PHONY : qt_lcnc_controller/fast
+qt_sai/fast:
+	$(MAKE) $(MAKESILENT) -f projects/qt_sai/CMakeFiles/qt_sai.dir/build.make projects/qt_sai/CMakeFiles/qt_sai.dir/build
+.PHONY : qt_sai/fast
 
 #=============================================================================
-# Target rules for targets named qt_lcnc_controller_autogen
+# Target rules for targets named qt_sai_autogen
 
 # Build rule for target.
-qt_lcnc_controller_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qt_lcnc_controller_autogen
-.PHONY : qt_lcnc_controller_autogen
+qt_sai_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qt_sai_autogen
+.PHONY : qt_sai_autogen
 
 # fast build rule for target.
-qt_lcnc_controller_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/build.make projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/build
-.PHONY : qt_lcnc_controller_autogen/fast
+qt_sai_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/build.make projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/build
+.PHONY : qt_sai_autogen/fast
 
 # Help Target
 help:
@@ -212,9 +212,9 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... qt_lcnc_controller_autogen"
-	@echo "... qt_lcnc_controller"
-	@echo "... tpmod_scurve_cplusplus"
+	@echo "... qt_sai_autogen"
+	@echo "... librs274"
+	@echo "... qt_sai"
 .PHONY : help
 
 

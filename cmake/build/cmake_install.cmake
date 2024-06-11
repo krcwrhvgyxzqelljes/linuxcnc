@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/user/linuxcnc/cmake/build/components/tpmod_scurve_c++/cmake_install.cmake")
-  include("/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller/cmake_install.cmake")
+  include("/home/user/linuxcnc/cmake/build/librs274/cmake_install.cmake")
+  include("/home/user/linuxcnc/cmake/build/projects/qt_sai/cmake_install.cmake")
 
 endif()
 

@@ -247,29 +247,29 @@ __/__/vendor/tpmod_scurve_cplusplus/add_line.cpp.s:
 	cd /home/user/linuxcnc/cmake/build && $(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/add_line.cpp.s
 .PHONY : __/__/vendor/tpmod_scurve_cplusplus/add_line.cpp.s
 
-__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.o: __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o
-.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.o
+__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.o: __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o
+.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.o
 
 # target to build an object file
-__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o:
-	cd /home/user/linuxcnc/cmake/build && $(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o
-.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o
+__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o:
+	cd /home/user/linuxcnc/cmake/build && $(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o
+.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o
 
-__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.i: __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.i
-.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.i
+__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.i: __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.i
+.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.i
 
 # target to preprocess a source file
-__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.i:
-	cd /home/user/linuxcnc/cmake/build && $(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.i
-.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.i
+__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.i:
+	cd /home/user/linuxcnc/cmake/build && $(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.i
+.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.i
 
-__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.s: __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.s
-.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.s
+__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.s: __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.s
+.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.s
 
 # target to generate assembly for a file
-__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.s:
-	cd /home/user/linuxcnc/cmake/build && $(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.s
-.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.s
+__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.s:
+	cd /home/user/linuxcnc/cmake/build && $(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.s
+.PHONY : __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.s
 
 __/__/vendor/tpmod_scurve_cplusplus/vector.o: __/__/vendor/tpmod_scurve_cplusplus/vector.cpp.o
 .PHONY : __/__/vendor/tpmod_scurve_cplusplus/vector.o
@@ -461,9 +461,9 @@ help:
 	@echo "... __/__/vendor/tpmod_scurve_cplusplus/add_line.o"
 	@echo "... __/__/vendor/tpmod_scurve_cplusplus/add_line.i"
 	@echo "... __/__/vendor/tpmod_scurve_cplusplus/add_line.s"
-	@echo "... __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.o"
-	@echo "... __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.i"
-	@echo "... __/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.s"
+	@echo "... __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.o"
+	@echo "... __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.i"
+	@echo "... __/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.s"
 	@echo "... __/__/vendor/tpmod_scurve_cplusplus/vector.o"
 	@echo "... __/__/vendor/tpmod_scurve_cplusplus/vector.i"
 	@echo "... __/__/vendor/tpmod_scurve_cplusplus/vector.s"

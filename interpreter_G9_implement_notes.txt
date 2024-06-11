@@ -1,0 +1,31 @@
+#include <iostream>
+void GENERAL_MOTION(int type)
+{
+    std::cout<<"GENERAL_MOTION type:"<<type<<std::endl;
+}
+
+interp_internal.hh add G_9=90 // General.
+
+Interp::read_g -> the G9 has to be here.	
+
+Added to Interp::read_g :
+
+  			// std::cout<<"G value:"<<value<<std::endl;
+  			if(value==G_9){ // G9 = 90
+      			std::cout<<"G9 found."<<std::endl;
+      			block->g_modes[mode] = value;
+      			return INTERP_OK;
+  			} // Dont fall into remap stuff...
+  			
+~/linuxcnc/src/emc/rs274ngc/interp_internal.hh
+	added a print to : struct block_struct line 429
+  		void print(){
+        	std::cout<<""<<std::endl;
+        	std::cout<<"x:"<<x_number<<std::endl;
+        	std::cout<<"y:"<<y_number<<std::endl;
+        	std::cout<<"z:"<<z_number<<std::endl;
+        	std::cout<<"p:"<<p_number<<std::endl; 
+        	std::cout<<"q:"<<q_number<<std::endl;
+        	std::cout<<"r:"<<r_number<<std::endl;
+        	std::cout<<"s:"<<s_number<<std::endl;
+    	}

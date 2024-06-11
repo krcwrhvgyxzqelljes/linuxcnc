@@ -2274,8 +2274,8 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/t
  /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/add_line.cpp
  /usr/include/stdc-predef.h
 
-components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o
- /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c
+components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o
+ /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c
  /usr/include/stdc-predef.h
  /home/user/linuxcnc/src/rtapi/rtapi.h
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h
@@ -2346,9 +2346,6 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/t
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
  /home/user/linuxcnc/src/rtapi/rtapi_io.h
  /usr/include/x86_64-linux-gnu/sys/io.h
- /home/user/linuxcnc/src/hal/hal.h
- /home/user/linuxcnc/src/rtapi/rtapi_bool.h
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h
  /usr/include/stdio.h
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h
@@ -2360,6 +2357,12 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/t
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
+ /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/hal_section.h
+ /home/user/linuxcnc/src/hal/hal.h
+ /home/user/linuxcnc/src/rtapi/rtapi_bool.h
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h
+ /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/def_section.h
+ /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/emc_section.h
  /home/user/linuxcnc/src/emc/nml_intf/emcpose.h
  /home/user/linuxcnc/src/emc/nml_intf/emcpos.h
  /home/user/linuxcnc/src/libnml/posemath/posemath.h
@@ -2389,6 +2392,7 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/t
  /home/user/linuxcnc/src/emc/tp/tcq.h
  /home/user/linuxcnc/src/emc/tp/tc.h
  /home/user/linuxcnc/src/emc/tp/tp_types.h
+ /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/deb_section.h
 
 components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/vector.cpp.o
  /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/vector.cpp

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,_togl.so.0 -o _togl.so.0 CMakeFiles/_togl.dir/home/user/linuxcnc/src/emc/usr_intf/axis/extensions/_toglmodule.c.o  -ltcl8.6 -ltk8.6 -lX11 -lepoxy -lXmu 

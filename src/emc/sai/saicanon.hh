@@ -22,8 +22,7 @@ struct StandaloneInterpInternals
   //! Retrieve values for line and arc.
   EmcPose pose;
   double cx,cy;
-  //! Line=0, arc=1, none=-1
-  int type;
+  int type;   // Line=0, arc=1, none=-1
   int rotation;
 
   CANON_PLANE _active_plane;

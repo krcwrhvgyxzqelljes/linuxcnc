@@ -256,6 +256,9 @@ int Canterp::read() {
 }
 
 int Canterp::execute(const char *line) {
+
+    printf("canterp execute. \n");
+
     int retval;
     double d1 = 0, d2 = 0, d3 = 0, d4 = 0, d5 = 0, d6 = 0, d7 = 0, d8 = 0, d9 = 0, d10 = 0, d11 = 0;
     int i1, i2, ln=-1;

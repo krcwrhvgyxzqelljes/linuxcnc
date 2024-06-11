@@ -209,6 +209,7 @@ enum GCodes
     G_6_3 = 63,
     G_7 = 70,
     G_8 = 80,
+    G_9 = 90, // General
     G_10 = 100,
     G_17 = 170,
     G_17_1 = 171,
@@ -424,6 +425,7 @@ typedef int_remap_map::iterator int_remap_iterator;
 #define REMAP_FUNC(r) (r->remap_ngc ? r->remap_ngc: \
 		       (r->remap_py ? r->remap_py : "BUG-no-remap-func"))
 
+#include <iostream>
 struct block_struct
 {
   char comment[256]{};
@@ -529,6 +531,22 @@ struct block_struct
     // reason for recording the fact: this permits an epilog to do the
     // right thing depending on whether the builtin was used or not.
     bool builtin_used{};
+
+    void print(){
+        std::cout<<""<<std::endl;
+        std::cout<<"x:"<<x_number<<std::endl;
+        std::cout<<"y:"<<y_number<<std::endl;
+        std::cout<<"z:"<<z_number<<std::endl;
+        std::cout<<"p:"<<p_number<<std::endl;
+        std::cout<<"q:"<<q_number<<std::endl;
+        std::cout<<"r:"<<r_number<<std::endl;
+        std::cout<<"l:"<<l_number<<std::endl;
+        std::cout<<"e:"<<e_number<<std::endl;
+
+        for(uint i=0; i<GM_MAX_MODAL_GROUPS; i++){
+             std::cout<<"gmodes i:"<< g_modes[i] <<std::endl;;
+        }
+    }
 };
 
 // indicates which type of Python handler yielded, and needs reexecution

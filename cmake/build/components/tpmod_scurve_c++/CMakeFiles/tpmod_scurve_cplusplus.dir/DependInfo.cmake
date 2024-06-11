@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c" "components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o" "gcc" "components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o.d"
+  "/home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c" "components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o" "gcc" "components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o.d"
   "/home/user/linuxcnc/src/emc/nml_intf/emcpose.c" "components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/emc/nml_intf/emcpose.c.o" "gcc" "components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/emc/nml_intf/emcpose.c.o.d"
   "/home/user/linuxcnc/src/emc/tp/blendmath.c" "components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/emc/tp/blendmath.c.o" "gcc" "components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/emc/tp/blendmath.c.o.d"
   "/home/user/linuxcnc/src/emc/tp/spherical_arc.c" "components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/emc/tp/spherical_arc.c.o" "gcc" "components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linuxcnc/src/emc/tp/spherical_arc.c.o.d"

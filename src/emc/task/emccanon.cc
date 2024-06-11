@@ -1024,12 +1024,14 @@ void ON_RESET() {
     drop_segments();
 }
 
-
+#include <stdio.h>
 void STRAIGHT_TRAVERSE(int line_number,
                        double x, double y, double z,
 		               double a, double b, double c,
                        double u, double v, double w)
 {
+    printf("calling STRAIGHT_TRAVERSE from milltask. \n \n");
+
     double vel, acc;
 
     flush_segments();

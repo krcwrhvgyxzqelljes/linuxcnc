@@ -31,6 +31,8 @@ cmake_minimum_required(VERSION 3.0)
 set(PROJECT "- LINUX_CNC -") # The name of the file excluding .c or .h
 project(${PROJECT} CXX C) # Asm is optional.
 
+set(CMAKE_CXX_STANDARD 17)
+
 # Set variables.
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(BUILD_DIR "${CMAKE_CURRENT_BINARY_DIR}")
@@ -72,7 +74,7 @@ include_directories("/usr/include/boost")
 #add_subdirectory(${SRC_DIR}/liblinuxcnc)
 #add_subdirectory(${SRC_DIR}/libposemath)
 #add_subdirectory(${SRC_DIR}/libpyplugin)
-#add_subdirectory(${SRC_DIR}/librs274)
+add_subdirectory(${SRC_DIR}/librs274)
 #add_subdirectory(${SRC_DIR}/libcanterp)
 
 ## ~/rtlib (realtime modules for real hardware or simulating)
@@ -92,7 +94,7 @@ include_directories("/usr/include/boost")
 # In development, based on the tpmod_scurve_skynet.
 # Known bug : jogging before program start, solves a position jump when pressing program stop.
 # add_subdirectory(${SRC_DIR}/components/tpmod_scurve_grotius)
-add_subdirectory(${SRC_DIR}/components/tpmod_scurve_c++)
+# add_subdirectory(${SRC_DIR}/components/tpmod_scurve_c++)
 
 ##add_subdirectory(${SRC_DIR}/components/tpmod_T800) # experimental scurve lib using ruckig-dev, enabling velocity ends.
 #add_subdirectory(${SRC_DIR}/components/homemod)
@@ -118,7 +120,7 @@ add_subdirectory(${SRC_DIR}/components/tpmod_scurve_c++)
 #add_subdirectory(${SRC_DIR}/components/rosekins)
 #add_subdirectory(${SRC_DIR}/components/ugenserkins)
 #add_subdirectory(${SRC_DIR}/components/scurve)
-#add_subdirectory(${SRC_DIR}/components/motmod) # jogging trapezium
+#add_subdirectory(${SRC_DIR}/components/motmod) # lcnc motion controller component. also has jogging trapezium
 #add_subdirectory(${SRC_DIR}/components/motmod_scurve) # jogging grotius scurve
 ##add_subdirectory(${SRC_DIR}/components/motmod_T800) # jogging scurve using ruckig-dev lib.
 #add_subdirectory(${SRC_DIR}/components/scope_rt)
@@ -149,8 +151,8 @@ add_subdirectory(${SRC_DIR}/components/tpmod_scurve_c++)
 #add_subdirectory(${SRC_DIR}/halrmt)
 #add_subdirectory(${SRC_DIR}/pci_write)
 #add_subdirectory(${SRC_DIR}/pci_read)
-##add_subdirectory(${SRC_DIR}/io)
-##add_subdirectory(${SRC_DIR}/iov2)
+#add_subdirectory(${SRC_DIR}/io)
+#add_subdirectory(${SRC_DIR}/iov2)
 #add_subdirectory(${SRC_DIR}/motion_logger)
 #add_subdirectory(${SRC_DIR}/sai)
 #add_subdirectory(${SRC_DIR}/linuxcncsvr)
@@ -176,7 +178,8 @@ add_subdirectory(${SRC_DIR}/components/tpmod_scurve_c++)
 
 # Requires qt & opencascade installed, opencascade version: ~/cmake/vendor/oce-upstream-V7_5_0beta
 # add_subdirectory(${SRC_DIR}/projects/qt_gremlin)
-add_subdirectory(${SRC_DIR}/projects/qt_lcnc_controller)
+# add_subdirectory(${SRC_DIR}/projects/qt_lcnc_controller)
+add_subdirectory(${SRC_DIR}/projects/qt_sai)
 # add_subdirectory(${SRC_DIR}/projects/qt_occ_draw)
 # add_subdirectory(${SRC_DIR}/projects/qt_occ_cavalier)
 

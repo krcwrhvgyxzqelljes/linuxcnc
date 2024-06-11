@@ -564,6 +564,8 @@ int Interp::read_g(char *line,   //!< string: line of RS274/NGC code being proce
                   block_pointer block,  //!< pointer to a block being filled from the line 
                   double *parameters)   //!< array of system parameters                    
 {
+  std::cout<<"Interp::read_g"<<std::endl;
+
   double value_read;
   int value;
   int mode;
@@ -583,6 +585,13 @@ int Interp::read_g(char *line,   //!< string: line of RS274/NGC code being proce
   CHKS((value < 0), NCE_NEGATIVE_G_CODE_USED);
   // mode = usercode_mgroup(&(_setup),value);
   // if (mode != -1) {
+
+  // std::cout<<"G value:"<<value<<std::endl;
+  if(value==G_9){ // G9 = 90
+      std::cout<<"G9 found."<<std::endl;
+      block->g_modes[GM_MOTION] = value; // GM_MOTION is same as G2, G3 etc.
+      return INTERP_OK;
+  } // Dont fall into remap stuff...
 
  remap_pointer r = _setup.g_remapped[value];
   if (r) {
@@ -818,6 +827,7 @@ int Interp::read_items(block_pointer block,      //!< pointer to a block being f
                       char *line,       //!< string: line of RS274/NGC code being processed
                       double *parameters)   //!< array of system parameters 
 {
+  //  std::cout<<"Interp::read_items"<<std::endl;
   int counter;
   int m_number, m_counter;  // for checking m98/m99 as o-words
   int length;
@@ -872,6 +882,7 @@ int Interp::read_items(block_pointer block,      //!< pointer to a block being f
   for (; counter < length;) {
     CHP(read_one_item(line, &counter, block, parameters));
   }
+  // std::cout<<"End Interp::read_items"<<std::endl;
   return INTERP_OK;
 }
 
@@ -1199,6 +1210,8 @@ int Interp::read_one_item(
     block_pointer block,   //!< pointer to a block being filled from the line 
     double * parameters) /* array of system parameters  */
 {
+  //std::cout<<"Interp::read_one_item"<<std::endl;
+
   read_function_pointer function_pointer;
   char letter;
 
@@ -1210,6 +1223,9 @@ int Interp::read_one_item(
 	(!isprint(letter) || isspace(letter)) ?
 	    _("Bad character '\\%03o' used") : _("Bad character '%c' used"), letter);
   CHP((*this.*function_pointer)(line, counter, block, parameters)); /* Call the function */ 
+
+  //block->print();
+  // std::cout<<"End Interp::read_one_item"<<std::endl;
   return INTERP_OK;
 }
 

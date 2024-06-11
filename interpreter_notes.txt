@@ -1,0 +1,60 @@
+nurbs are converted to arcs, then loaded into the trajectory planner as a x number of arcs.
+
+Function to load arcs in trajectory planner is done by component tpmod.so, this component is also used for jogging :
+	tpAddCircle(){}
+
+Lcnc motion component motmod.so :
+
+~linuxcnc/src/emc/motion/command.c line 1088 loads the arc by :
+ 	tpAddCircle(&emcmotIn......
+The function : 	
+ 	void emcmotCommandHandler_locked(void *arg, long servo_period); line 386
+Called by : 
+	void emcmotCommandHandler(void *arg, long servo_period); line 1904
+Is hal function : 
+    retval = hal_export_funct("motion-command-handler", emcmotCommandHandler, 0	/* arg Line 1021
+
+The data for the arcs is stored in a c structure, saved in shared memory : 
+	extern struct emcmot_command_t *emcmotCommand;
+	- cmd_code_t command;	/* command code (enum) */
+		- EMCMOT_SET_LINE,	/* queue up a linear move */
+		- EMCMOT_SET_CIRCLE,	/* queue up a circular move */
+
+
+The interpreter :
+interp_queue.hh looks like to store a vector of gcode lines.
+
+milltask.so
+/home/user/linuxcnc/src/emc/task/taskintf.cc line 1407
+This function sends a arc move to hal component motmod.so
+	int emcTrajCircularMove(EmcPose end, PM_CARTESIAN center .....
+	
+/home/user/linuxcnc/src/emc/task/emctask.cc line 565
+Reads from the interpreter directly.
+	int emcTaskPlanRead()
+	
+	Line 46, it has interpreter storage:
+	InterpBase *pinterp=0;
+	#define interp (*pinterp)
+	
+liblinuxcnc.so
+/home/user/linuxcnc/src/emc/nml_intf/emc.hh
+This functions calls the milltask.so 
+	extern int emcTrajCircularMove(EmcPose end, ....
+	
+/home/user/linuxcnc/src/emc/task/emccanon.cc	
+This function is called by the interpreter and adds a line to the interp_list by calling tag_and_send(...
+	void STRAIGHT_TRAVERSE(....
+	
+Conclusion.
+
+The interpreter itself has not the function STRAIGHT_TRAVERSE(); itself. Its been called by outside programs that include's the
+interpreter source code and therefore must declare the STRAIGHT_TRAVERSE() function.
+
+
+
+	
+	
+	
+	
+	

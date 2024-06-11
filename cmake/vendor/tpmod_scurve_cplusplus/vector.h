@@ -14,6 +14,8 @@ public:
     vector();
 
     std::vector<segment> segvec;
+
+    int loading;
 };
 
 #else

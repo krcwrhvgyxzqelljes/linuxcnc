@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/linuxcnc_module_helper.dir/home/user/linuxcnc/src/module_helper/module_helper.c.o -o linuxcnc_module_helper  -Wall -Werror 

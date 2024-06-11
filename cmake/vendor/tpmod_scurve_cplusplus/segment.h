@@ -28,7 +28,8 @@ struct segment {
 
     double vel;
     int turn;               // -1=ccw.
-    int canon_motion_type;  // 1=rapid, 2=linear, 3=circle.
+    int canon_motion_type;  // 1=rapid, 2=linear, 3=circle,
+    int gcode_line_nr;      // Refers to the gcode textfile line nr of this segment.
 
     double g64_p, g64_q;
 };

@@ -48,6 +48,8 @@ extern std::vector<cad_data> runInterpreter(std::string filename)
     pinterp = new Interp;
 
     int s=pinterp->init();
+
+
     s=pinterp->open(filename.c_str());
 
     while(1)
@@ -102,6 +104,9 @@ extern std::vector<cad_data> runInterpreter(std::string filename)
 
         d.rotation=_sai.rotation; // Arc dir, G2 or G3.
         // std::cout<<"rotation:"<<d.rotation<<std::endl;
+
+        d.motion_tolerance=_sai.motion_tolerance;
+        d.naivecam_tolerance=_sai.naivecam_tolerance;
 
         cadvec.push_back(d);
 

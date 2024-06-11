@@ -68,6 +68,9 @@ struct tp_segment {
     int next_segment_is_tangent_or_colinear;
 
     int is_fillet_segment; //! Used by cavalier algo.
+
+    double motion_tolerance;      // G64 P
+    double naivecam_tolerance;    // G64 Q
 };
 
 #endif

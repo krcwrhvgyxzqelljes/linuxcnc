@@ -63,128 +63,128 @@ CMAKE_BINARY_DIR = /home/user/linuxcnc/cmake/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: components/tpmod_scurve_c++/all
-all: projects/qt_lcnc_controller/all
+all: librs274/all
+all: projects/qt_sai/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: components/tpmod_scurve_c++/preinstall
-preinstall: projects/qt_lcnc_controller/preinstall
+preinstall: librs274/preinstall
+preinstall: projects/qt_sai/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: components/tpmod_scurve_c++/clean
-clean: projects/qt_lcnc_controller/clean
+clean: librs274/clean
+clean: projects/qt_sai/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory components/tpmod_scurve_c++
+# Directory level rules for directory librs274
 
 # Recursive "all" directory target.
-components/tpmod_scurve_c++/all: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/all
-.PHONY : components/tpmod_scurve_c++/all
+librs274/all: librs274/CMakeFiles/librs274.dir/all
+.PHONY : librs274/all
 
 # Recursive "preinstall" directory target.
-components/tpmod_scurve_c++/preinstall:
-.PHONY : components/tpmod_scurve_c++/preinstall
+librs274/preinstall:
+.PHONY : librs274/preinstall
 
 # Recursive "clean" directory target.
-components/tpmod_scurve_c++/clean: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/clean
-.PHONY : components/tpmod_scurve_c++/clean
+librs274/clean: librs274/CMakeFiles/librs274.dir/clean
+.PHONY : librs274/clean
 
 #=============================================================================
-# Directory level rules for directory projects/qt_lcnc_controller
+# Directory level rules for directory projects/qt_sai
 
 # Recursive "all" directory target.
-projects/qt_lcnc_controller/all: projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/all
-.PHONY : projects/qt_lcnc_controller/all
+projects/qt_sai/all: projects/qt_sai/CMakeFiles/qt_sai.dir/all
+.PHONY : projects/qt_sai/all
 
 # Recursive "preinstall" directory target.
-projects/qt_lcnc_controller/preinstall:
-.PHONY : projects/qt_lcnc_controller/preinstall
+projects/qt_sai/preinstall:
+.PHONY : projects/qt_sai/preinstall
 
 # Recursive "clean" directory target.
-projects/qt_lcnc_controller/clean: projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/clean
-projects/qt_lcnc_controller/clean: projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/clean
-.PHONY : projects/qt_lcnc_controller/clean
+projects/qt_sai/clean: projects/qt_sai/CMakeFiles/qt_sai.dir/clean
+projects/qt_sai/clean: projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/clean
+.PHONY : projects/qt_sai/clean
 
 #=============================================================================
-# Target rules for target components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir
+# Target rules for target librs274/CMakeFiles/librs274.dir
 
 # All Build rule for target.
-components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/all:
-	$(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/depend
-	$(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/linuxcnc/cmake/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26,27,28,29,30 "Built target tpmod_scurve_cplusplus"
-.PHONY : components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/all
+librs274/CMakeFiles/librs274.dir/all:
+	$(MAKE) $(MAKESILENT) -f librs274/CMakeFiles/librs274.dir/build.make librs274/CMakeFiles/librs274.dir/depend
+	$(MAKE) $(MAKESILENT) -f librs274/CMakeFiles/librs274.dir/build.make librs274/CMakeFiles/librs274.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/linuxcnc/cmake/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31 "Built target librs274"
+.PHONY : librs274/CMakeFiles/librs274.dir/all
 
 # Build rule for subdir invocation for target.
-components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/linuxcnc/cmake/build/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/all
+librs274/CMakeFiles/librs274.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/linuxcnc/cmake/build/CMakeFiles 31
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 librs274/CMakeFiles/librs274.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/linuxcnc/cmake/build/CMakeFiles 0
-.PHONY : components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/rule
+.PHONY : librs274/CMakeFiles/librs274.dir/rule
 
 # Convenience name for target.
-tpmod_scurve_cplusplus: components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/rule
-.PHONY : tpmod_scurve_cplusplus
+librs274: librs274/CMakeFiles/librs274.dir/rule
+.PHONY : librs274
 
 # clean rule for target.
-components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/build.make components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/clean
-.PHONY : components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/clean
+librs274/CMakeFiles/librs274.dir/clean:
+	$(MAKE) $(MAKESILENT) -f librs274/CMakeFiles/librs274.dir/build.make librs274/CMakeFiles/librs274.dir/clean
+.PHONY : librs274/CMakeFiles/librs274.dir/clean
 
 #=============================================================================
-# Target rules for target projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir
+# Target rules for target projects/qt_sai/CMakeFiles/qt_sai.dir
 
 # All Build rule for target.
-projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/all: projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/all
-	$(MAKE) $(MAKESILENT) -f projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/build.make projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/depend
-	$(MAKE) $(MAKESILENT) -f projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/build.make projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/linuxcnc/cmake/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target qt_lcnc_controller"
-.PHONY : projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/all
+projects/qt_sai/CMakeFiles/qt_sai.dir/all: projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f projects/qt_sai/CMakeFiles/qt_sai.dir/build.make projects/qt_sai/CMakeFiles/qt_sai.dir/depend
+	$(MAKE) $(MAKESILENT) -f projects/qt_sai/CMakeFiles/qt_sai.dir/build.make projects/qt_sai/CMakeFiles/qt_sai.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/linuxcnc/cmake/build/CMakeFiles --progress-num=32,33,34,35,36,37,38 "Built target qt_sai"
+.PHONY : projects/qt_sai/CMakeFiles/qt_sai.dir/all
 
 # Build rule for subdir invocation for target.
-projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/linuxcnc/cmake/build/CMakeFiles 18
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/all
+projects/qt_sai/CMakeFiles/qt_sai.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/linuxcnc/cmake/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/qt_sai/CMakeFiles/qt_sai.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/linuxcnc/cmake/build/CMakeFiles 0
-.PHONY : projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/rule
+.PHONY : projects/qt_sai/CMakeFiles/qt_sai.dir/rule
 
 # Convenience name for target.
-qt_lcnc_controller: projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/rule
-.PHONY : qt_lcnc_controller
+qt_sai: projects/qt_sai/CMakeFiles/qt_sai.dir/rule
+.PHONY : qt_sai
 
 # clean rule for target.
-projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/clean:
-	$(MAKE) $(MAKESILENT) -f projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/build.make projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/clean
-.PHONY : projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/clean
+projects/qt_sai/CMakeFiles/qt_sai.dir/clean:
+	$(MAKE) $(MAKESILENT) -f projects/qt_sai/CMakeFiles/qt_sai.dir/build.make projects/qt_sai/CMakeFiles/qt_sai.dir/clean
+.PHONY : projects/qt_sai/CMakeFiles/qt_sai.dir/clean
 
 #=============================================================================
-# Target rules for target projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir
+# Target rules for target projects/qt_sai/CMakeFiles/qt_sai_autogen.dir
 
 # All Build rule for target.
-projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/all:
-	$(MAKE) $(MAKESILENT) -f projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/build.make projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/depend
-	$(MAKE) $(MAKESILENT) -f projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/build.make projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/linuxcnc/cmake/build/CMakeFiles --progress-num=18 "Built target qt_lcnc_controller_autogen"
-.PHONY : projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/all
+projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/all:
+	$(MAKE) $(MAKESILENT) -f projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/build.make projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/build.make projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/linuxcnc/cmake/build/CMakeFiles --progress-num=39 "Built target qt_sai_autogen"
+.PHONY : projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/all
 
 # Build rule for subdir invocation for target.
-projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/rule: cmake_check_build_system
+projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/linuxcnc/cmake/build/CMakeFiles 1
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/linuxcnc/cmake/build/CMakeFiles 0
-.PHONY : projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/rule
+.PHONY : projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/rule
 
 # Convenience name for target.
-qt_lcnc_controller_autogen: projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/rule
-.PHONY : qt_lcnc_controller_autogen
+qt_sai_autogen: projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/rule
+.PHONY : qt_sai_autogen
 
 # clean rule for target.
-projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/clean:
-	$(MAKE) $(MAKESILENT) -f projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/build.make projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/clean
-.PHONY : projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/clean
+projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/build.make projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/clean
+.PHONY : projects/qt_sai/CMakeFiles/qt_sai_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

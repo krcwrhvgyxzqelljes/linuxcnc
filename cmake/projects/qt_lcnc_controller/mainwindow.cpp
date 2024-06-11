@@ -211,6 +211,9 @@ void MainWindow::get_segvec_from_caddata(std::vector<cad_data> cvec, std::vector
 
         tp_segment seg;
 
+        seg.motion_tolerance=d.motion_tolerance;        // G64 P
+        seg.naivecam_tolerance=d.naivecam_tolerance;    // G64 Q
+
         if(d.type==1 /*G1*/ || d.type==3 /*G0*/){ //! Draw opencascade line.
             gp_Pnt p0(oldx,oldy,oldz);
             gp_Pnt p1(d.pose.tran.x, d.pose.tran.y, d.pose.tran.z);
@@ -975,16 +978,6 @@ void MainWindow::create_clothoid_fillets(){
         aShape=draw_primitives::colorize(aShape,Quantity_NOC_WHITE,0);
         occ->add_shapevec(aShape);
 
-
-        ui->label_segments_in->setText(QString::number(segvec.size()));
-        ui->label_segments_out->setText(QString::number(trivec.size()));
-
-        double filtered_nr=segvec.size()-trivec.size();
-        double val=(filtered_nr/segvec.size())*100;
-
-        ui->label_cleaned_procent->setText(QString::number( val ,'g',2 ));
-        ui->label_filtered_out->setText(QString::number(filtered_nr));
-
         return;
     }
 
@@ -1015,14 +1008,4 @@ void MainWindow::create_clothoid_fillets(){
     for(uint i=0; i<trivec.size(); i++){
         occ->add_shapevec( draw_primitives::colorize( draw_primitives::draw_3p_3d_arc(trivec[i].p0,trivec[i].p1,trivec[i].p2), Quantity_NOC_WHITE,0));
     }
-
-    ui->label_segments_in->setText(QString::number(segvec.size()));
-    ui->label_segments_out->setText(QString::number(trivec.size()));
-
-    double filtered_nr=segvec.size()-trivec.size();
-    double val=(filtered_nr/segvec.size())*100;
-
-    ui->label_cleaned_procent->setText(QString::number( val ,'g',2 ));
-    ui->label_filtered_out->setText(QString::number(filtered_nr));
-
 }

@@ -133,11 +133,7 @@ typedef struct {
 				   FALSE if in position mode */
     double uu_per_rev;          /* user units per spindle revolution */
 
-
     syncdio_t syncdio; //record tpSetDout's here
-
-    int gcode_upcoming_line_nr;
-    int gcode_current_executed_line_nr;
 
 } TP_STRUCT;
 

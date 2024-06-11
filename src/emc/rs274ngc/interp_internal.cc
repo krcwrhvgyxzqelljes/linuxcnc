@@ -143,10 +143,12 @@ settings->motion mode).
 This also make the checks described above.
 
 */
-
+#include <iostream>
 int Interp::enhance_block(block_pointer block,   //!< pointer to a block to be checked
                          setup_pointer settings)        //!< pointer to machine settings
 {
+  // std::cout<<"Interp::enhance_block"<<std::endl;
+
   int axis_flag;
   int ijk_flag;
   int polar_flag;
@@ -215,6 +217,8 @@ int Interp::enhance_block(block_pointer block,   //!< pointer to a block to be c
       block->motion_to_be = settings->motion_mode;
   }
   CHKS((polar_flag && block->motion_to_be == -1), _("Polar coordinates can only be used for motion"));
+
+  // std::cout<<"End Interp::enhance_block"<<std::endl;
   return INTERP_OK;
 }
 
@@ -338,20 +342,34 @@ Called by:  Interp::read
 
 */
 
+#include <iostream>
 int Interp::parse_line(char *line,       //!< array holding a line of RS274 code
                       block_pointer block,      //!< pointer to a block to be filled
                       setup_pointer settings)   //!< pointer to machine settings
 {
+  // std::cout<<"Interp::parse_line:"<<line<<std::endl;
+
   CHP(init_block(block));
   CHP(read_items(block, line, settings->parameters));
 
-  if(settings->skipping_o == 0)
-  {
+  if(block->g_modes[1]==G_9){
+      block->print();
+      return INTERP_OK; // Skip the next code as it will filter out commands. Return ok.
+  }
+
+  if(settings->skipping_o == 0){
     CHP(enhance_block(block, settings));
     CHP(check_items(block, settings));
     int n = find_remappings(block,settings);
     if (n) logRemap("parse_line: found %d remappings",n);
   }
+
+  // std::cout<<"End Interp::parse_line:"<<std::endl;
+
+  // Add gmodes.
+
+ // block->print();
+
   return INTERP_OK;
 }
 

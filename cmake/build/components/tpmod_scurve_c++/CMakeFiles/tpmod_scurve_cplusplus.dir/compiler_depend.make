@@ -2271,7 +2271,7 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/t
 components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/add_line.cpp.o: /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/add_line.cpp \
   /usr/include/stdc-predef.h
 
-components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c.o: /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c \
+components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c.o: /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c \
   /usr/include/stdc-predef.h \
   /home/user/linuxcnc/src/rtapi/rtapi.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
@@ -2342,9 +2342,6 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/t
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /home/user/linuxcnc/src/rtapi/rtapi_io.h \
   /usr/include/x86_64-linux-gnu/sys/io.h \
-  /home/user/linuxcnc/src/hal/hal.h \
-  /home/user/linuxcnc/src/rtapi/rtapi_bool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
@@ -2356,6 +2353,12 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/t
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/hal_section.h \
+  /home/user/linuxcnc/src/hal/hal.h \
+  /home/user/linuxcnc/src/rtapi/rtapi_bool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h \
+  /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/def_section.h \
+  /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/emc_section.h \
   /home/user/linuxcnc/src/emc/nml_intf/emcpose.h \
   /home/user/linuxcnc/src/emc/nml_intf/emcpos.h \
   /home/user/linuxcnc/src/libnml/posemath/posemath.h \
@@ -2384,7 +2387,8 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/t
   /home/user/linuxcnc/src/emc/motion/state_tag.h \
   /home/user/linuxcnc/src/emc/tp/tcq.h \
   /home/user/linuxcnc/src/emc/tp/tc.h \
-  /home/user/linuxcnc/src/emc/tp/tp_types.h
+  /home/user/linuxcnc/src/emc/tp/tp_types.h \
+  /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/deb_section.h
 
 components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/__/__/vendor/tpmod_scurve_cplusplus/vector.cpp.o: /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/vector.cpp \
   /usr/include/stdc-predef.h \
@@ -4797,7 +4801,7 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linu
 
 /home/user/linuxcnc/src/rtapi/rtapi.h:
 
-/home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tp_scurve_cplusplus.c:
+/home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/tpmod_scurve.c:
 
 /home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/add_circle.cpp:
 
@@ -5188,6 +5192,8 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linu
 /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h:
 
 /usr/include/eigen3/Eigen/src/Core/Fuzzy.h:
+
+/home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/def_section.h:
 
 /usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:
 
@@ -6477,6 +6483,8 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linu
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
+/home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/emc_section.h:
+
 /home/user/linuxcnc/cmake/vendor/oce-upstream-V7_5_0beta/src/BVH/BVH_Tree.hxx:
 
 /home/user/linuxcnc/cmake/vendor/oce-upstream-V7_5_0beta/src/STEPControl/STEPControl_Writer.hxx:
@@ -7156,6 +7164,8 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linu
 /home/user/linuxcnc/cmake/vendor/oce-upstream-V7_5_0beta/src/gp/gp_Vec2d.lxx:
 
 /home/user/linuxcnc/src/emc/tp/blendmath.c:
+
+/home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/deb_section.h:
 
 /usr/include/c++/12/istream:
 
@@ -8552,6 +8562,8 @@ components/tpmod_scurve_c++/CMakeFiles/tpmod_scurve_cplusplus.dir/home/user/linu
 /home/user/linuxcnc/cmake/vendor/oce-upstream-V7_5_0beta/src/TCollection/TCollection_ExtendedString.hxx:
 
 /home/user/linuxcnc/cmake/vendor/oce-upstream-V7_5_0beta/src/Standard/Standard_PExtCharacter.hxx:
+
+/home/user/linuxcnc/cmake/vendor/tpmod_scurve_cplusplus/hal_section.h:
 
 /usr/include/stdlib.h:
 

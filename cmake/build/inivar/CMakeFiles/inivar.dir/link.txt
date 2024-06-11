@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/inivar.dir/home/user/linuxcnc/src/libnml/inifile/inivar.cc.o CMakeFiles/inivar.dir/home/user/linuxcnc/src/libnml/inifile/inifile.cc.o -o inivar  -Wl,-rpath,/home/user/linuxcnc/cmake/inivar/../build/liblinuxcncini: -lpthread -pthread -lrt -ludev -ldl /home/user/linuxcnc/cmake/inivar/../build/liblinuxcncini/liblinuxcncini.so 
