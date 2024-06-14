@@ -996,13 +996,16 @@ void emcmotCommandHandler_locked(void *arg, long servo_period)
             rtapi_print_msg(RTAPI_MSG_DBG, "SET_GENERAL_MOTION");
             printf("tpAddGeneralMotion from command.c \n");
 
-            double a,b,c,d,e,f;
-            a=emcmotCommand->a;
-            b=emcmotCommand->b;
-            c=emcmotCommand->c;
-            d=emcmotCommand->e;
+            double i,j,k,p,q,r,e,l,test;
+            i=emcmotCommand->i;
+            j=emcmotCommand->j;
+            k=emcmotCommand->k;
+            p=emcmotCommand->p;
+            q=emcmotCommand->q;
+            r=emcmotCommand->r;
             e=emcmotCommand->e;
-            f=emcmotCommand->f;
+            l=emcmotCommand->l;
+            test=emcmotCommand->test;
 
             /* append it to the emcmotInternal->coord_tp */
             tpSetId(&emcmotInternal->coord_tp, emcmotCommand->id);
@@ -1015,7 +1018,10 @@ void emcmotCommandHandler_locked(void *arg, long servo_period)
                                                  emcmotStatus->enables_new,
                                                  issue_atspeed,
                                                  emcmotCommand->turn,
-                                                 emcmotCommand->tag, a,b,c,d,e,f);
+                                                 emcmotCommand->tag,
+                                                 i,j,k,
+                                                 p,q,r,
+                                                 e,l,test);
             //KLUDGE ignore zero length line
             if (res_addline < 0) {
                 printf("tpAddGeneralMotion from command.c error. \n");

@@ -1834,12 +1834,15 @@ static int emcTaskIssueCommand(NMLmsg * cmd)
                                     emcTrajGeneralMoveMsg->type, emcTrajGeneralMoveMsg->vel,
                                     emcTrajGeneralMoveMsg->ini_maxvel, emcTrajGeneralMoveMsg->acc,
                                     emcTrajGeneralMoveMsg->indexer_jnum,
-                                    emcTrajGeneralMoveMsg->a,
-                                    emcTrajGeneralMoveMsg->b,
-                                    emcTrajGeneralMoveMsg->c,
-                                    emcTrajGeneralMoveMsg->d,
+                                    emcTrajGeneralMoveMsg->i,
+                                    emcTrajGeneralMoveMsg->j,
+                                    emcTrajGeneralMoveMsg->k,
+                                    emcTrajGeneralMoveMsg->p,
+                                    emcTrajGeneralMoveMsg->q,
+                                    emcTrajGeneralMoveMsg->r,
                                     emcTrajGeneralMoveMsg->e,
-                                    emcTrajGeneralMoveMsg->f
+                                    emcTrajGeneralMoveMsg->l,
+                                    emcTrajGeneralMoveMsg->test
                                     );
         break;
 

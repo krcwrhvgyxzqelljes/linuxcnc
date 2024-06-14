@@ -183,7 +183,7 @@ typedef struct {
     // Temporary status flags (reset each cycle)
     int is_blending;
 
-    double a,b,c,d,e,f; // G9 data.
+    double i,j,k,p,q,r,e,l,test; // GENERAL_MOTION vars.
 
 } TC_STRUCT;
 

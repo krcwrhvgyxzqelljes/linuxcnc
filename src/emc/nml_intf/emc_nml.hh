@@ -640,7 +640,7 @@ class EMC_TRAJ_GENERAL_MOVE:public EMC_TRAJ_CMD_MSG {
     double vel, ini_maxvel, acc;
     int feed_mode;
     int indexer_jnum;
-    double a,b,c,d,e,f;
+    double i,j,k,p,q,r,e,l,test;
 };
 
 class EMC_TRAJ_CIRCULAR_MOVE:public EMC_TRAJ_CMD_MSG {

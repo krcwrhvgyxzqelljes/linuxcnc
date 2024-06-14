@@ -2036,23 +2036,28 @@ STATIC tc_blend_type_t tpHandleBlendArc(TP_STRUCT * const tp, TC_STRUCT * const 
     return blend_used;
 }
 
-double pa,pb,pc,pd,pe,pf;
+double pi,pj,pk,pp,pq,pr,pe,pl,ptest;
 
 int tpAddGeneralMotion(TP_STRUCT * const tp, EmcPose end, int canon_motion_type,
                        double vel, double ini_maxvel, double acc, unsigned char enables,
                        char atspeed, int indexer_jnum, struct state_tag_t tag,
-                       double a, double b, double c, double d, double e, double f){
+                       double i, double j, double k,
+                       double p, double q, double r,
+                       double e, double l, double test){
 
     printf("== AddGeneralMotion ==");
     printf("x end: %f \n",end.tran.x);
     printf("y end: %f \n",end.tran.y);
 
-    printf("test value a: %f \n",a);
-    printf("test value b: %f \n",b);
-    printf("test value c: %f \n",c);
-    printf("test value d: %f \n",d);
+    printf("test value i: %f \n",i);
+    printf("test value j: %f \n",j);
+    printf("test value k: %f \n",k);
+    printf("test value p: %f \n",p);
+    printf("test value q: %f \n",q);
+    printf("test value r: %f \n",r);
     printf("test value e: %f \n",e);
-    printf("test value f: %f \n",f);
+    printf("test value l: %f \n",l);
+    printf("test value test: %f \n",test);
 
     if (tpErrorCheck(tp) < 0) {
         return TP_ERR_FAIL;
@@ -2108,19 +2113,25 @@ int tpAddGeneralMotion(TP_STRUCT * const tp, EmcPose end, int canon_motion_type,
     tcFinalizeLength(prev_tc);
     tcFlagEarlyStop(prev_tc, &tc);
 
-    tc.a=pa;
-    tc.b=pb;
-    tc.c=pc;
-    tc.d=pd;
+    tc.i=pi;
+    tc.j=pj;
+    tc.k=pk;
+    tc.p=pp;
+    tc.q=pq;
+    tc.r=pr;
     tc.e=pe;
-    tc.f=pf;
+    tc.l=pl;
+    tc.test=ptest;
 
-    pa=a;
-    pb=b;
-    pc=c;
-    pd=d;
+    pi=i;
+    pj=j;
+    pk=k;
+    pp=p;
+    pq=q;
+    pr=r;
     pe=e;
-    pf=f;
+    pl=l;
+    ptest=test;
 
     int retval = tpAddSegmentToQueue(tp, &tc, true);
     //Run speed optimization (will abort safely if there are no tangent segments)
@@ -3503,12 +3514,15 @@ int tpRunCycle(TP_STRUCT * const tp, long period)
     tc = tcqItem(&tp->queue, 0);
 
     if(count>1 && tc!=NULL){
-        // p,q,r,e,l
-        printf("gcode value p: %f \n",tc->a);
-        printf("gcode value q: %f \n",tc->b);
-        printf("gcode value r: %f \n",tc->c);
-        printf("gcode value e: %f \n",tc->d);
-        printf("gcode value l: %f \n",tc->e);
+        printf("gcode value i: %f \n",tc->i);
+        printf("gcode value j: %f \n",tc->j);
+        printf("gcode value k: %f \n",tc->k);
+        printf("gcode value p: %f \n",tc->p);
+        printf("gcode value q: %f \n",tc->q);
+        printf("gcode value r: %f \n",tc->r);
+        printf("gcode value e: %f \n",tc->e);
+        printf("gcode value l: %f \n",tc->l);
+        printf("gcode value test: %f \n",tc->test);
         count=0;
     }
     count+=0.001;

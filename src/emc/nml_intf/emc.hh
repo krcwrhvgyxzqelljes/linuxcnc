@@ -369,7 +369,10 @@ extern int emcTrajDelay(double delay);
 extern int emcTrajLinearMove(EmcPose end, int type, double vel,
                              double ini_maxvel, double acc, int indexer_jnum);
 extern int emcTrajGeneralMove(EmcPose end, int type, double vel,
-                             double ini_maxvel, double acc, int indexer_jnum, double a, double b, double c, double d, double e, double f);
+                             double ini_maxvel, double acc, int indexer_jnum,
+                              double i, double j, double k,
+                              double p, double q, double r,
+                              double e, double l, double test);
 extern int emcTrajCircularMove(EmcPose end, PM_CARTESIAN center, PM_CARTESIAN
         normal, int turn, int type, double vel, double ini_maxvel, double acc);
 extern int emcTrajSetTermCond(int cond, double tolerance);

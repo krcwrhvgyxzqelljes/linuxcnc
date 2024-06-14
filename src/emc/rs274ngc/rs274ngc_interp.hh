@@ -232,7 +232,7 @@ public:
  int comp_get_programmed(setup_pointer settings, double *x, double *y, double *z);
  int comp_set_programmed(setup_pointer settings, double x, double y, double z);
  int convert_arc(int move, block_pointer block, setup_pointer settings);
- int convert_general_motion(int move, block_pointer block, setup_pointer settings);
+ int convert_general_motion(int move, block_pointer block, setup_pointer settings); // GENERAL_MOTION
  int convert_arc2(int move, block_pointer block,
                   setup_pointer settings,
                   double *current1, double *current2, double *current3,

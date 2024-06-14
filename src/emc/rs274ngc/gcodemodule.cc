@@ -348,6 +348,7 @@ void GENERAL_MOTION(int line_number,
                     double x, double y, double z,
                     double a, double b, double c,
                     double u, double v, double w,
+                    double i, double j, double k,
                     double p, double q, double r,
                     double e, double l, double test) {
 
@@ -367,8 +368,8 @@ void GENERAL_MOTION(int line_number,
     if (interp_error) return;
 
     // Call the Python method
-    PyObject *result = callmethod(callback, "general_motion", "fffffffffffffff",
-                                  x, y, z, a, b, c, u, v, w, p, q, r, e, l, test);
+    PyObject *result = callmethod(callback, "general_motion", "ffffffffffffffffff",
+                                  x, y, z, a, b, c, u, v, w, i, j, k, p, q, r, e, l, test);
     if (result == NULL) {
         interp_error++;
     }

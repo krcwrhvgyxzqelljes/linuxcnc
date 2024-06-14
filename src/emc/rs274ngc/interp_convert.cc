@@ -5328,6 +5328,9 @@ int Interp::convert_general_motion(int move,   //!< G_9
     double CC_end;
     double u_end, v_end, w_end;
 
+    double i=block->i_number;
+    double j=block->j_number;
+    double k=block->k_number;
     double p=block->p_number;
     double q=block->q_number;
     double r=block->r_number;
@@ -5349,7 +5352,10 @@ int Interp::convert_general_motion(int move,   //!< G_9
     GENERAL_MOTION(block->line_number,
                    end_x, end_y, end_z,
                    AA_end, BB_end, CC_end,
-                   u_end, v_end, w_end, p,q,r,e,l,test);
+                   u_end, v_end, w_end,
+                   i,j,k,
+                   p,q,r,
+                   e,l,test);
 
 
     settings->current_x = end_x;

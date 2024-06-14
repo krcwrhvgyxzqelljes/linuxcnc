@@ -255,9 +255,11 @@ void STRAIGHT_TRAVERSE( int line_number,
 
 #include <iostream>
 #include <iomanip> // for std::setprecision
-void GENERAL_MOTION(int lineno, double x, double y, double z,
+void GENERAL_MOTION(int lineno,
+                    double x, double y, double z,
                     double a, double b, double c,
                     double u, double v, double w,
+                    double i, double j, double k,
                     double p, double q, double r,
                     double e, double l, double test){
 
