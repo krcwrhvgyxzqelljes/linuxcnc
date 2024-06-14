@@ -26,3 +26,4 @@ Interpreter calls function in Milltask:
 Python interface function decleration
 	void GENERAL_MOTION(....)
 
+emc.cc 

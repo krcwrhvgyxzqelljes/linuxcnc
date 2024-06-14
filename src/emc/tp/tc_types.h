@@ -182,6 +182,9 @@ typedef struct {
 
     // Temporary status flags (reset each cycle)
     int is_blending;
+
+    double a,b,c,d,e,f; // G9 data.
+
 } TC_STRUCT;
 
 #endif				/* TC_TYPES_H */

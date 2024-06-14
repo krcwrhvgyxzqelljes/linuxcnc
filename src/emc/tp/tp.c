@@ -2036,15 +2036,23 @@ STATIC tc_blend_type_t tpHandleBlendArc(TP_STRUCT * const tp, TC_STRUCT * const 
     return blend_used;
 }
 
+double pa,pb,pc,pd,pe,pf;
+
 int tpAddGeneralMotion(TP_STRUCT * const tp, EmcPose end, int canon_motion_type,
                        double vel, double ini_maxvel, double acc, unsigned char enables,
-                       char atspeed, int indexer_jnum, struct state_tag_t tag, double a, double b, double c, double d, double e, double f){
-
+                       char atspeed, int indexer_jnum, struct state_tag_t tag,
+                       double a, double b, double c, double d, double e, double f){
 
     printf("== AddGeneralMotion ==");
+    printf("x end: %f \n",end.tran.x);
+    printf("y end: %f \n",end.tran.y);
+
     printf("test value a: %f \n",a);
     printf("test value b: %f \n",b);
     printf("test value c: %f \n",c);
+    printf("test value d: %f \n",d);
+    printf("test value e: %f \n",e);
+    printf("test value f: %f \n",f);
 
     if (tpErrorCheck(tp) < 0) {
         return TP_ERR_FAIL;
@@ -2052,6 +2060,9 @@ int tpAddGeneralMotion(TP_STRUCT * const tp, EmcPose end, int canon_motion_type,
 
     // Initialize new tc struct for the line segment
     TC_STRUCT tc = {0};
+
+
+
     tcInit(&tc,
            TC_LINEAR,
            canon_motion_type,
@@ -2086,6 +2097,7 @@ int tpAddGeneralMotion(TP_STRUCT * const tp, EmcPose end, int canon_motion_type,
     // For linear move, set joint corresponding to a locking indexer axis
     tc.indexer_jnum = indexer_jnum;
 
+
     //TODO refactor this into its own function
     TC_STRUCT *prev_tc;
     prev_tc = tcqLast(&tp->queue);
@@ -2095,6 +2107,20 @@ int tpAddGeneralMotion(TP_STRUCT * const tp, EmcPose end, int canon_motion_type,
     }
     tcFinalizeLength(prev_tc);
     tcFlagEarlyStop(prev_tc, &tc);
+
+    tc.a=pa;
+    tc.b=pb;
+    tc.c=pc;
+    tc.d=pd;
+    tc.e=pe;
+    tc.f=pf;
+
+    pa=a;
+    pb=b;
+    pc=c;
+    pd=d;
+    pe=e;
+    pf=f;
 
     int retval = tpAddSegmentToQueue(tp, &tc, true);
     //Run speed optimization (will abort safely if there are no tangent segments)
@@ -3132,8 +3158,6 @@ STATIC int tpDoParabolicBlending(TP_STRUCT * const tp, TC_STRUCT * const tc,
 
     return TP_ERR_OK;
 }
-
-
 /**
  * Do a complete update on one segment.
  * Handles the majority of updates on a single segment for the current cycle.
@@ -3456,7 +3480,7 @@ STATIC int tpHandleRegularCycle(TP_STRUCT * const tp,
     return TP_ERR_OK;
 }
 
-
+double count=0;
 /**
  * Calculate an updated goal position for the next timestep.
  * This is the brains of the operation. It's called every TRAJ period and is
@@ -3477,6 +3501,19 @@ int tpRunCycle(TP_STRUCT * const tp, long period)
 
     int queue_dir_step = tp->reverse_run ? -1 : 1;
     tc = tcqItem(&tp->queue, 0);
+
+    if(count>1 && tc!=NULL){
+        // p,q,r,e,l
+        printf("gcode value p: %f \n",tc->a);
+        printf("gcode value q: %f \n",tc->b);
+        printf("gcode value r: %f \n",tc->c);
+        printf("gcode value e: %f \n",tc->d);
+        printf("gcode value l: %f \n",tc->e);
+        count=0;
+    }
+    count+=0.001;
+
+
     nexttc = tcqItem(&tp->queue, queue_dir_step * 1);
 
     //Set GUI status to "zero" state

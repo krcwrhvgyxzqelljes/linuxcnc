@@ -1378,8 +1378,8 @@ int emcTrajSetTermCond(int cond, double tolerance)
 }
 
 int emcTrajGeneralMove(EmcPose end, int type, double vel, double ini_maxvel, double acc,
-                      int indexer_jnum)
-{
+                      int indexer_jnum,
+                       double a, double b, double c, double d, double e, double f){
 #ifdef ISNAN_TRAP
     if (std::isnan(end.tran.x) || std::isnan(end.tran.y) || std::isnan(end.tran.z) ||
         std::isnan(end.a) || std::isnan(end.b) || std::isnan(end.c) ||
@@ -1400,6 +1400,13 @@ int emcTrajGeneralMove(EmcPose end, int type, double vel, double ini_maxvel, dou
     emcmotCommand.ini_maxvel = ini_maxvel;
     emcmotCommand.acc = acc;
     emcmotCommand.turn = indexer_jnum;
+
+    emcmotCommand.a=a;
+    emcmotCommand.b=b;
+    emcmotCommand.c=c;
+    emcmotCommand.d=d;
+    emcmotCommand.e=e;
+    emcmotCommand.f=f;
 
     return usrmotWriteEmcmotCommand(&emcmotCommand);
 }

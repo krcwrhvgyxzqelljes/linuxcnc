@@ -943,7 +943,7 @@ static void flush_segments(void) {
     drop_segments();
 }
 
-static void flush_segments_general_motion(void) {
+static void flush_segments_general_motion(double aa, double bb, double cc, double dd, double ee, double ff) {
     if(chained_points.empty()) return;
 
     struct pt &pos = chained_points.back();
@@ -976,35 +976,43 @@ static void flush_segments_general_motion(void) {
         }
     }
 
+    printf("flushing generalMoveMsg. \n");
 
-    auto linearMoveMsg = std::make_unique<EMC_TRAJ_GENERAL_MOVE>();
-    linearMoveMsg->feed_mode = canon.feed_mode;
+    auto generalMoveMsg = std::make_unique<EMC_TRAJ_GENERAL_MOVE>();
+    generalMoveMsg->feed_mode = canon.feed_mode;
+
+    generalMoveMsg->a=aa;
+    generalMoveMsg->b=bb;
+    generalMoveMsg->c=cc;
+    generalMoveMsg->d=dd;
+    generalMoveMsg->e=ee;
+    generalMoveMsg->f=ff;
 
     // now x, y, z, and b are in absolute mm or degree units
-    linearMoveMsg->end.tran.x = TO_EXT_LEN(x);
-    linearMoveMsg->end.tran.y = TO_EXT_LEN(y);
-    linearMoveMsg->end.tran.z = TO_EXT_LEN(z);
+    generalMoveMsg->end.tran.x = TO_EXT_LEN(x);
+    generalMoveMsg->end.tran.y = TO_EXT_LEN(y);
+    generalMoveMsg->end.tran.z = TO_EXT_LEN(z);
 
-    linearMoveMsg->end.u = TO_EXT_LEN(u);
-    linearMoveMsg->end.v = TO_EXT_LEN(v);
-    linearMoveMsg->end.w = TO_EXT_LEN(w);
+    generalMoveMsg->end.u = TO_EXT_LEN(u);
+    generalMoveMsg->end.v = TO_EXT_LEN(v);
+    generalMoveMsg->end.w = TO_EXT_LEN(w);
 
     // fill in the orientation
-    linearMoveMsg->end.a = TO_EXT_ANG(a);
-    linearMoveMsg->end.b = TO_EXT_ANG(b);
-    linearMoveMsg->end.c = TO_EXT_ANG(c);
+    generalMoveMsg->end.a = TO_EXT_ANG(a);
+    generalMoveMsg->end.b = TO_EXT_ANG(b);
+    generalMoveMsg->end.c = TO_EXT_ANG(c);
 
-    linearMoveMsg->vel = toExtVel(vel);
-    linearMoveMsg->ini_maxvel = toExtVel(linedata.vel);
+    generalMoveMsg->vel = toExtVel(vel);
+    generalMoveMsg->ini_maxvel = toExtVel(linedata.vel);
     AccelData lineaccdata = getStraightAcceleration(x, y, z, a, b, c, u, v, w);
     double acc = lineaccdata.acc;
-    linearMoveMsg->acc = toExtAcc(acc);
+    generalMoveMsg->acc = toExtAcc(acc);
 
-    linearMoveMsg->type = EMC_MOTION_TYPE_FEED;
-    linearMoveMsg->indexer_jnum = -1;
+    generalMoveMsg->type = EMC_MOTION_TYPE_FEED;
+    generalMoveMsg->indexer_jnum = -1;
     if ((vel && acc) || canon.spindle[canon.spindle_num].synched) {
         interp_list.set_line_number(line_no);
-        tag_and_send(std::move(linearMoveMsg), pos.tag);
+        tag_and_send(std::move(generalMoveMsg), pos.tag);
     }
     canonUpdateEndPoint(x, y, z, a, b, c, u, v, w);
 
@@ -1062,11 +1070,11 @@ linkable(double x, double y, double z,
 
 static void
 see_segment_general_motion(int line_number,
-            StateTag tag,
-            double x, double y, double z,
-            double a, double b, double c,
-            double u, double v, double w,
-            double p, double q, double r, double e, double l, double test ) {
+                           StateTag tag,
+                           double x, double y, double z,
+                           double a, double b, double c,
+                           double u, double v, double w,
+                           double p, double q, double r, double e, double l, double test ) { // This are Gcode letter : P Q R E L
     bool changed_abc = (a != canon.endPoint.a)
             || (b != canon.endPoint.b)
             || (c != canon.endPoint.c);
@@ -1076,12 +1084,12 @@ see_segment_general_motion(int line_number,
             || (w != canon.endPoint.w);
 
     if(!chained_points.empty() && !linkable(x, y, z, a, b, c, u, v, w)) {
-        flush_segments_general_motion();
+        flush_segments_general_motion(p,q,r,e,l,test);
     }
     pt pos = {x, y, z, a, b, c, u, v, w, line_number, tag};
     chained_points.push_back(pos);
     if(changed_abc || changed_uvw) {
-        flush_segments_general_motion();
+        flush_segments_general_motion(p,q,r,e,l,test);
     }
 }
 
@@ -1172,7 +1180,14 @@ void GENERAL_MOTION(int lineno, double x, double y, double z,
                     double u, double v, double w, double p, double q, double r, double e, double l,
                     double test){
 
-    printf("calling GENERAL_MOTION from milltask. \n \n");
+
+    printf("calling GENERAL_MOTION from milltask. checking values from here : \n"); // This is checked ok.
+    printf("value p: %f \n",p);
+    printf("value q: %f \n",q);
+    printf("value r: %f \n",r);
+    printf("value e: %f \n",e);
+    printf("value l: %f \n",l);
+
     from_prog(x,y,z,a,b,c,u,v,w);
     rotate_and_offset_pos(x,y,z,a,b,c,u,v,w);
     see_segment_general_motion(lineno, _tag, x, y, z, a, b, c, u, v, w, p,q,r,e,l,test);
@@ -3722,7 +3737,7 @@ void SET_PARAMETER_FILE_NAME(const char *name)
 }
 
 void GET_EXTERNAL_PARAMETER_FILE_NAME(char *file_name,	/* string: to copy
-                                                                                                                                                                                       file name into */
+                                                                                                                                                                                                                             file name into */
                                       int max_size)
 {				/* maximum number of characters to copy */
     // Paranoid checks
