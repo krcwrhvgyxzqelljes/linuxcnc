@@ -2036,6 +2036,13 @@ STATIC tc_blend_type_t tpHandleBlendArc(TP_STRUCT * const tp, TC_STRUCT * const 
     return blend_used;
 }
 
+int tpAddGeneralMotion(TP_STRUCT * const tp, EmcPose end, int canon_motion_type,
+                       double vel, double ini_maxvel, double acc, unsigned char enables,
+                       char atspeed, int indexer_jnum, struct state_tag_t tag){
+     printf("add general motion.");
+     return 0;
+}
+
 //TODO final setup steps as separate functions
 //
 /**
@@ -3672,6 +3679,7 @@ EXPORT_SYMBOL(tpAbort);
 EXPORT_SYMBOL(tpActiveDepth);
 EXPORT_SYMBOL(tpAddCircle);
 EXPORT_SYMBOL(tpAddLine);
+EXPORT_SYMBOL(tpAddGeneralMotion);
 EXPORT_SYMBOL(tpAddRigidTap);
 EXPORT_SYMBOL(tpClear);
 EXPORT_SYMBOL(tpCreate);

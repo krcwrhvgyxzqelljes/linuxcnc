@@ -222,8 +222,8 @@ milltask/CMakeFiles/milltask.dir/home/user/linuxcnc/src/emc/task/taskintf.cc.o: 
  /home/user/linuxcnc/cmake/milltask/../../src/emc/rs274ngc/interp_fwd.hh \
  /home/user/linuxcnc/cmake/milltask/../../src/libnml/rcs/rcs_print.hh \
  /home/user/linuxcnc/cmake/milltask/../../src/libnml/os_intf/timer.hh \
- /home/user/linuxcnc/cmake/milltask/../../src/libnml/inifile/inifile.hh \
- /home/user/linuxcnc/cmake/milltask/../../src/libnml/inifile/inifile.h \
+ /home/user/linuxcnc/src/libnml/inifile/inifile.hh \
+ /home/user/linuxcnc/src/libnml/inifile/inifile.h \
  /usr/include/boost/lexical_cast.hpp \
  /usr/include/boost/range/iterator_range_core.hpp \
  /usr/include/boost/detail/workaround.hpp \

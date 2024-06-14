@@ -1,8 +1,5 @@
-#include <iostream>
-void GENERAL_MOTION(int type)
-{
-    std::cout<<"GENERAL_MOTION type:"<<type<<std::endl;
-}
+*** do a make clean and make in src folder, i had a undefined symbol because header files
+where not overwritten. ***
 
 interp_internal.hh add G_9=90 // General.
 
@@ -10,12 +7,12 @@ Interp::read_g -> the G9 has to be here.
 
 Added to Interp::read_g :
 
-  			// std::cout<<"G value:"<<value<<std::endl;
-  			if(value==G_9){ // G9 = 90
-      			std::cout<<"G9 found."<<std::endl;
-      			block->g_modes[mode] = value;
-      			return INTERP_OK;
-  			} // Dont fall into remap stuff...
+  		// std::cout<<"G value:"<<value<<std::endl;
+  		if(value==G_9){ // G9 = 90
+      		std::cout<<"G9 found."<<std::endl;
+      		block->g_modes[GM_MOTION] = value; // GM_MOTION is same as G2, G3 etc.
+      		return INTERP_OK;
+  		} // Dont fall into remap stuff...
   			
 ~/linuxcnc/src/emc/rs274ngc/interp_internal.hh
 	added a print to : struct block_struct line 429
@@ -29,3 +26,48 @@ Added to Interp::read_g :
         	std::cout<<"r:"<<r_number<<std::endl;
         	std::cout<<"s:"<<s_number<<std::endl;
     	}
+    	
+int Interp::parse_line added :
+    	
+			if(block->g_modes[1]==G_9){
+				block->print();
+				return INTERP_OK;
+			}
+			
+/home/user/linuxcnc/src/emc/rs274ngc/interp_execute.cc
+Function : int Interp::execute_block(...   Line 249 added:
+
+    if(block->g_modes[GM_MOTION]==G_9){
+        convert_motion(G_9,block,settings);
+    }
+    
+/home/user/linuxcnc/src/emc/rs274ngc/interp_convert.cc Line 4366
+
+	else if ( motion == G_9 ){
+        	CHP(convert_general_motion(motion,block,settings));
+        	std::cout<<"Interp::convert G9 converting .."<<std::endl;
+
+    
+
+/home/user/linuxcnc/src/emc/rs274ngc/rs274ngc_interp.hh Line 235 added function declaration:
+ 	int convert_general_motion(int move, block_pointer block, setup_pointer settings);
+
+
+
+/home/user/linuxcnc/src/emc/nml_intf/canon.hh Line 260 added function decleration:
+	extern void GENERAL_MOTION(int line_number, int type);
+
+MILLTASK needs a copy of the same function.
+/home/user/linuxcnc/src/emc/task/emccanon.cc Line 1076 added same function decleration:
+	#include <iostream>
+	// G9 X11 Y22 Z33 P0.1 Q0.2 R44.5 L321 E123.33 (L=integer type)
+	void GENERAL_MOTION(int lineno,
+                    	double x, double y, double z,
+                    	double a, double b, double c,
+                    	double u, double v, double w,
+                    	double p, double q, double r,
+                    	double e, int l
+                    	){
+	
+    	std::cout<<"GENERAL MOTION"<<std::endl;
+}

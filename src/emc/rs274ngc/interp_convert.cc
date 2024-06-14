@@ -37,6 +37,7 @@
 #include "interp_parameter_def.hh"
 #include <rtapi_string.h>
 
+
 #include "units.h"
 #define TOOL_INSIDE_ARC(side, turn) (((side)==CUTTER_COMP::LEFT&&(turn)>0)||((side)==CUTTER_COMP::RIGHT&&(turn)<0))
 #define DEBUG_EMC
@@ -4301,8 +4302,6 @@ int Interp::convert_motion(int motion,   //!< g_code for a line, arc, canned cyc
                            block_pointer block,  //!< pointer to a block of RS274 instructions
                            setup_pointer settings)       //!< pointer to machine settings
 {
-    std::cout<<"Interp::convert_motion"<<std::endl;
-
     int ai = block->a_flag && (-1 != settings->a_indexer_jnum);
     int bi = block->b_flag && (-1 != settings->b_indexer_jnum);
     int ci = block->c_flag && (-1 != settings->c_indexer_jnum);
@@ -4354,7 +4353,6 @@ int Interp::convert_motion(int motion,   //!< g_code for a line, arc, canned cyc
         write_canon_state_tag(block, settings);
         CHP(convert_spline(motion, block, settings));
     } else if ((motion == G_5_2) || (motion == G_6_2)) { // jjf
-        StateTag tag;
         write_canon_state_tag(block, settings);
         CHP(convert_nurbs(motion, block, settings));
     } else if (
@@ -4368,7 +4366,6 @@ int Interp::convert_motion(int motion,   //!< g_code for a line, arc, canned cyc
     } else {
         ERS(NCE_BUG_UNKNOWN_MOTION_CODE);
     }
-
     return INTERP_OK;
 }
 
@@ -5321,6 +5318,8 @@ int Interp::convert_general_motion(int move,   //!< G_9
                                    block_pointer block,        //!< pointer to a block of RS274 instructions
                                    setup_pointer settings)     //!< pointer to machine settings
 {
+    printf("Interp::convert_general_motion. \n");
+
     double end_x;
     double end_y;
     double end_z;
@@ -5329,8 +5328,11 @@ int Interp::convert_general_motion(int move,   //!< G_9
     double CC_end;
     double u_end, v_end, w_end;
 
-    double p,q,r,e;
-    int l;
+    double p=block->p_number;
+    double q=block->q_number;
+    double r=block->r_number;
+    double e=block->e_number;
+    int l=block->l_number;
 
     if (move == G_9) {
 
@@ -5342,11 +5344,12 @@ int Interp::convert_general_motion(int move,   //!< G_9
     // Create a state tag and dump it to canon
     write_canon_state_tag(block, settings);
 
-//    GENERAL_MOTION(block->line_number,
-//                   end_x, end_y, end_z,
-//                   AA_end, BB_end, CC_end,
-//                   u_end, v_end, w_end,
-//                   p,q,r,e,l);
+    // Todo set the p,q,r,e values.
+    GENERAL_MOTION(block->line_number,
+                   end_x, end_y, end_z,
+                   AA_end, BB_end, CC_end,
+                   u_end, v_end, w_end);
+
 
     settings->current_x = end_x;
     settings->current_y = end_y;

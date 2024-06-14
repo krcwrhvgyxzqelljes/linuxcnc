@@ -410,10 +410,78 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
   /home/user/linuxcnc/src/libnml/nml/stat_msg.hh \
   /home/user/linuxcnc/src/emc/nml_intf/canon.hh \
   /home/user/linuxcnc/src/emc/rs274ngc/rs274ngc.hh \
+  /usr/include/c++/12/iostream \
+  /usr/include/c++/12/ostream \
+  /usr/include/c++/12/ios \
+  /usr/include/c++/12/exception \
+  /usr/include/c++/12/bits/exception_ptr.h \
+  /usr/include/c++/12/bits/cxxabi_init_exception.h \
+  /usr/include/c++/12/typeinfo \
+  /usr/include/c++/12/bits/nested_exception.h \
+  /usr/include/c++/12/bits/ios_base.h \
+  /usr/include/c++/12/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/12/bits/locale_classes.h \
+  /usr/include/c++/12/bits/locale_classes.tcc \
+  /usr/include/c++/12/system_error \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/error_constants.h \
+  /usr/include/c++/12/stdexcept \
+  /usr/include/c++/12/streambuf \
+  /usr/include/c++/12/bits/streambuf.tcc \
+  /usr/include/c++/12/bits/basic_ios.h \
+  /usr/include/c++/12/bits/locale_facets.h \
+  /usr/include/c++/12/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_base.h \
+  /usr/include/c++/12/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_inline.h \
+  /usr/include/c++/12/bits/locale_facets.tcc \
+  /usr/include/c++/12/bits/basic_ios.tcc \
+  /usr/include/c++/12/bits/ostream.tcc \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
   /home/user/linuxcnc/src/emc/nml_intf/interp_return.hh \
   /home/user/linuxcnc/src/config.h \
   /home/user/linuxcnc/src/emc/rs274ngc/units.h
 
+
+/usr/include/c++/12/istream:
+
+/usr/include/c++/12/bits/locale_facets.tcc:
+
+/usr/include/c++/12/bits/streambuf_iterator.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/ctype_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/c++/12/bits/basic_ios.h:
+
+/usr/include/c++/12/stdexcept:
+
+/usr/include/c++/12/system_error:
+
+/usr/include/c++/12/bits/locale_classes.tcc:
+
+/usr/include/c++/12/bits/locale_classes.h:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h:
+
+/usr/include/c++/12/bits/nested_exception.h:
+
+/usr/include/c++/12/bits/exception_ptr.h:
+
+/usr/include/c++/12/exception:
+
+/usr/include/c++/12/ios:
+
+/usr/include/c++/12/ostream:
 
 /home/user/linuxcnc/src/libnml/nml/stat_msg.hh:
 
@@ -443,7 +511,11 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 
 /usr/include/c++/12/bits/erase_if.h:
 
+/usr/include/c++/12/ext/atomicity.h:
+
 /usr/include/c++/12/bits/node_handle.h:
+
+/usr/include/c++/12/bits/ios_base.h:
 
 /usr/include/c++/12/set:
 
@@ -468,6 +540,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 /usr/include/c++/12/map:
 
 /usr/include/c++/12/bits/charconv.h:
+
+/usr/include/c++/12/bits/locale_facets.h:
 
 /usr/include/c++/12/string_view:
 
@@ -545,11 +619,15 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 
 /usr/include/c++/12/cstddef:
 
+/usr/include/c++/12/bits/ostream.tcc:
+
 /home/user/linuxcnc/src/emc/rs274ngc/interp_base.hh:
 
 /usr/include/python3.11/structmember.h:
 
 /usr/include/python3.11/tracemalloc.h:
+
+/usr/include/c++/12/bits/streambuf.tcc:
 
 /usr/include/python3.11/fileutils.h:
 
@@ -606,6 +684,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 /usr/include/python3.11/cpython/pylifecycle.h:
 
 /usr/include/python3.11/cpython/genobject.h:
+
+/usr/include/c++/12/typeinfo:
 
 /usr/include/c++/12/math.h:
 
@@ -695,6 +775,10 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 
 /usr/include/errno.h:
 
+/usr/include/x86_64-linux-gnu/c++/12/bits/ctype_inline.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h:
+
 /usr/include/python3.11/import.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
@@ -733,6 +817,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
+/usr/include/c++/12/bits/cxxabi_init_exception.h:
+
 /usr/include/linux/stddef.h:
 
 /usr/include/python3.11/pymacconfig.h:
@@ -770,6 +856,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/error_constants.h:
 
 /usr/include/python3.11/cpython/modsupport.h:
 
@@ -851,6 +939,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 
 /usr/include/python3.11/Python.h:
 
+/usr/include/c++/12/bits/istream.tcc:
+
 /usr/include/asm-generic/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
@@ -926,6 +1016,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
 /usr/include/python3.11/boolobject.h:
+
+/usr/include/c++/12/streambuf:
 
 /home/user/linuxcnc/src/emc/nml_intf/canon_position.hh:
 
@@ -1025,6 +1117,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 
 /usr/include/python3.11/cpython/traceback.h:
 
+/usr/include/c++/12/cwctype:
+
 /usr/include/c++/12/tr1/hypergeometric.tcc:
 
 /usr/include/c++/12/tr1/legendre_function.tcc:
@@ -1034,6 +1128,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 /usr/include/c++/12/tr1/modified_bessel_func.tcc:
 
 /usr/include/c++/12/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/12/bits/basic_ios.tcc:
 
 /usr/include/c++/12/tr1/riemann_zeta.tcc:
 
@@ -1057,6 +1153,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 
 /usr/include/python3.11/pythread.h:
 
+/usr/include/c++/12/iostream:
+
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
@@ -1072,6 +1170,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 /usr/include/c++/12/tr1/gamma.tcc:
 
 /usr/include/linux/stat.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h:
 
 /usr/include/c++/12/cstdio:
 
@@ -1216,6 +1316,8 @@ gcode_py/CMakeFiles/gcode.dir/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
 /usr/include/c++/12/ext/alloc_traits.h:
 
 /usr/include/python3.11/cpython/pythread.h:
+
+/usr/include/wctype.h:
 
 /usr/include/boost/config/user.hpp:
 

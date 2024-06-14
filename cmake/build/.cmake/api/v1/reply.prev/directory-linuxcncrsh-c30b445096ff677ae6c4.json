@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"linuxcncrsh/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 87,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/build/linuxcncrsh/../../../bin",
+			"paths" : 
+			[
+				"linuxcncrsh/linuxcncrsh"
+			],
+			"targetId" : "linuxcncrsh::@e1dd18eaf175b37aa146",
+			"targetIndex" : 23,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "linuxcncrsh",
+		"source" : "linuxcncrsh"
+	}
+}

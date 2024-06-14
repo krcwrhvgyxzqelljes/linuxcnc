@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"liblinuxcnc/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/build/liblinuxcnc/../../../lib",
+			"paths" : 
+			[
+				"liblinuxcnc/liblinuxcnc.a"
+			],
+			"targetId" : "linuxcnc::@c4f5def545515268f0d4",
+			"targetIndex" : 19,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "liblinuxcnc",
+		"source" : "liblinuxcnc"
+	}
+}

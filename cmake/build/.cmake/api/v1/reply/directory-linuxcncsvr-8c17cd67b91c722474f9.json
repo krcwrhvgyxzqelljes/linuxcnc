@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"linuxcncsvr/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/build/linuxcncsvr/../../../bin",
+			"paths" : 
+			[
+				"linuxcncsvr/linuxcncsvr"
+			],
+			"targetId" : "linuxcncsvr::@8a4b74604ca69b14417c",
+			"targetIndex" : 24,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "linuxcncsvr",
+		"source" : "linuxcncsvr"
+	}
+}

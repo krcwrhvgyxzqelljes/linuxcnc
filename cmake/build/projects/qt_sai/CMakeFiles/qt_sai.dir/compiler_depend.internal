@@ -450,6 +450,18 @@ projects/qt_sai/CMakeFiles/qt_sai.dir/home/user/linuxcnc/src/emc/sai/saicanon.cc
  /home/user/linuxcnc/src/rtapi/rtapi.h
  /usr/include/spawn.h
  /home/user/linuxcnc/src/rtapi/rtapi_gfp.h
+ /usr/include/c++/12/iomanip
+ /usr/include/c++/12/locale
+ /usr/include/c++/12/bits/locale_facets_nonio.h
+ /usr/include/c++/12/ctime
+ /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h
+ /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h
+ /usr/include/c++/12/bits/codecvt.h
+ /usr/include/c++/12/bits/locale_facets_nonio.tcc
+ /usr/include/c++/12/bits/locale_conv.h
+ /usr/include/c++/12/bits/quoted_string.h
+ /usr/include/c++/12/sstream
+ /usr/include/c++/12/bits/sstream.tcc
 
 projects/qt_sai/CMakeFiles/qt_sai.dir/home/user/linuxcnc/src/emc/task/taskclass.cc.o
  /home/user/linuxcnc/src/emc/task/taskclass.cc
@@ -2707,15 +2719,11 @@ projects/qt_sai/CMakeFiles/qt_sai.dir/interpreter_intf.cpp.o
  /usr/include/getopt.h
  /usr/include/x86_64-linux-gnu/bits/getopt_ext.h
  /usr/include/readline/readline.h
- /usr/include/x86_64-linux-gnu/sys/ioctl.h
- /usr/include/x86_64-linux-gnu/bits/ioctls.h
- /usr/include/x86_64-linux-gnu/asm/ioctls.h
- /usr/include/asm-generic/ioctls.h
- /usr/include/linux/ioctl.h
- /usr/include/x86_64-linux-gnu/asm/ioctl.h
- /usr/include/asm-generic/ioctl.h
- /usr/include/x86_64-linux-gnu/bits/ioctl-types.h
- /usr/include/x86_64-linux-gnu/sys/ttydefaults.h
+ /usr/include/readline/rlstdc.h
+ /usr/include/readline/rltypedefs.h
+ /usr/include/readline/keymaps.h
+ /usr/include/readline/chardefs.h
+ /usr/include/readline/tilde.h
  /usr/include/readline/history.h
  /usr/include/glob.h
  /usr/include/wordexp.h

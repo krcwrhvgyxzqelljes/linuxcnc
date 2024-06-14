@@ -236,8 +236,6 @@ error message.
 int Interp::execute_block(block_pointer block,   //!< pointer to a block of RS274/NGC instructions
                           setup_pointer settings) //!< pointer to machine settings
 {
-    std::cout<<"Interp::execute_block"<<std::endl;
-
     int status = INTERP_EXIT;
 
     block->line_number = settings->sequence_number;

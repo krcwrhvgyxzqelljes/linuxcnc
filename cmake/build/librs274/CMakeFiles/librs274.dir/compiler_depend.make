@@ -7348,7 +7348,7 @@ librs274/CMakeFiles/librs274.dir/home/user/linuxcnc/src/emc/rs274ngc/interp_name
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
   /usr/include/linux/falloc.h \
   /usr/include/c++/12/optional \
-  /home/user/linuxcnc/include/hal.h \
+  /home/user/linuxcnc/src/hal/hal.h \
   /home/user/linuxcnc/src/rtapi/rtapi.h \
   /usr/include/spawn.h \
   /home/user/linuxcnc/src/rtapi/rtapi_errno.h \
@@ -20693,7 +20693,7 @@ librs274/CMakeFiles/librs274.dir/home/user/linuxcnc/src/emc/rs274ngc/rs274ngc_pr
 
 /home/user/linuxcnc/src/rtapi/rtapi_bool.h:
 
-/home/user/linuxcnc/include/hal.h:
+/home/user/linuxcnc/src/hal/hal.h:
 
 /usr/include/c++/12/optional:
 

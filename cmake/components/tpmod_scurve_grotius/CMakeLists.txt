@@ -128,6 +128,7 @@ ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/../../vendor/cavalier_contours/cavalier_offset.cpp
     ${SRC_DIR}/../../vendor/cavalier_contours/cavalier_3d.h
     ${SRC_DIR}/../../vendor/cavalier_contours/cavalier_3d.cpp
+
     )
 
 # Set path to eigen3, for install $ sudo apt-get install libeigen3-dev

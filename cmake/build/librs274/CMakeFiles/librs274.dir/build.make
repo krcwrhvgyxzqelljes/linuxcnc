@@ -556,8 +556,8 @@ librs274/librs274.so.0: librs274/CMakeFiles/librs274.dir/home/user/linuxcnc/src/
 librs274/librs274.so.0: librs274/CMakeFiles/librs274.dir/home/user/linuxcnc/src/emc/rs274ngc/rs274ngc_pre.cc.o
 librs274/librs274.so.0: librs274/CMakeFiles/librs274.dir/home/user/linuxcnc/src/emc/rs274ngc/interp_inspection.cc.o
 librs274/librs274.so.0: librs274/CMakeFiles/librs274.dir/build.make
-librs274/librs274.so.0: /home/user/linuxcnc/cmake/librs274/../build/liblinuxcncini/liblinuxcncini.so
 librs274/librs274.so.0: /home/user/linuxcnc/cmake/librs274/../build/libpyplugin/libpyplugin.so
+librs274/librs274.so.0: /home/user/linuxcnc/cmake/librs274/../build/liblinuxcncini/liblinuxcncini.so
 librs274/librs274.so.0: /home/user/linuxcnc/cmake/librs274/../build/liblinuxcnchal/liblinuxcnchal.so
 librs274/librs274.so.0: /home/user/linuxcnc/cmake/librs274/../build/libtooldata/libtooldata.so
 librs274/librs274.so.0: librs274/CMakeFiles/librs274.dir/link.txt

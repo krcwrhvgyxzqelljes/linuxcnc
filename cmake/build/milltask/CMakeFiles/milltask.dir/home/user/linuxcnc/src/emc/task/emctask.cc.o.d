@@ -409,8 +409,8 @@ milltask/CMakeFiles/milltask.dir/home/user/linuxcnc/src/emc/task/emctask.cc.o: \
  /usr/include/c++/12/iostream /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
  /home/user/linuxcnc/cmake/milltask/../../src/emc/nml_intf/interp_return.hh \
- /home/user/linuxcnc/cmake/milltask/../../src/libnml/inifile/inifile.hh \
- /home/user/linuxcnc/cmake/milltask/../../src/libnml/inifile/inifile.h \
+ /home/user/linuxcnc/src/libnml/inifile/inifile.hh \
+ /home/user/linuxcnc/src/libnml/inifile/inifile.h \
  /usr/include/boost/lexical_cast.hpp \
  /usr/include/boost/range/iterator_range_core.hpp \
  /usr/include/boost/assert.hpp \

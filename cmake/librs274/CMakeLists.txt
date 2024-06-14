@@ -48,7 +48,7 @@ ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/../../src/emc/rs274ngc/modal_state.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/nurbs_additional_functions.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_namedparams.cc
-     ${SRC_DIR}/../../src/emc/rs274ngc/interp_python.hh
+    ${SRC_DIR}/../../src/emc/rs274ngc/interp_python.hh
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_python.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_remap.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_setup.cc
@@ -64,7 +64,9 @@ ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_inspection.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_parameter_def.hh
     ${SRC_DIR}/../../src/emc/rs274ngc/rs274ngc_interp.hh
+     ${SRC_DIR}/../../src/emc/rs274ngc/rs274ngc.hh
     ${SRC_DIR}/../../src/emc/nml_intf/canon.hh
+
     )
 
 if (BUILD_USPACE)
@@ -96,11 +98,11 @@ set_target_properties(tooldata PROPERTIES
 add_library(pyplugin SHARED IMPORTED) # or STATIC instead of SHARED
 set_target_properties(pyplugin PROPERTIES
     IMPORTED_LOCATION "${SRC_DIR}/../build/libpyplugin/libpyplugin.so"
-    INTERFACE_INCLUDE_DIRECTORIES "${SRC_DIR}/../../include" # Todo: figur out the excact includes for this one.
+    INTERFACE_INCLUDE_DIRECTORIES "${SRC_DIR}/../../src/emc/pythonplugin"
     )
 
 # Link to libraries.
-target_link_libraries(${PROJECT_NAME} PRIVATE  linuxcncini pyplugin linuxcnchal tooldata
+target_link_libraries(${PROJECT_NAME} PRIVATE pyplugin linuxcncini linuxcnchal tooldata
     ${PYTHON_LIB}
     )
 

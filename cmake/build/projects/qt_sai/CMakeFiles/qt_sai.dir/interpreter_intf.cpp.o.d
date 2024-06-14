@@ -895,15 +895,9 @@ projects/qt_sai/CMakeFiles/qt_sai.dir/interpreter_intf.cpp.o: \
  /usr/include/linux/falloc.h /usr/include/c++/12/optional \
  /home/user/linuxcnc/cmake/projects/qt_sai/../../../src/config.h \
  /usr/include/getopt.h /usr/include/x86_64-linux-gnu/bits/getopt_ext.h \
- /usr/include/readline/readline.h \
- /usr/include/x86_64-linux-gnu/sys/ioctl.h \
- /usr/include/x86_64-linux-gnu/bits/ioctls.h \
- /usr/include/x86_64-linux-gnu/asm/ioctls.h \
- /usr/include/asm-generic/ioctls.h /usr/include/linux/ioctl.h \
- /usr/include/x86_64-linux-gnu/asm/ioctl.h \
- /usr/include/asm-generic/ioctl.h \
- /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
- /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+ /usr/include/readline/readline.h /usr/include/readline/rlstdc.h \
+ /usr/include/readline/rltypedefs.h /usr/include/readline/keymaps.h \
+ /usr/include/readline/chardefs.h /usr/include/readline/tilde.h \
  /usr/include/readline/history.h /usr/include/glob.h \
  /usr/include/wordexp.h \
  /home/user/linuxcnc/cmake/projects/qt_sai/../../../src/rtapi/rtapi_string.h \

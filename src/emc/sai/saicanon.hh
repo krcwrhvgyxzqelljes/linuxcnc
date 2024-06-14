@@ -71,6 +71,8 @@ struct StandaloneInterpInternals
   bool block_delete;
   double motion_tolerance;      // G64 P
   double naivecam_tolerance;    // G64 Q
+  int l;
+  double r,e;
   /* Dummy status variables */
   double _traverse_rate;
 

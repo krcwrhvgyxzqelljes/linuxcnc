@@ -1,0 +1,59 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"libposemath/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 45,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/build/libposemath/../../../lib",
+			"paths" : 
+			[
+				"libposemath/libposemath.so.0"
+			],
+			"targetId" : "libposemath::@19836be86c85fe12aa79",
+			"targetIndex" : 14,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/build/libposemath/../../../lib",
+			"paths" : 
+			[
+				"libposemath/libposemath.so"
+			],
+			"targetId" : "libposemath::@19836be86c85fe12aa79",
+			"targetIndex" : 14,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "libposemath",
+		"source" : "libposemath"
+	}
+}

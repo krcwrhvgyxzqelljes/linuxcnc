@@ -1,0 +1,59 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"libpyplugin/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 51,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/build/libpyplugin/../../../lib",
+			"paths" : 
+			[
+				"libpyplugin/libpyplugin.so.0"
+			],
+			"targetId" : "libpyplugin::@27ea7f702e5a44822e7f",
+			"targetIndex" : 15,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/build/libpyplugin/../../../lib",
+			"paths" : 
+			[
+				"libpyplugin/libpyplugin.so"
+			],
+			"targetId" : "libpyplugin::@27ea7f702e5a44822e7f",
+			"targetIndex" : 15,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "libpyplugin",
+		"source" : "libpyplugin"
+	}
+}

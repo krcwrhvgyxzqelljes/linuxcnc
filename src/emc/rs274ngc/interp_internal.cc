@@ -353,7 +353,7 @@ int Interp::parse_line(char *line,       //!< array holding a line of RS274 code
   CHP(read_items(block, line, settings->parameters));
 
   if(block->g_modes[1]==G_9){
-      block->print();
+      // block->print();
       return INTERP_OK; // Skip the next code as it will filter out commands. Return ok.
   }
 

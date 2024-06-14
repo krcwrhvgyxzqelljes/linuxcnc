@@ -1,0 +1,59 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"linuxcnc_py/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 91,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/linuxcnc_py/../../lib/python",
+			"paths" : 
+			[
+				"linuxcnc_py/linuxcnc.so.0"
+			],
+			"targetId" : "linuxcnc_py::@0f1b16824e0a2a39bd82",
+			"targetIndex" : 21,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/linuxcnc_py/../../lib/python",
+			"paths" : 
+			[
+				"linuxcnc_py/linuxcnc.so"
+			],
+			"targetId" : "linuxcnc_py::@0f1b16824e0a2a39bd82",
+			"targetIndex" : 21,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "linuxcnc_py",
+		"source" : "linuxcnc_py"
+	}
+}

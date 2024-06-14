@@ -78,8 +78,8 @@ set_target_properties(linuxcnchal PROPERTIES
 add_library(linuxcncini SHARED IMPORTED) # or STATIC instead of SHARED
 set_target_properties(linuxcncini PROPERTIES
     IMPORTED_LOCATION "${SRC_DIR}/../build/liblinuxcncini/liblinuxcncini.so"
-    INTERFACE_INCLUDE_DIRECTORIES "${SRC_DIR}/../../include"
-    )
+    INTERFACE_INCLUDE_DIRECTORIES "${SRC_DIR}/../../src/libnml/inifile"
+)
 
 add_library(tooldata SHARED IMPORTED) # or STATIC instead of SHARED
 set_target_properties(tooldata PROPERTIES

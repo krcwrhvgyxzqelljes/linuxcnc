@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"linuxcnc_module_helper/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 36,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/build/linuxcnc_module_helper/../../../bin",
+			"paths" : 
+			[
+				"linuxcnc_module_helper/linuxcnc_module_helper"
+			],
+			"targetId" : "linuxcnc_module_helper::@3983c76584e3407a53a6",
+			"targetIndex" : 20,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "linuxcnc_module_helper",
+		"source" : "linuxcnc_module_helper"
+	}
+}

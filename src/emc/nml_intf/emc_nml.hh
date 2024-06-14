@@ -626,6 +626,22 @@ class EMC_TRAJ_LINEAR_MOVE:public EMC_TRAJ_CMD_MSG {
     int indexer_jnum;
 };
 
+class EMC_TRAJ_GENERAL_MOVE:public EMC_TRAJ_CMD_MSG {
+  public:
+    EMC_TRAJ_GENERAL_MOVE():EMC_TRAJ_CMD_MSG(EMC_TRAJ_GENERAL_MOVE_TYPE,
+                        sizeof(EMC_TRAJ_GENERAL_MOVE)) {
+    };
+
+    // For internal NML/CMS use only.
+    void update(CMS * cms);
+
+    int type;
+    EmcPose end;		// end point
+    double vel, ini_maxvel, acc;
+    int feed_mode;
+    int indexer_jnum;
+};
+
 class EMC_TRAJ_CIRCULAR_MOVE:public EMC_TRAJ_CMD_MSG {
   public:
     EMC_TRAJ_CIRCULAR_MOVE():EMC_TRAJ_CMD_MSG(EMC_TRAJ_CIRCULAR_MOVE_TYPE,

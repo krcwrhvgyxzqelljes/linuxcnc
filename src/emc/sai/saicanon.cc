@@ -253,27 +253,52 @@ void STRAIGHT_TRAVERSE( int line_number,
     _sai.type=3; //! G0.
 }
 
-// G9 X11 Y22 Z33 P0.1 Q0.2 R44.5 L321 E123.33 (L=integer type)
-//void GENERAL_MOTION(int lineno,
-//                    double x, double y, double z,
-//                    double a, double b, double c,
-//                    double u, double v, double w,
-//                    double p, double q, double r,
-//                    double e, int l
-//                    ){
+#include <iostream>
+#include <iomanip> // for std::setprecision
+void GENERAL_MOTION(int lineno, double x, double y, double z,
+                    double a, double b, double c,
+                    double u, double v, double w){
 
-//    //    ECHO_WITH_ARGS("%.4f, %.4f, %.4f"
-//    //                   ", %.4f" /*AA*/
-//    //                   ", %.4f" /*BB*/
-//    //                   ", %.4f" /*CC*/
-//    //                   , x, y, z
-//    //                   , a /*AA*/
-//    //                   , b /*BB*/
-//    //                   , c /*CC*/
-//    //                   );
+    ECHO_WITH_ARGS("%.4f, %.4f, %.4f"
+                   ", %.4f" /*AA*/
+                   ", %.4f" /*BB*/
+                   ", %.4f" /*CC*/
+                   ", %.4f" /*u*/
+                   ", %.4f" /*v*/
+                   ", %.4f" /*w*/
+                   , x, y, z
+                   , a /*AA*/
+                   , b /*BB*/
+                   , c /*CC*/
+                   , u
+                   , v
+                   , w);
 
+    _sai._program_position_x = x;
+    _sai._program_position_y = y;
+    _sai._program_position_z = z;
+    _sai._program_position_a = a; /*AA*/
+    _sai._program_position_b = b; /*BB*/
+    _sai._program_position_c = c; /*CC*/
 
-//}
+    _sai.pose.tran.x=x;
+    _sai.pose.tran.y=y;
+    _sai.pose.tran.z=z;
+    _sai.pose.a=a;
+    _sai.pose.b=b;
+    _sai.pose.c=c;
+    _sai.pose.u=u;
+    _sai.pose.v=v;
+    _sai.pose.w=w;
+
+//    _sai.motion_tolerance=p;
+//    _sai.naivecam_tolerance=q;
+//    _sai.r=r;
+//    _sai.e=e;
+//    _sai.l=l;
+
+    _sai.type=3; //! G0.
+}
 
 /* Machining Attributes */
 void SET_FEED_MODE(int spindle, int mode)

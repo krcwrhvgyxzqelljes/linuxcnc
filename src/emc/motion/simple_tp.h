@@ -34,6 +34,7 @@ extern "C" {
 	double curr_pos;	/* current position */
 	double curr_vel;	/* current velocity */
 	int active;		/* non-zero if motion in progress */
+    double max_jerk;
     } simple_tp_t;
 
 /* I could write a bunch of functions to read and write the first four

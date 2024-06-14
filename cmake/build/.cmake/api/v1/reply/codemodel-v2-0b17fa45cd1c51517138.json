@@ -1,0 +1,1430 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "rtapi",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-rtapi-0156abd842e23ca319ad.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "rtapi",
+					"targetIndexes" : 
+					[
+						34
+					]
+				},
+				{
+					"build" : "linuxcnc_module_helper",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-linuxcnc_module_helper-f071fb2567f6f7b614e5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "linuxcnc_module_helper",
+					"targetIndexes" : 
+					[
+						20
+					]
+				},
+				{
+					"build" : "liblinuxcnchal",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-liblinuxcnchal-3cce3f5d3763176bf7fb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "liblinuxcnchal",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "liblinuxcncini",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-liblinuxcncini-333ee1d142f75b2a1031.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "liblinuxcncini",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "libtooldata",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libtooldata-3b6899915b48cfee4d9e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "libtooldata",
+					"targetIndexes" : 
+					[
+						17
+					]
+				},
+				{
+					"build" : "libnml",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libnml-9c5f8de98f6a67f8c182.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 6,
+					"source" : "libnml",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "liblinuxcnc",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-liblinuxcnc-bc5522ef4a4f315948b3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 7,
+					"source" : "liblinuxcnc",
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"build" : "libposemath",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libposemath-01a40650e8b3e168e76c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 8,
+					"source" : "libposemath",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "libpyplugin",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libpyplugin-b1e6ee092dc9223d3d87.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 9,
+					"source" : "libpyplugin",
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"build" : "librs274",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-librs274-6aabb4e835432bbd525a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 10,
+					"source" : "librs274",
+					"targetIndexes" : 
+					[
+						16
+					]
+				},
+				{
+					"build" : "libcanterp",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libcanterp-36f563270b639aa3688a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 11,
+					"source" : "libcanterp",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "components/tpmod",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-components.tpmod-3a87d8feeec2820d8589.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 12,
+					"source" : "components/tpmod",
+					"targetIndexes" : 
+					[
+						36
+					]
+				},
+				{
+					"build" : "components/tpmod_scurve_grotius",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-components.tpmod_scurve_grotius-b42f5eac94480726d368.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 13,
+					"source" : "components/tpmod_scurve_grotius",
+					"targetIndexes" : 
+					[
+						37
+					]
+				},
+				{
+					"build" : "components/motmod",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-components.motmod-7bbdd0767fd720cfc29b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 14,
+					"source" : "components/motmod",
+					"targetIndexes" : 
+					[
+						27
+					]
+				},
+				{
+					"build" : "inivar",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-inivar-ba4d5b0407e6756b029b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 15,
+					"source" : "inivar",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "halcmd",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-halcmd-61248cca6a4da2d8c8b4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 16,
+					"source" : "halcmd",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "halmeter",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-halmeter-6856aa9d8ba00d6363af.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 17,
+					"source" : "halmeter",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "halscope",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-halscope-ab7935cbf9420f392bed.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 18,
+					"source" : "halscope",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "classicladder",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-classicladder-1aa50cd2107da80d4aa6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 19,
+					"source" : "classicladder",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "halui",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-halui-eed35ead4f786f793ff9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 20,
+					"source" : "halui",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "halrmt",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-halrmt-f182469b30fbacfbe2c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 21,
+					"source" : "halrmt",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "pci_write",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-pci_write-d0083ab849caef004c2d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 22,
+					"source" : "pci_write",
+					"targetIndexes" : 
+					[
+						29
+					]
+				},
+				{
+					"build" : "pci_read",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-pci_read-9d8f920962397252196c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 23,
+					"source" : "pci_read",
+					"targetIndexes" : 
+					[
+						28
+					]
+				},
+				{
+					"build" : "motion_logger",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-motion_logger-b32c4c7fa33f7810c690.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 24,
+					"source" : "motion_logger",
+					"targetIndexes" : 
+					[
+						26
+					]
+				},
+				{
+					"build" : "sai",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-sai-0b8d6ff2678992ee832a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 25,
+					"source" : "sai",
+					"targetIndexes" : 
+					[
+						33
+					]
+				},
+				{
+					"build" : "linuxcncsvr",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-linuxcncsvr-8c17cd67b91c722474f9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 26,
+					"source" : "linuxcncsvr",
+					"targetIndexes" : 
+					[
+						24
+					]
+				},
+				{
+					"build" : "milltask",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-milltask-383acebe33115085c37b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 27,
+					"source" : "milltask",
+					"targetIndexes" : 
+					[
+						25
+					]
+				},
+				{
+					"build" : "linuxcncrsh",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-linuxcncrsh-c30b445096ff677ae6c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 28,
+					"source" : "linuxcncrsh",
+					"targetIndexes" : 
+					[
+						23
+					]
+				},
+				{
+					"build" : "schedrmt",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-schedrmt-b4d39d8db678d97dca49.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 29,
+					"source" : "schedrmt",
+					"targetIndexes" : 
+					[
+						35
+					]
+				},
+				{
+					"build" : "linuxcnclcd",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-linuxcnclcd-90baa76469a6aca2169a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 30,
+					"source" : "linuxcnclcd",
+					"targetIndexes" : 
+					[
+						22
+					]
+				},
+				{
+					"build" : "lineardeltakins_py",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lineardeltakins_py-207e71205c3431d0fd66.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 31,
+					"source" : "lineardeltakins_py",
+					"targetIndexes" : 
+					[
+						18
+					]
+				},
+				{
+					"build" : "rotarydeltakins_py",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-rotarydeltakins_py-5be60d4b0526fe8e33da.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 32,
+					"source" : "rotarydeltakins_py",
+					"targetIndexes" : 
+					[
+						32
+					]
+				},
+				{
+					"build" : "hal_py",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-hal_py-791b90efd08515cacc53.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 33,
+					"source" : "hal_py",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "togl_py",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-togl_py-a00a90cc9db4540c9a60.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 34,
+					"source" : "togl_py",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "linuxcnc_py",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-linuxcnc_py-2fd585fd7dd151aae6e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 35,
+					"source" : "linuxcnc_py",
+					"targetIndexes" : 
+					[
+						21
+					]
+				},
+				{
+					"build" : "gcode_py",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-gcode_py-91198814ad2b4afe3570.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 36,
+					"source" : "gcode_py",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "projects/qt_sai",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-projects.qt_sai-f3abcfe3d0152571bbfe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 37,
+					"source" : "projects/qt_sai",
+					"targetIndexes" : 
+					[
+						30,
+						31
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "- LINUX_CNC -"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "rtapi_app",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						34
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "linuxcnc_module_helper",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						20
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "liblinuxcnchal",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "liblinuxcncini",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "libtooldata",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						17
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "libnml",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "linuxcnc",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "libposemath",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "libpyplugin",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "librs274",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "libcanterp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						12
+					],
+					"name" : "tpmod",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						36
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						13
+					],
+					"name" : "tpmod_scurve_grotius",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						37
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						14
+					],
+					"name" : "motmod",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						27
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						15
+					],
+					"name" : "inivar",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						16
+					],
+					"name" : "halcmd",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						17
+					],
+					"name" : "halmeter",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						18
+					],
+					"name" : "halscope",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						19
+					],
+					"name" : "classicladder",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						20
+					],
+					"name" : "halui",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						21
+					],
+					"name" : "halrmt",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						22
+					],
+					"name" : "pci_write",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						29
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						23
+					],
+					"name" : "pci_read",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						28
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						24
+					],
+					"name" : "motion-logger",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						26
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						25
+					],
+					"name" : "rs274",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						33
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						26
+					],
+					"name" : "linuxcncsvr",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						24
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						27
+					],
+					"name" : "milltask",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						25
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						28
+					],
+					"name" : "linuxcncrsh",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						23
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						29
+					],
+					"name" : "schedrmt",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						35
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						30
+					],
+					"name" : "linuxcnclcd",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						22
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						31
+					],
+					"name" : "lineardeltakins",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						18
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						32
+					],
+					"name" : "rotarydeltakins",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						32
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						33
+					],
+					"name" : "_hal",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						34
+					],
+					"name" : "_togl",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						35
+					],
+					"name" : "linuxcnc_py",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						21
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						36
+					],
+					"name" : "gcode",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						37
+					],
+					"name" : "qt_sai",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						30,
+						31
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 33,
+					"id" : "_hal::@ccead1037d4c58d5d3f3",
+					"jsonFile" : "target-_hal-0ef841a4f2f07667659d.json",
+					"name" : "_hal",
+					"projectIndex" : 33
+				},
+				{
+					"directoryIndex" : 34,
+					"id" : "_togl::@86a052b3028c59544279",
+					"jsonFile" : "target-_togl-690c9793ca4702b98490.json",
+					"name" : "_togl",
+					"projectIndex" : 34
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "classicladder::@2d96e050c8962f15af59",
+					"jsonFile" : "target-classicladder-47840645a7b480d1898d.json",
+					"name" : "classicladder",
+					"projectIndex" : 19
+				},
+				{
+					"directoryIndex" : 36,
+					"id" : "gcode::@f4ad55f59c915f3a86cb",
+					"jsonFile" : "target-gcode-057af91b82dfe2dd75c2.json",
+					"name" : "gcode",
+					"projectIndex" : 36
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "halcmd::@1f17e775d1a3e64320df",
+					"jsonFile" : "target-halcmd-a924f06b20e7ce62123f.json",
+					"name" : "halcmd",
+					"projectIndex" : 16
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "halmeter::@dbcfe65feedfd999f5aa",
+					"jsonFile" : "target-halmeter-c0da24390436aed55387.json",
+					"name" : "halmeter",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "halrmt::@ee8516805f4176e9cc3a",
+					"jsonFile" : "target-halrmt-907ff6247b36326a8acd.json",
+					"name" : "halrmt",
+					"projectIndex" : 21
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "halscope::@db8ca3555d5edd4af2bb",
+					"jsonFile" : "target-halscope-74f1bd8bae621edc3f13.json",
+					"name" : "halscope",
+					"projectIndex" : 18
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "halui::@a4ea0616aca5dc723302",
+					"jsonFile" : "target-halui-26c0504ecc79770f6d7d.json",
+					"name" : "halui",
+					"projectIndex" : 20
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "inivar::@633126830bfa3b314512",
+					"jsonFile" : "target-inivar-a42c0450b880645bb360.json",
+					"name" : "inivar",
+					"projectIndex" : 15
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "libcanterp::@911b0e96ea547b530200",
+					"jsonFile" : "target-libcanterp-fe764a9a354c2152a9d9.json",
+					"name" : "libcanterp",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "liblinuxcnchal::@c1030ccdc925b6471c51",
+					"jsonFile" : "target-liblinuxcnchal-fb952ccd78378a2dcb7a.json",
+					"name" : "liblinuxcnchal",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "liblinuxcncini::@aecb313196f168a34936",
+					"jsonFile" : "target-liblinuxcncini-059a8d0febc30aa3e78a.json",
+					"name" : "liblinuxcncini",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "libnml::@9aff2b4a67a23bc21e7f",
+					"jsonFile" : "target-libnml-09b91a9418d3f2961d02.json",
+					"name" : "libnml",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "libposemath::@19836be86c85fe12aa79",
+					"jsonFile" : "target-libposemath-d8aa1a9f1ee661db211e.json",
+					"name" : "libposemath",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "libpyplugin::@27ea7f702e5a44822e7f",
+					"jsonFile" : "target-libpyplugin-c044412f97b62619bde0.json",
+					"name" : "libpyplugin",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "librs274::@8df4451ed63a711bc318",
+					"jsonFile" : "target-librs274-281af7112dda3ede13e9.json",
+					"name" : "librs274",
+					"projectIndex" : 10
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "libtooldata::@dde462fa742d24151126",
+					"jsonFile" : "target-libtooldata-3560ea330efcf53657f6.json",
+					"name" : "libtooldata",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 31,
+					"id" : "lineardeltakins::@a377f7f3ef850a26aae3",
+					"jsonFile" : "target-lineardeltakins-f0611dd6440f1ddd4017.json",
+					"name" : "lineardeltakins",
+					"projectIndex" : 31
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "linuxcnc::@c4f5def545515268f0d4",
+					"jsonFile" : "target-linuxcnc-7fa6df92dbf84082325a.json",
+					"name" : "linuxcnc",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "linuxcnc_module_helper::@3983c76584e3407a53a6",
+					"jsonFile" : "target-linuxcnc_module_helper-41a73ffb63365b8ee901.json",
+					"name" : "linuxcnc_module_helper",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 35,
+					"id" : "linuxcnc_py::@0f1b16824e0a2a39bd82",
+					"jsonFile" : "target-linuxcnc_py-fe5c74e856a320059949.json",
+					"name" : "linuxcnc_py",
+					"projectIndex" : 35
+				},
+				{
+					"directoryIndex" : 30,
+					"id" : "linuxcnclcd::@3137aef15a868b1ad966",
+					"jsonFile" : "target-linuxcnclcd-a000495ab79297dd7e9c.json",
+					"name" : "linuxcnclcd",
+					"projectIndex" : 30
+				},
+				{
+					"directoryIndex" : 28,
+					"id" : "linuxcncrsh::@e1dd18eaf175b37aa146",
+					"jsonFile" : "target-linuxcncrsh-07c150567aa7892f35b4.json",
+					"name" : "linuxcncrsh",
+					"projectIndex" : 28
+				},
+				{
+					"directoryIndex" : 26,
+					"id" : "linuxcncsvr::@8a4b74604ca69b14417c",
+					"jsonFile" : "target-linuxcncsvr-cab75df8a71e427465bf.json",
+					"name" : "linuxcncsvr",
+					"projectIndex" : 26
+				},
+				{
+					"directoryIndex" : 27,
+					"id" : "milltask::@d1334ecc1d63caeb52f9",
+					"jsonFile" : "target-milltask-c561527ab0f245e59796.json",
+					"name" : "milltask",
+					"projectIndex" : 27
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "motion-logger::@78056885ae24361b7255",
+					"jsonFile" : "target-motion-logger-26bd22358140be165190.json",
+					"name" : "motion-logger",
+					"projectIndex" : 24
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "motmod::@cbc05b92200129ae8c4a",
+					"jsonFile" : "target-motmod-bbf9ce6e54f9f836cad3.json",
+					"name" : "motmod",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 23,
+					"id" : "pci_read::@5b0c03e0d211115f05b6",
+					"jsonFile" : "target-pci_read-38b225e3049ef80c6596.json",
+					"name" : "pci_read",
+					"projectIndex" : 23
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "pci_write::@d2246b2c7127254f5297",
+					"jsonFile" : "target-pci_write-21a2bb5a198bee9071c6.json",
+					"name" : "pci_write",
+					"projectIndex" : 22
+				},
+				{
+					"directoryIndex" : 37,
+					"id" : "qt_sai::@d4e30abfa16d77a3c5fe",
+					"jsonFile" : "target-qt_sai-e4e254b36c9a395c5eca.json",
+					"name" : "qt_sai",
+					"projectIndex" : 37
+				},
+				{
+					"directoryIndex" : 37,
+					"id" : "qt_sai_autogen::@d4e30abfa16d77a3c5fe",
+					"jsonFile" : "target-qt_sai_autogen-b8c26850a75dffcd7446.json",
+					"name" : "qt_sai_autogen",
+					"projectIndex" : 37
+				},
+				{
+					"directoryIndex" : 32,
+					"id" : "rotarydeltakins::@4994e271654b74d39745",
+					"jsonFile" : "target-rotarydeltakins-2668ca2845b103933911.json",
+					"name" : "rotarydeltakins",
+					"projectIndex" : 32
+				},
+				{
+					"directoryIndex" : 25,
+					"id" : "rs274::@c56801e398c33da3819a",
+					"jsonFile" : "target-rs274-5db0943ceadde181abac.json",
+					"name" : "rs274",
+					"projectIndex" : 25
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "rtapi_app::@d7ee44f6a91619cc980f",
+					"jsonFile" : "target-rtapi_app-63f0e6b5c0c4783c22a8.json",
+					"name" : "rtapi_app",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "schedrmt::@7ec6d298df89a6c9b520",
+					"jsonFile" : "target-schedrmt-8d000a041e6225347864.json",
+					"name" : "schedrmt",
+					"projectIndex" : 29
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "tpmod::@6b1419e068b35c2513c3",
+					"jsonFile" : "target-tpmod-3c387770cd95201f0bca.json",
+					"name" : "tpmod",
+					"projectIndex" : 12
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "tpmod_scurve_grotius::@9f976c48a704071ba798",
+					"jsonFile" : "target-tpmod_scurve_grotius-8e4cdb9db1e1f8623752.json",
+					"name" : "tpmod_scurve_grotius",
+					"projectIndex" : 13
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/user/linuxcnc/cmake/build",
+		"source" : "/home/user/linuxcnc/cmake"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

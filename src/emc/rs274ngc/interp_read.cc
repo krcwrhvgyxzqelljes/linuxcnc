@@ -564,8 +564,6 @@ int Interp::read_g(char *line,   //!< string: line of RS274/NGC code being proce
                   block_pointer block,  //!< pointer to a block being filled from the line 
                   double *parameters)   //!< array of system parameters                    
 {
-  std::cout<<"Interp::read_g"<<std::endl;
-
   double value_read;
   int value;
   int mode;
@@ -586,9 +584,7 @@ int Interp::read_g(char *line,   //!< string: line of RS274/NGC code being proce
   // mode = usercode_mgroup(&(_setup),value);
   // if (mode != -1) {
 
-  // std::cout<<"G value:"<<value<<std::endl;
   if(value==G_9){ // G9 = 90
-      std::cout<<"G9 found."<<std::endl;
       block->g_modes[GM_MOTION] = value; // GM_MOTION is same as G2, G3 etc.
       return INTERP_OK;
   } // Dont fall into remap stuff...

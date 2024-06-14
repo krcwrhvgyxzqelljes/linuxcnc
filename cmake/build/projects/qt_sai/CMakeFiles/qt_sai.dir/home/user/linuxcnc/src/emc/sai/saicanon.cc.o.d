@@ -379,4 +379,13 @@ projects/qt_sai/CMakeFiles/qt_sai.dir/home/user/linuxcnc/src/emc/sai/saicanon.cc
  /home/user/linuxcnc/cmake/projects/qt_sai/../../../src/rtapi/rtapi_string.h \
  /home/user/linuxcnc/cmake/projects/qt_sai/../../../src/rtapi/rtapi.h \
  /usr/include/spawn.h \
- /home/user/linuxcnc/cmake/projects/qt_sai/../../../src/rtapi/rtapi_gfp.h
+ /home/user/linuxcnc/cmake/projects/qt_sai/../../../src/rtapi/rtapi_gfp.h \
+ /usr/include/c++/12/iomanip /usr/include/c++/12/locale \
+ /usr/include/c++/12/bits/locale_facets_nonio.h /usr/include/c++/12/ctime \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+ /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/12/bits/locale_conv.h \
+ /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/sstream \
+ /usr/include/c++/12/bits/sstream.tcc

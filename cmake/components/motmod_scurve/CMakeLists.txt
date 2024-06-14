@@ -37,12 +37,12 @@ ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/../../../src/emc/motion/emcmotutil.c
     ${SRC_DIR}/../../../src/emc/motion/stashf.c
     ${SRC_DIR}/../../../src/emc/motion/dbuf.c
-    #${SRC_DIR}/../../vendor/scurve/scurve_engine/scurve_struct.h
-    #${SRC_DIR}/../../vendor/scurve/scurve_engine/scurve_reset.h
-    #${SRC_DIR}/../../vendor/scurve/scurve_engine/scurve_engine.h
-    #${SRC_DIR}/../../vendor/scurve/scurve_engine/scurve_engine.cpp
-    #${SRC_DIR}/../../vendor/scurve/scurve_engine/simple_tp_scurve.c
-    #${SRC_DIR}/../../vendor/scurve/scurve_engine/motion_scurve.c
+    ${SRC_DIR}/../../vendor/scurve/scurve_engine/scurve_struct.h
+    ${SRC_DIR}/../../vendor/scurve/scurve_engine/scurve_reset.h
+    ${SRC_DIR}/../../vendor/scurve/scurve_engine/scurve_engine.h
+    ${SRC_DIR}/../../vendor/scurve/scurve_engine/scurve_engine.cpp
+    ${SRC_DIR}/../../vendor/scurve/scurve_engine/simple_tp_scurve.c
+    ${SRC_DIR}/../../vendor/scurve/scurve_engine/motion_scurve.c
 )
 
 # Set path to eigen3, for install $ sudo apt-get install libeigen3-dev

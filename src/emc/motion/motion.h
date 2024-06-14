@@ -117,6 +117,7 @@ extern "C" {
 
 	EMCMOT_SET_LINE,	/* queue up a linear move */
 	EMCMOT_SET_CIRCLE,	/* queue up a circular move */
+    EMCMOT_SET_GENERAL_MOTION,	/* queue up a general motion move */
 	EMCMOT_SET_TELEOP_VECTOR,	/* Move at a given velocity but in
 					   world cartesian coordinates, not
 					   in joint space like EMCMOT_JOG_* */

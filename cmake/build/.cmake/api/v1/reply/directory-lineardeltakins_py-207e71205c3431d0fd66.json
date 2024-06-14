@@ -1,0 +1,59 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"lineardeltakins_py/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 61,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/lineardeltakins_py",
+			"paths" : 
+			[
+				"lineardeltakins_py/lineardeltakins.so.0"
+			],
+			"targetId" : "lineardeltakins::@a377f7f3ef850a26aae3",
+			"targetIndex" : 18,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/lineardeltakins_py",
+			"paths" : 
+			[
+				"lineardeltakins_py/lineardeltakins.so"
+			],
+			"targetId" : "lineardeltakins::@a377f7f3ef850a26aae3",
+			"targetIndex" : 18,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lineardeltakins_py",
+		"source" : "lineardeltakins_py"
+	}
+}

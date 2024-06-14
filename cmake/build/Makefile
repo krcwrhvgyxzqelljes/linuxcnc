@@ -162,6 +162,123 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named rtapi_app
+
+# Build rule for target.
+rtapi_app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rtapi_app
+.PHONY : rtapi_app
+
+# fast build rule for target.
+rtapi_app/fast:
+	$(MAKE) $(MAKESILENT) -f rtapi/CMakeFiles/rtapi_app.dir/build.make rtapi/CMakeFiles/rtapi_app.dir/build
+.PHONY : rtapi_app/fast
+
+#=============================================================================
+# Target rules for targets named linuxcnc_module_helper
+
+# Build rule for target.
+linuxcnc_module_helper: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linuxcnc_module_helper
+.PHONY : linuxcnc_module_helper
+
+# fast build rule for target.
+linuxcnc_module_helper/fast:
+	$(MAKE) $(MAKESILENT) -f linuxcnc_module_helper/CMakeFiles/linuxcnc_module_helper.dir/build.make linuxcnc_module_helper/CMakeFiles/linuxcnc_module_helper.dir/build
+.PHONY : linuxcnc_module_helper/fast
+
+#=============================================================================
+# Target rules for targets named liblinuxcnchal
+
+# Build rule for target.
+liblinuxcnchal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 liblinuxcnchal
+.PHONY : liblinuxcnchal
+
+# fast build rule for target.
+liblinuxcnchal/fast:
+	$(MAKE) $(MAKESILENT) -f liblinuxcnchal/CMakeFiles/liblinuxcnchal.dir/build.make liblinuxcnchal/CMakeFiles/liblinuxcnchal.dir/build
+.PHONY : liblinuxcnchal/fast
+
+#=============================================================================
+# Target rules for targets named liblinuxcncini
+
+# Build rule for target.
+liblinuxcncini: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 liblinuxcncini
+.PHONY : liblinuxcncini
+
+# fast build rule for target.
+liblinuxcncini/fast:
+	$(MAKE) $(MAKESILENT) -f liblinuxcncini/CMakeFiles/liblinuxcncini.dir/build.make liblinuxcncini/CMakeFiles/liblinuxcncini.dir/build
+.PHONY : liblinuxcncini/fast
+
+#=============================================================================
+# Target rules for targets named libtooldata
+
+# Build rule for target.
+libtooldata: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtooldata
+.PHONY : libtooldata
+
+# fast build rule for target.
+libtooldata/fast:
+	$(MAKE) $(MAKESILENT) -f libtooldata/CMakeFiles/libtooldata.dir/build.make libtooldata/CMakeFiles/libtooldata.dir/build
+.PHONY : libtooldata/fast
+
+#=============================================================================
+# Target rules for targets named libnml
+
+# Build rule for target.
+libnml: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libnml
+.PHONY : libnml
+
+# fast build rule for target.
+libnml/fast:
+	$(MAKE) $(MAKESILENT) -f libnml/CMakeFiles/libnml.dir/build.make libnml/CMakeFiles/libnml.dir/build
+.PHONY : libnml/fast
+
+#=============================================================================
+# Target rules for targets named linuxcnc
+
+# Build rule for target.
+linuxcnc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linuxcnc
+.PHONY : linuxcnc
+
+# fast build rule for target.
+linuxcnc/fast:
+	$(MAKE) $(MAKESILENT) -f liblinuxcnc/CMakeFiles/linuxcnc.dir/build.make liblinuxcnc/CMakeFiles/linuxcnc.dir/build
+.PHONY : linuxcnc/fast
+
+#=============================================================================
+# Target rules for targets named libposemath
+
+# Build rule for target.
+libposemath: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libposemath
+.PHONY : libposemath
+
+# fast build rule for target.
+libposemath/fast:
+	$(MAKE) $(MAKESILENT) -f libposemath/CMakeFiles/libposemath.dir/build.make libposemath/CMakeFiles/libposemath.dir/build
+.PHONY : libposemath/fast
+
+#=============================================================================
+# Target rules for targets named libpyplugin
+
+# Build rule for target.
+libpyplugin: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libpyplugin
+.PHONY : libpyplugin
+
+# fast build rule for target.
+libpyplugin/fast:
+	$(MAKE) $(MAKESILENT) -f libpyplugin/CMakeFiles/libpyplugin.dir/build.make libpyplugin/CMakeFiles/libpyplugin.dir/build
+.PHONY : libpyplugin/fast
+
+#=============================================================================
 # Target rules for targets named librs274
 
 # Build rule for target.
@@ -173,6 +290,344 @@ librs274: cmake_check_build_system
 librs274/fast:
 	$(MAKE) $(MAKESILENT) -f librs274/CMakeFiles/librs274.dir/build.make librs274/CMakeFiles/librs274.dir/build
 .PHONY : librs274/fast
+
+#=============================================================================
+# Target rules for targets named libcanterp
+
+# Build rule for target.
+libcanterp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libcanterp
+.PHONY : libcanterp
+
+# fast build rule for target.
+libcanterp/fast:
+	$(MAKE) $(MAKESILENT) -f libcanterp/CMakeFiles/libcanterp.dir/build.make libcanterp/CMakeFiles/libcanterp.dir/build
+.PHONY : libcanterp/fast
+
+#=============================================================================
+# Target rules for targets named tpmod
+
+# Build rule for target.
+tpmod: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tpmod
+.PHONY : tpmod
+
+# fast build rule for target.
+tpmod/fast:
+	$(MAKE) $(MAKESILENT) -f components/tpmod/CMakeFiles/tpmod.dir/build.make components/tpmod/CMakeFiles/tpmod.dir/build
+.PHONY : tpmod/fast
+
+#=============================================================================
+# Target rules for targets named tpmod_scurve_grotius
+
+# Build rule for target.
+tpmod_scurve_grotius: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tpmod_scurve_grotius
+.PHONY : tpmod_scurve_grotius
+
+# fast build rule for target.
+tpmod_scurve_grotius/fast:
+	$(MAKE) $(MAKESILENT) -f components/tpmod_scurve_grotius/CMakeFiles/tpmod_scurve_grotius.dir/build.make components/tpmod_scurve_grotius/CMakeFiles/tpmod_scurve_grotius.dir/build
+.PHONY : tpmod_scurve_grotius/fast
+
+#=============================================================================
+# Target rules for targets named motmod
+
+# Build rule for target.
+motmod: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motmod
+.PHONY : motmod
+
+# fast build rule for target.
+motmod/fast:
+	$(MAKE) $(MAKESILENT) -f components/motmod/CMakeFiles/motmod.dir/build.make components/motmod/CMakeFiles/motmod.dir/build
+.PHONY : motmod/fast
+
+#=============================================================================
+# Target rules for targets named inivar
+
+# Build rule for target.
+inivar: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inivar
+.PHONY : inivar
+
+# fast build rule for target.
+inivar/fast:
+	$(MAKE) $(MAKESILENT) -f inivar/CMakeFiles/inivar.dir/build.make inivar/CMakeFiles/inivar.dir/build
+.PHONY : inivar/fast
+
+#=============================================================================
+# Target rules for targets named halcmd
+
+# Build rule for target.
+halcmd: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 halcmd
+.PHONY : halcmd
+
+# fast build rule for target.
+halcmd/fast:
+	$(MAKE) $(MAKESILENT) -f halcmd/CMakeFiles/halcmd.dir/build.make halcmd/CMakeFiles/halcmd.dir/build
+.PHONY : halcmd/fast
+
+#=============================================================================
+# Target rules for targets named halmeter
+
+# Build rule for target.
+halmeter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 halmeter
+.PHONY : halmeter
+
+# fast build rule for target.
+halmeter/fast:
+	$(MAKE) $(MAKESILENT) -f halmeter/CMakeFiles/halmeter.dir/build.make halmeter/CMakeFiles/halmeter.dir/build
+.PHONY : halmeter/fast
+
+#=============================================================================
+# Target rules for targets named halscope
+
+# Build rule for target.
+halscope: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 halscope
+.PHONY : halscope
+
+# fast build rule for target.
+halscope/fast:
+	$(MAKE) $(MAKESILENT) -f halscope/CMakeFiles/halscope.dir/build.make halscope/CMakeFiles/halscope.dir/build
+.PHONY : halscope/fast
+
+#=============================================================================
+# Target rules for targets named classicladder
+
+# Build rule for target.
+classicladder: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classicladder
+.PHONY : classicladder
+
+# fast build rule for target.
+classicladder/fast:
+	$(MAKE) $(MAKESILENT) -f classicladder/CMakeFiles/classicladder.dir/build.make classicladder/CMakeFiles/classicladder.dir/build
+.PHONY : classicladder/fast
+
+#=============================================================================
+# Target rules for targets named halui
+
+# Build rule for target.
+halui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 halui
+.PHONY : halui
+
+# fast build rule for target.
+halui/fast:
+	$(MAKE) $(MAKESILENT) -f halui/CMakeFiles/halui.dir/build.make halui/CMakeFiles/halui.dir/build
+.PHONY : halui/fast
+
+#=============================================================================
+# Target rules for targets named halrmt
+
+# Build rule for target.
+halrmt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 halrmt
+.PHONY : halrmt
+
+# fast build rule for target.
+halrmt/fast:
+	$(MAKE) $(MAKESILENT) -f halrmt/CMakeFiles/halrmt.dir/build.make halrmt/CMakeFiles/halrmt.dir/build
+.PHONY : halrmt/fast
+
+#=============================================================================
+# Target rules for targets named pci_write
+
+# Build rule for target.
+pci_write: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pci_write
+.PHONY : pci_write
+
+# fast build rule for target.
+pci_write/fast:
+	$(MAKE) $(MAKESILENT) -f pci_write/CMakeFiles/pci_write.dir/build.make pci_write/CMakeFiles/pci_write.dir/build
+.PHONY : pci_write/fast
+
+#=============================================================================
+# Target rules for targets named pci_read
+
+# Build rule for target.
+pci_read: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pci_read
+.PHONY : pci_read
+
+# fast build rule for target.
+pci_read/fast:
+	$(MAKE) $(MAKESILENT) -f pci_read/CMakeFiles/pci_read.dir/build.make pci_read/CMakeFiles/pci_read.dir/build
+.PHONY : pci_read/fast
+
+#=============================================================================
+# Target rules for targets named motion-logger
+
+# Build rule for target.
+motion-logger: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motion-logger
+.PHONY : motion-logger
+
+# fast build rule for target.
+motion-logger/fast:
+	$(MAKE) $(MAKESILENT) -f motion_logger/CMakeFiles/motion-logger.dir/build.make motion_logger/CMakeFiles/motion-logger.dir/build
+.PHONY : motion-logger/fast
+
+#=============================================================================
+# Target rules for targets named rs274
+
+# Build rule for target.
+rs274: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rs274
+.PHONY : rs274
+
+# fast build rule for target.
+rs274/fast:
+	$(MAKE) $(MAKESILENT) -f sai/CMakeFiles/rs274.dir/build.make sai/CMakeFiles/rs274.dir/build
+.PHONY : rs274/fast
+
+#=============================================================================
+# Target rules for targets named linuxcncsvr
+
+# Build rule for target.
+linuxcncsvr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linuxcncsvr
+.PHONY : linuxcncsvr
+
+# fast build rule for target.
+linuxcncsvr/fast:
+	$(MAKE) $(MAKESILENT) -f linuxcncsvr/CMakeFiles/linuxcncsvr.dir/build.make linuxcncsvr/CMakeFiles/linuxcncsvr.dir/build
+.PHONY : linuxcncsvr/fast
+
+#=============================================================================
+# Target rules for targets named milltask
+
+# Build rule for target.
+milltask: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 milltask
+.PHONY : milltask
+
+# fast build rule for target.
+milltask/fast:
+	$(MAKE) $(MAKESILENT) -f milltask/CMakeFiles/milltask.dir/build.make milltask/CMakeFiles/milltask.dir/build
+.PHONY : milltask/fast
+
+#=============================================================================
+# Target rules for targets named linuxcncrsh
+
+# Build rule for target.
+linuxcncrsh: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linuxcncrsh
+.PHONY : linuxcncrsh
+
+# fast build rule for target.
+linuxcncrsh/fast:
+	$(MAKE) $(MAKESILENT) -f linuxcncrsh/CMakeFiles/linuxcncrsh.dir/build.make linuxcncrsh/CMakeFiles/linuxcncrsh.dir/build
+.PHONY : linuxcncrsh/fast
+
+#=============================================================================
+# Target rules for targets named schedrmt
+
+# Build rule for target.
+schedrmt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 schedrmt
+.PHONY : schedrmt
+
+# fast build rule for target.
+schedrmt/fast:
+	$(MAKE) $(MAKESILENT) -f schedrmt/CMakeFiles/schedrmt.dir/build.make schedrmt/CMakeFiles/schedrmt.dir/build
+.PHONY : schedrmt/fast
+
+#=============================================================================
+# Target rules for targets named linuxcnclcd
+
+# Build rule for target.
+linuxcnclcd: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linuxcnclcd
+.PHONY : linuxcnclcd
+
+# fast build rule for target.
+linuxcnclcd/fast:
+	$(MAKE) $(MAKESILENT) -f linuxcnclcd/CMakeFiles/linuxcnclcd.dir/build.make linuxcnclcd/CMakeFiles/linuxcnclcd.dir/build
+.PHONY : linuxcnclcd/fast
+
+#=============================================================================
+# Target rules for targets named lineardeltakins
+
+# Build rule for target.
+lineardeltakins: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lineardeltakins
+.PHONY : lineardeltakins
+
+# fast build rule for target.
+lineardeltakins/fast:
+	$(MAKE) $(MAKESILENT) -f lineardeltakins_py/CMakeFiles/lineardeltakins.dir/build.make lineardeltakins_py/CMakeFiles/lineardeltakins.dir/build
+.PHONY : lineardeltakins/fast
+
+#=============================================================================
+# Target rules for targets named rotarydeltakins
+
+# Build rule for target.
+rotarydeltakins: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rotarydeltakins
+.PHONY : rotarydeltakins
+
+# fast build rule for target.
+rotarydeltakins/fast:
+	$(MAKE) $(MAKESILENT) -f rotarydeltakins_py/CMakeFiles/rotarydeltakins.dir/build.make rotarydeltakins_py/CMakeFiles/rotarydeltakins.dir/build
+.PHONY : rotarydeltakins/fast
+
+#=============================================================================
+# Target rules for targets named _hal
+
+# Build rule for target.
+_hal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _hal
+.PHONY : _hal
+
+# fast build rule for target.
+_hal/fast:
+	$(MAKE) $(MAKESILENT) -f hal_py/CMakeFiles/_hal.dir/build.make hal_py/CMakeFiles/_hal.dir/build
+.PHONY : _hal/fast
+
+#=============================================================================
+# Target rules for targets named _togl
+
+# Build rule for target.
+_togl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _togl
+.PHONY : _togl
+
+# fast build rule for target.
+_togl/fast:
+	$(MAKE) $(MAKESILENT) -f togl_py/CMakeFiles/_togl.dir/build.make togl_py/CMakeFiles/_togl.dir/build
+.PHONY : _togl/fast
+
+#=============================================================================
+# Target rules for targets named linuxcnc_py
+
+# Build rule for target.
+linuxcnc_py: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linuxcnc_py
+.PHONY : linuxcnc_py
+
+# fast build rule for target.
+linuxcnc_py/fast:
+	$(MAKE) $(MAKESILENT) -f linuxcnc_py/CMakeFiles/linuxcnc_py.dir/build.make linuxcnc_py/CMakeFiles/linuxcnc_py.dir/build
+.PHONY : linuxcnc_py/fast
+
+#=============================================================================
+# Target rules for targets named gcode
+
+# Build rule for target.
+gcode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gcode
+.PHONY : gcode
+
+# fast build rule for target.
+gcode/fast:
+	$(MAKE) $(MAKESILENT) -f gcode_py/CMakeFiles/gcode.dir/build.make gcode_py/CMakeFiles/gcode.dir/build
+.PHONY : gcode/fast
 
 #=============================================================================
 # Target rules for targets named qt_sai
@@ -213,8 +668,43 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... qt_sai_autogen"
+	@echo "... _hal"
+	@echo "... _togl"
+	@echo "... classicladder"
+	@echo "... gcode"
+	@echo "... halcmd"
+	@echo "... halmeter"
+	@echo "... halrmt"
+	@echo "... halscope"
+	@echo "... halui"
+	@echo "... inivar"
+	@echo "... libcanterp"
+	@echo "... liblinuxcnchal"
+	@echo "... liblinuxcncini"
+	@echo "... libnml"
+	@echo "... libposemath"
+	@echo "... libpyplugin"
 	@echo "... librs274"
+	@echo "... libtooldata"
+	@echo "... lineardeltakins"
+	@echo "... linuxcnc"
+	@echo "... linuxcnc_module_helper"
+	@echo "... linuxcnc_py"
+	@echo "... linuxcnclcd"
+	@echo "... linuxcncrsh"
+	@echo "... linuxcncsvr"
+	@echo "... milltask"
+	@echo "... motion-logger"
+	@echo "... motmod"
+	@echo "... pci_read"
+	@echo "... pci_write"
 	@echo "... qt_sai"
+	@echo "... rotarydeltakins"
+	@echo "... rs274"
+	@echo "... rtapi_app"
+	@echo "... schedrmt"
+	@echo "... tpmod"
+	@echo "... tpmod_scurve_grotius"
 .PHONY : help
 
 

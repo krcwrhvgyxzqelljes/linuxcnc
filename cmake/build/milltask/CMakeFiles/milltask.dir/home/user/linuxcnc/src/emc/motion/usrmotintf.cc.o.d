@@ -102,9 +102,9 @@ milltask/CMakeFiles/milltask.dir/home/user/linuxcnc/src/emc/motion/usrmotintf.cc
  /home/user/linuxcnc/src/emc/motion/usrmotintf.h \
  /home/user/linuxcnc/cmake/milltask/../../src/libnml/os_intf/_timer.h \
  /home/user/linuxcnc/cmake/milltask/../../src/libnml/rcs/rcs_print.hh \
- /home/user/linuxcnc/cmake/milltask/../../src/libnml/inifile/inifile.hh \
- /home/user/linuxcnc/cmake/milltask/../../src/libnml/inifile/inifile.h \
- /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+ /home/user/linuxcnc/src/libnml/inifile/inifile.hh \
+ /home/user/linuxcnc/src/libnml/inifile/inifile.h /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \

@@ -857,7 +857,7 @@ librs274/CMakeFiles/librs274.dir/home/user/linuxcnc/src/emc/rs274ngc/interp_o_wo
  /home/user/linuxcnc/cmake/librs274/../../src/emc/rs274ngc/rs274ngc.hh \
  /usr/include/c++/12/iostream \
  /home/user/linuxcnc/src/emc/rs274ngc/rs274ngc_interp.hh \
- /home/user/linuxcnc/cmake/librs274/../../src/emc/pythonplugin/python_plugin.hh \
+ /home/user/linuxcnc/src/emc/pythonplugin/python_plugin.hh \
  /home/user/linuxcnc/src/emc/rs274ngc/interp_python.hh \
  /home/user/linuxcnc/cmake/librs274/../../src/rtapi/rtapi_string.h \
  /home/user/linuxcnc/cmake/librs274/../../src/rtapi/rtapi.h \

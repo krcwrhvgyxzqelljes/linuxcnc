@@ -4,11 +4,7 @@ project(${PROJECT} CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Set variables.
@@ -65,7 +61,6 @@ set_target_properties(linuxcncini PROPERTIES
 
 add_library(linuxcnc_a STATIC IMPORTED) # or STATIC instead of SHARED
 set_target_properties(linuxcnc_a PROPERTIES
-    # IMPORTED_LOCATION "/home/user/lcncladdertest/lib/liblinuxcnc.a"
     IMPORTED_LOCATION ${SRC_DIR}/../../../lib/liblinuxcnc.a
     INTERFACE_INCLUDE_DIRECTORIES ${SRC_DIR}/../../../include
 )
@@ -107,8 +102,6 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_PREFIX_PATH "/opt/qt-creator/5.15.1/gcc_64/lib/cmake")
 include_directories("/opt/qt-creator/5.15.1/gcc_64/include/QtWidgets")
 include_directories("/opt/qt-creator/5.15.1/gcc_64/include/QtGui")
@@ -128,7 +121,7 @@ set(PROJECT_SOURCES
     ${SRC_DIR}/../../../src/emc/sai/saicanon.hh
     ${SRC_DIR}/../../../src/emc/sai/saicanon.cc
     ${SRC_DIR}/../../../src/emc/task/taskclass.cc
-    # ${SRC_DIR}/../../../src/emc/nml_intf/canon.hh
+    ${SRC_DIR}/../../../src/emc/nml_intf/canon.hh
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

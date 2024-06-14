@@ -62,7 +62,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
      NOT IS_SYMLINK "$ENV{DESTDIR}/home/user/linuxcnc/cmake/build/librs274/../../../lib/librs274.so.0")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}/home/user/linuxcnc/cmake/build/librs274/../../../lib/librs274.so.0"
-         OLD_RPATH "/home/user/linuxcnc/cmake/librs274/../build/liblinuxcncini:/home/user/linuxcnc/cmake/librs274/../build/libpyplugin:/home/user/linuxcnc/cmake/librs274/../build/liblinuxcnchal:/home/user/linuxcnc/cmake/librs274/../build/libtooldata:"
+         OLD_RPATH "/home/user/linuxcnc/cmake/librs274/../build/libpyplugin:/home/user/linuxcnc/cmake/librs274/../build/liblinuxcncini:/home/user/linuxcnc/cmake/librs274/../build/liblinuxcnchal:/home/user/linuxcnc/cmake/librs274/../build/libtooldata:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/user/linuxcnc/cmake/build/librs274/../../../lib/librs274.so.0")
@@ -90,7 +90,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
      NOT IS_SYMLINK "$ENV{DESTDIR}/home/user/linuxcnc/cmake/build/librs274/../../../lib/librs274.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}/home/user/linuxcnc/cmake/build/librs274/../../../lib/librs274.so"
-         OLD_RPATH "/home/user/linuxcnc/cmake/librs274/../build/liblinuxcncini:/home/user/linuxcnc/cmake/librs274/../build/libpyplugin:/home/user/linuxcnc/cmake/librs274/../build/liblinuxcnchal:/home/user/linuxcnc/cmake/librs274/../build/libtooldata:"
+         OLD_RPATH "/home/user/linuxcnc/cmake/librs274/../build/libpyplugin:/home/user/linuxcnc/cmake/librs274/../build/liblinuxcncini:/home/user/linuxcnc/cmake/librs274/../build/liblinuxcnchal:/home/user/linuxcnc/cmake/librs274/../build/libtooldata:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/user/linuxcnc/cmake/build/librs274/../../../lib/librs274.so")

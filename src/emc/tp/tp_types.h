@@ -7,7 +7,7 @@
 * Author:
 * License: GPL Version 2
 * System: Linux
-*    
+*
 * Copyright (c) 2004 All rights reserved.
 *
 ********************************************************************/
@@ -78,7 +78,7 @@ typedef enum {
  * synchronized motion code.
  */
 typedef struct {
-	 int spindle_num;
+     int spindle_num;
      double offset;
      double revs;
      int waiting_for_index;
@@ -96,7 +96,6 @@ typedef struct {
 
     EmcPose currentPos;
     EmcPose goalPos;
-    EmcPose last_pos;
 
     int queueSize;
     double cycleTime;
@@ -130,10 +129,54 @@ typedef struct {
                                    blends */
     int synchronized;       // spindle sync required for this move
     int velocity_mode; 	        /* TRUE if spindle sync is in velocity mode,
-				   FALSE if in position mode */
+                   FALSE if in position mode */
     double uu_per_rev;          /* user units per spindle revolution */
 
+
     syncdio_t syncdio; //record tpSetDout's here
+
+    // When adding stuff here, recompile lcnc src first.
+    double max_jerk;
+    double traject_lenght;
+    EmcPose gcode_lastPos;
+    int gcode_upcoming_line_nr;
+    int vector_current_exec;
+    double segment_progress;
+    double ruckig_jerk;
+    double arc_radius_sample;
+    double arc_velocity_sample;
+    double blend_radius_G0;
+    double blend_radius_G1_G2_G3;
+    int gcode_current_executed_line_nr;
+    int enable_look_ahead;
+    int enable_grotius_scurve;
+    int enable_backend_runners;
+    int enable_chamfer;
+    int buffer_ready;
+    int cavalier_ready;
+
+    int look_ahead_lines;
+    int look_ahead_buffer;
+    int jog_x_plus;
+    int jog_x_min;
+    int jog_y_plus;
+    int jog_y_min;
+    int jog_z_plus;
+    int jog_z_min;
+    int jog_a_plus;
+    int jog_a_min;
+    int jog_b_plus;
+    int jog_b_min;
+    int jog_c_plus;
+    int jog_c_min;
+    int jog_u_plus;
+    int jog_u_min;
+    int jog_v_plus;
+    int jog_v_min;
+    int jog_w_plus;
+    int jog_w_min;
+    int jog_mode;
+    EmcPose jog_saved_pose;
 
 } TP_STRUCT;
 

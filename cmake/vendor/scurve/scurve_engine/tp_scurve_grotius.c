@@ -110,6 +110,57 @@ static int comp_idx; /* component ID */
 static void the_function();
 static int setup_pins();
 
+
+struct sc_pnt emc_pose_to_sc_pnt(struct EmcPose pose){
+    struct sc_pnt pnt;
+    pnt.x=pose.tran.x;
+    pnt.y=pose.tran.y;
+    pnt.z=pose.tran.z;
+    return pnt;
+}
+
+struct sc_dir emc_pose_to_sc_dir(struct EmcPose pose){
+    struct sc_dir dir;
+    dir.a=pose.a;
+    dir.b=pose.b;
+    dir.c=pose.c;
+    return dir;
+}
+
+struct sc_ext emc_pose_to_sc_ext(struct EmcPose pose){
+    struct sc_ext ext;
+    ext.u=pose.u;
+    ext.v=pose.v;
+    ext.w=pose.w;
+    return ext;
+}
+
+struct sc_pnt emc_cart_to_sc_pnt( PmCartesian pnt){
+    struct sc_pnt p;
+    p.x=pnt.x;
+    p.y=pnt.y;
+    p.z=pnt.z;
+    return p;
+}
+
+PmCartesian sc_pnt_to_emc_cart(struct sc_pnt pnt){
+    PmCartesian p;
+    p.x=pnt.x;
+    p.y=pnt.y;
+    p.z=pnt.z;
+    return p;
+}
+
+bool emc_pose_xyz_equal(struct EmcPose pose0, struct EmcPose pose1){
+
+    if(pose0.tran.x==pose1.tran.x && pose0.tran.y==pose1.tran.y && pose0.tran.z==pose1.tran.z){
+        return 1;
+    }
+    return 0;
+}
+
+
+
 int rtapi_app_main(void) {
 
     int r = 0;
@@ -498,42 +549,42 @@ void start_calculation_thread() {
 //}
 
 
-int tpRunCycle(TP_STRUCT * const tp, long period)
-{
+int tpRunCycle(TP_STRUCT * const tp, long period){
+
     //! printf("tpRunCycle. \n");
     tp->cycleTime=period;
     tp->cycleTime*=0.000000001; //! Convert to ms.
 
-    if(tp->buffer_ready==0){
-        tp->cavalier_ready=0;
-        calculation_done=0;
-    }
+    //    if(tp->buffer_ready==0){
+    //        tp->cavalier_ready=0;
+    //        calculation_done=0;
+    //    }
 
-    if(tp->buffer_ready==1){
+    //   if(tp->buffer_ready==1){
 
-        if(!calculation_done){
-            start_calculation_thread();
-        }
+    //        if(!calculation_done){
+    //            start_calculation_thread();
+    //        }
 
-        if(tp->cavalier_ready==0){
-            vector_update_pathlenghts(vector_ptr);
-            tp->cavalier_ready=1;
-        }
+    //        if(tp->cavalier_ready==0){
+    //            vector_update_pathlenghts(vector_ptr);
+    //            tp->cavalier_ready=1;
+    //        }
 
-        if(!calc_thread_running){ // This enables the calculation thread to modify the gcode buffer, without any others acces the data.
-            update_hal(tp);
-            if(tp->enable_look_ahead){
-                update_look_ahead(tp);
-            }
-            if(tp->enable_grotius_scurve){
-                update_scurve_grotius(tp);
-            } else {
-                update_scurve_ruckig(tp);
-            }
-            update_gui(tp);
-        }
-    }
-    tp->buffer_ready=1; // Will keep this value if no new segments are added.
+    //        if(!calc_thread_running){ // This enables the calculation thread to modify the gcode buffer, without any others acces the data.
+    update_hal(tp);
+    //   if(tp->enable_look_ahead){
+    //       update_look_ahead(tp);
+    //   }
+    // if(tp->enable_grotius_scurve){
+    update_scurve_grotius(tp);
+    //  } else {
+    //     update_scurve_ruckig(tp);
+    //  }
+    update_gui(tp);
+    //       }
+    //    }
+    //   tp->buffer_ready=1; // Will keep this value if no new segments are added.
 
     return 0;
 }
@@ -822,35 +873,19 @@ int tpIsTangent(struct tp_segment a, struct tp_segment b){
     return result;
 }
 
-extern int add_line(TP_STRUCT *
-                    const tp,
-                    EmcPose end,
-                    int canon_motion_type,
-                    double vel,
-                    double ini_maxvel,
-                    double acc,
-                    unsigned char enables,
-                    char atspeed,
-                    int indexer_jnum,
-                    struct state_tag_t tag);
+int tpAddGeneralMotion(TP_STRUCT *
+                       const tp,
+                       EmcPose end,
+                       int canon_motion_type,
+                       double vel,
+                       double ini_maxvel,
+                       double acc,
+                       unsigned char enables,
+                       char atspeed,
+                       int indexer_jnum,
+                       struct state_tag_t tag){
 
-int tpAddLine(TP_STRUCT *
-              const tp,
-              EmcPose end,
-              int canon_motion_type,
-              double vel,
-              double ini_maxvel,
-              double acc,
-              unsigned char enables,
-              char atspeed,
-              int indexer_jnum,
-              struct state_tag_t tag)
-
-
-{
-    printf("tpAddLine \n");
-
-    // add_line(tp,end,canon_motion_type,vel,ini_maxvel,acc,enables,atspeed,indexer_jnum,tag);
+    printf("tpAddGeneralMotion \n");
 
     struct tp_segment b;
     b.primitive_id=sc_line;
@@ -937,18 +972,106 @@ int tpAddLine(TP_STRUCT *
     return 0;
 }
 
-extern int add_circle( TP_STRUCT * const tp,
-                        EmcPose end,
-                        PmCartesian center,
-                        PmCartesian normal,
-                        int turn,
-                        int canon_motion_type, //! arc_3->lin_2->GO_1
-                        double vel,
-                        double ini_maxvel,
-                        double acc,
-                        unsigned char enables,
-                        char atspeed,
-                        struct state_tag_t tag );
+int tpAddLine(TP_STRUCT *
+              const tp,
+              EmcPose end,
+              int canon_motion_type,
+              double vel,
+              double ini_maxvel,
+              double acc,
+              unsigned char enables,
+              char atspeed,
+              int indexer_jnum,
+              struct state_tag_t tag)
+
+
+{
+    printf("tpAddLine \n");
+
+    struct tp_segment b;
+    b.primitive_id=sc_line;
+    b.motion_type=canon_motion_type;
+    b.pnt_s=emc_pose_to_sc_pnt(tp->gcode_lastPos);
+    b.pnt_c.x=0;
+    b.pnt_c.y=0;
+    b.pnt_c.z=0;
+    b.angle_begin=0;
+    b.angle_end=0;
+    b.acs=0;
+    b.ace=0;
+    b.radius=0;
+
+    b.pnt_e=emc_pose_to_sc_pnt(end);
+
+    b.pnt_w=tp_lines_midpoint(b.pnt_s,b.pnt_e);
+
+    b.dir_s=emc_pose_to_sc_dir(tp->gcode_lastPos);
+    b.dir_e=emc_pose_to_sc_dir(end);
+
+    b.ext_s=emc_pose_to_sc_ext(tp->gcode_lastPos);
+    b.ext_e=emc_pose_to_sc_ext(end);
+
+    b.gcode_line_nr=tp->gcode_upcoming_line_nr;
+
+    b.path_lenght=line_lenght_c(b.pnt_s,b.pnt_e);
+
+    b.vo=0;
+    b.vm=vel;
+    b.vm_gcode=vel;
+    b.ve=0;
+    b.is_fillet_segment=0;
+
+    //! Calculate previous segment to current segment path transition corners in degrees.
+    if(vector_size_c(vector_ptr)>0){
+        struct tp_segment previous=vector_at(vector_ptr,vector_size_c(vector_ptr)-1);
+        double angle_deg=segment_angle(previous,b);
+
+        b.angle_begin=angle_deg;
+        vector_set_end_angle(vector_ptr,vector_size_c(vector_ptr)-1,angle_deg);
+
+        int res=tpIsTangent(previous,b);
+        vector_set_tangent_or_colineair(vector_ptr,vector_size_c(vector_ptr)-1,res);
+    }
+
+    vector_add_segment(vector_ptr,b);
+    // printf("vector size: %d \n",vector_size_c(vector_ptr));
+
+    //if(vector_size_c(vector_ptr)>2){ // Used for cavalier algo.
+    //    int start=vector_size_c(vector_ptr)-3;
+    //    vector_run_cavalier(vector_ptr,start,tp->blend_radius_G0,tp->blend_radius_G1_G2_G3);
+    //}
+
+    //! Update last pose to end of gcode block.
+    tp->gcode_lastPos=end;
+
+    //! Clear.
+    tp->vector_current_exec=0;
+
+    scurve_data_reset(&sc);
+
+    tp->buffer_ready=0;
+
+    // Test to add tails.
+    if(vector_size_c(vector_ptr)>0){ // Used for cavalier algo.
+        struct tp_segment fillet;
+        fillet.pnt_s=vector_at(vector_ptr,vector_size_c(vector_ptr)-1).pnt_e;
+        fillet.pnt_e=vector_at(vector_ptr,vector_size_c(vector_ptr)-1).pnt_e; // Use same point.
+        fillet.pnt_w=vector_at(vector_ptr,vector_size_c(vector_ptr)-1).pnt_e;
+        fillet.pnt_c=vector_at(vector_ptr,vector_size_c(vector_ptr)-1).pnt_e;
+        fillet.primitive_id=sc_arc;
+        fillet.path_lenght=0;
+        fillet.gcode_line_nr=tp->gcode_upcoming_line_nr;
+        fillet.radius=0;
+        fillet.vo=0;
+        fillet.vm=vel;
+        fillet.vm_gcode=vel;
+        fillet.ve=0;
+        fillet.is_fillet_segment=1;
+        vector_add_segment(vector_ptr,fillet);
+    }
+
+    return 0;
+}
 
 int tpAddCircle(TP_STRUCT * const tp,
                 EmcPose end,
@@ -964,8 +1087,6 @@ int tpAddCircle(TP_STRUCT * const tp,
                 struct state_tag_t tag)
 {
     printf("tpAddCircle. \n");
-
-    // add_circle(tp,end,center,normal,turn,canon_motion_type,vel,ini_maxvel,acc,enables,atspeed,tag);
 
     struct tp_segment b;
     b.primitive_id=sc_arc;
@@ -2182,6 +2303,7 @@ EXPORT_SYMBOL(tpAbort);
 EXPORT_SYMBOL(tpActiveDepth);
 EXPORT_SYMBOL(tpAddCircle);
 EXPORT_SYMBOL(tpAddLine);
+EXPORT_SYMBOL(tpAddGeneralMotion);
 EXPORT_SYMBOL(tpAddRigidTap);
 EXPORT_SYMBOL(tpClear);
 EXPORT_SYMBOL(tpCreate);

@@ -1,7 +1,7 @@
 librs274/CMakeFiles/librs274.dir/home/user/linuxcnc/src/emc/rs274ngc/interp_python.cc.o: \
  /home/user/linuxcnc/src/emc/rs274ngc/interp_python.cc \
  /usr/include/stdc-predef.h \
- /home/user/linuxcnc/cmake/librs274/../../src/emc/pythonplugin/python_plugin.hh \
+ /home/user/linuxcnc/src/emc/pythonplugin/python_plugin.hh \
  /usr/include/boost/python/object.hpp \
  /usr/include/boost/python/ssize_t.hpp \
  /usr/include/boost/python/detail/prefix.hpp \

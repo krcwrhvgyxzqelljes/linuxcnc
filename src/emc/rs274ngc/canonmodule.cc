@@ -98,6 +98,7 @@ BOOST_PYTHON_MODULE(emccanon) {
 
     //  scope().attr("") =  ;
 
+    def("GENERAL_MOTION",&GENERAL_MOTION);
     def("ARC_FEED",&ARC_FEED);
     def("CANON_ERROR",&wrap_canon_error);
     def("CHANGE_TOOL",&CHANGE_TOOL);

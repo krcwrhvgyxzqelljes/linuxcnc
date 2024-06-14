@@ -990,6 +990,30 @@ void emcmotCommandHandler_locked(void *arg, long servo_period)
 		tpSetSpindleSync(&emcmotInternal->coord_tp, emcmotCommand->spindle, emcmotCommand->spindlesync, emcmotCommand->flags);
 		break;
 
+    case EMCMOT_SET_GENERAL_MOTION:
+        /* emcmotInternal->coord_tp up a linear move */
+        /* requires motion enabled, coordinated mode, not on limits */
+        rtapi_print_msg(RTAPI_MSG_DBG, "SET_GENERAL_MOTION");
+           printf("tpAddGeneralMotion from command.c \n");
+
+        /* append it to the emcmotInternal->coord_tp */
+        tpSetId(&emcmotInternal->coord_tp, emcmotCommand->id);
+        int res_addline = tpAddGeneralMotion(&emcmotInternal->coord_tp,
+                    emcmotCommand->pos,
+                    emcmotCommand->motion_type,
+                    emcmotCommand->vel,
+                    emcmotCommand->ini_maxvel,
+                    emcmotCommand->acc,
+                    emcmotStatus->enables_new,
+                    issue_atspeed,
+                    emcmotCommand->turn,
+                    emcmotCommand->tag);
+        //KLUDGE ignore zero length line
+        if (res_addline < 0) {
+            printf("tpAddGeneralMotion from command.c error. \n");
+        }
+        break;
+
 	case EMCMOT_SET_LINE:
 	    /* emcmotInternal->coord_tp up a linear move */
 	    /* requires motion enabled, coordinated mode, not on limits */
@@ -1024,7 +1048,7 @@ void emcmotCommandHandler_locked(void *arg, long servo_period)
 
 	    /* append it to the emcmotInternal->coord_tp */
 	    tpSetId(&emcmotInternal->coord_tp, emcmotCommand->id);
-	    int res_addline = tpAddLine(&emcmotInternal->coord_tp,
+        int res_addgen = tpAddLine(&emcmotInternal->coord_tp,
 					emcmotCommand->pos,
 					emcmotCommand->motion_type,
 					emcmotCommand->vel,
@@ -1035,14 +1059,14 @@ void emcmotCommandHandler_locked(void *arg, long servo_period)
 					emcmotCommand->turn,
 					emcmotCommand->tag);
         //KLUDGE ignore zero length line
-        if (res_addline < 0) {
+        if (res_addgen < 0) {
             reportError(_("can't add linear move at line %d, error code %d"),
-                    emcmotCommand->id, res_addline);
+                    emcmotCommand->id, res_addgen);
             emcmotStatus->commandStatus = EMCMOT_COMMAND_BAD_EXEC;
             tpAbort(&emcmotInternal->coord_tp);
             SET_MOTION_ERROR_FLAG(1);
             break;
-        } else if (res_addline != 0) {
+        } else if (res_addgen != 0) {
             //TODO make this hand-shake more explicit
             //KLUDGE Non fatal error, need to restore state so that the next
             //line properly handles at_speed

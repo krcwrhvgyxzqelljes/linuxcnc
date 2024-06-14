@@ -39,8 +39,8 @@ set(BUILD_DIR "${CMAKE_CURRENT_BINARY_DIR}")
 
 # Build and install the core first.
 # ~/bin (c++ kernel core code)
-#add_subdirectory(${SRC_DIR}/rtapi)
-#add_subdirectory(${SRC_DIR}/linuxcnc_module_helper)
+add_subdirectory(${SRC_DIR}/rtapi)
+add_subdirectory(${SRC_DIR}/linuxcnc_module_helper)
 
 # If RPC.H errors
 include_directories("/usr/include/tirpc/")
@@ -67,21 +67,21 @@ Boost library       Boost::python${BOOST_PYTHON_LIB_SUFFIX}
 include_directories("/usr/include/boost")
 
 # ~/lib (c - c++ code for motion, gcode etc.)
-#add_subdirectory(${SRC_DIR}/liblinuxcnchal)
-#add_subdirectory(${SRC_DIR}/liblinuxcncini)
-#add_subdirectory(${SRC_DIR}/libtooldata)
-#add_subdirectory(${SRC_DIR}/libnml)
-#add_subdirectory(${SRC_DIR}/liblinuxcnc)
-#add_subdirectory(${SRC_DIR}/libposemath)
-#add_subdirectory(${SRC_DIR}/libpyplugin)
+add_subdirectory(${SRC_DIR}/liblinuxcnchal)
+add_subdirectory(${SRC_DIR}/liblinuxcncini)
+add_subdirectory(${SRC_DIR}/libtooldata)
+add_subdirectory(${SRC_DIR}/libnml)
+add_subdirectory(${SRC_DIR}/liblinuxcnc)
+add_subdirectory(${SRC_DIR}/libposemath)
+add_subdirectory(${SRC_DIR}/libpyplugin)
 add_subdirectory(${SRC_DIR}/librs274)
-#add_subdirectory(${SRC_DIR}/libcanterp)
+add_subdirectory(${SRC_DIR}/libcanterp)
 
 ## ~/rtlib (realtime modules for real hardware or simulating)
 #add_subdirectory(${SRC_DIR}/hal_lib)
 #add_subdirectory(${SRC_DIR}/components/test)
 #add_subdirectory(${SRC_DIR}/components/tp)
-#add_subdirectory(${SRC_DIR}/components/tpmod) # Rob Ellenberg's motion planner.
+add_subdirectory(${SRC_DIR}/components/tpmod) # Rob Ellenberg's motion planner.
 ##add_subdirectory(${SRC_DIR}/components/tpmod_runners) # Rob Ellenberg's motion planner testing some scurve runners.
 ##add_subdirectory(${SRC_DIR}/components/tpmod_template) # a template how the lcnc program flow works.
 
@@ -89,11 +89,11 @@ add_subdirectory(${SRC_DIR}/librs274)
  # working scurve jog planner. Set's the maxjerk to be 2*maxacc.
 #add_subdirectory(${SRC_DIR}/components/tpmod_scurve)
 
-##add_subdirectory(${SRC_DIR}/components/tpmod_scurve_skynet) # minimal coded grotius scurve planner, run's program forward and pause.
+#add_subdirectory(${SRC_DIR}/components/tpmod_scurve_skynet) # minimal coded grotius scurve planner, run's program forward and pause.
 
 # In development, based on the tpmod_scurve_skynet.
 # Known bug : jogging before program start, solves a position jump when pressing program stop.
-# add_subdirectory(${SRC_DIR}/components/tpmod_scurve_grotius)
+ add_subdirectory(${SRC_DIR}/components/tpmod_scurve_grotius)
 # add_subdirectory(${SRC_DIR}/components/tpmod_scurve_c++)
 
 ##add_subdirectory(${SRC_DIR}/components/tpmod_T800) # experimental scurve lib using ruckig-dev, enabling velocity ends.
@@ -120,7 +120,7 @@ add_subdirectory(${SRC_DIR}/librs274)
 #add_subdirectory(${SRC_DIR}/components/rosekins)
 #add_subdirectory(${SRC_DIR}/components/ugenserkins)
 #add_subdirectory(${SRC_DIR}/components/scurve)
-#add_subdirectory(${SRC_DIR}/components/motmod) # lcnc motion controller component. also has jogging trapezium
+add_subdirectory(${SRC_DIR}/components/motmod) # lcnc motion controller component. also has jogging trapezium
 #add_subdirectory(${SRC_DIR}/components/motmod_scurve) # jogging grotius scurve
 ##add_subdirectory(${SRC_DIR}/components/motmod_T800) # jogging scurve using ruckig-dev lib.
 #add_subdirectory(${SRC_DIR}/components/scope_rt)
@@ -142,36 +142,36 @@ add_subdirectory(${SRC_DIR}/librs274)
 ##add_subdirectory(${SRC_DIR}/components/and2)
 
 ## ~/bin (executable commandline programs)
-#add_subdirectory(${SRC_DIR}/inivar)
-#add_subdirectory(${SRC_DIR}/halcmd) # atomic include error.
-#add_subdirectory(${SRC_DIR}/halmeter)
-#add_subdirectory(${SRC_DIR}/halscope)
-#add_subdirectory(${SRC_DIR}/classicladder)
-#add_subdirectory(${SRC_DIR}/halui)
-#add_subdirectory(${SRC_DIR}/halrmt)
-#add_subdirectory(${SRC_DIR}/pci_write)
-#add_subdirectory(${SRC_DIR}/pci_read)
+add_subdirectory(${SRC_DIR}/inivar)
+add_subdirectory(${SRC_DIR}/halcmd) # atomic include error.
+add_subdirectory(${SRC_DIR}/halmeter)
+add_subdirectory(${SRC_DIR}/halscope)
+add_subdirectory(${SRC_DIR}/classicladder)
+add_subdirectory(${SRC_DIR}/halui)
+add_subdirectory(${SRC_DIR}/halrmt)
+add_subdirectory(${SRC_DIR}/pci_write)
+add_subdirectory(${SRC_DIR}/pci_read)
 #add_subdirectory(${SRC_DIR}/io)
 #add_subdirectory(${SRC_DIR}/iov2)
-#add_subdirectory(${SRC_DIR}/motion_logger)
-#add_subdirectory(${SRC_DIR}/sai)
-#add_subdirectory(${SRC_DIR}/linuxcncsvr)
-#add_subdirectory(${SRC_DIR}/milltask)
-#add_subdirectory(${SRC_DIR}/linuxcncrsh)
-#add_subdirectory(${SRC_DIR}/schedrmt)
-#add_subdirectory(${SRC_DIR}/linuxcnclcd)
+add_subdirectory(${SRC_DIR}/motion_logger)
+add_subdirectory(${SRC_DIR}/sai)
+add_subdirectory(${SRC_DIR}/linuxcncsvr)
+add_subdirectory(${SRC_DIR}/milltask)
+add_subdirectory(${SRC_DIR}/linuxcncrsh)
+add_subdirectory(${SRC_DIR}/schedrmt)
+add_subdirectory(${SRC_DIR}/linuxcnclcd)
 
 ## ~/tlc (used before gtk was invented)
 #add_subdirectory(${SRC_DIR}/linuxcnc_tcl)
 #add_subdirectory(${SRC_DIR}/hal_tcl)
 
 ## ~/lib/python (c++ python glue code)
-#add_subdirectory(${SRC_DIR}/lineardeltakins_py)
-#add_subdirectory(${SRC_DIR}/rotarydeltakins_py)
-#add_subdirectory(${SRC_DIR}/hal_py)
-#add_subdirectory(${SRC_DIR}/togl_py)
-#add_subdirectory(${SRC_DIR}/linuxcnc_py)
-#add_subdirectory(${SRC_DIR}/gcode_py)
+add_subdirectory(${SRC_DIR}/lineardeltakins_py)
+add_subdirectory(${SRC_DIR}/rotarydeltakins_py)
+add_subdirectory(${SRC_DIR}/hal_py)
+add_subdirectory(${SRC_DIR}/togl_py)
+add_subdirectory(${SRC_DIR}/linuxcnc_py)
+add_subdirectory(${SRC_DIR}/gcode_py)
 
 # ~/projects (c - c++ gui projects)
 # add_subdirectory(${SRC_DIR}/projects/qt_nml) # Requires qt installed, first start linuxcnc, then start qt_nml.

@@ -1,0 +1,59 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"liblinuxcncini/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 36,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/build/liblinuxcncini/../../../lib",
+			"paths" : 
+			[
+				"liblinuxcncini/liblinuxcncini.so.0"
+			],
+			"targetId" : "liblinuxcncini::@aecb313196f168a34936",
+			"targetIndex" : 12,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/build/liblinuxcncini/../../../lib",
+			"paths" : 
+			[
+				"liblinuxcncini/liblinuxcncini.so"
+			],
+			"targetId" : "liblinuxcncini::@aecb313196f168a34936",
+			"targetIndex" : 12,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "liblinuxcncini",
+		"source" : "liblinuxcncini"
+	}
+}
