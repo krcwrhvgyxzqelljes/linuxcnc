@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: emc-developers@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-04-08 19:52+0200\n"
-"PO-Revision-Date: 2024-06-04 14:39+0000\n"
-"Last-Translator: Petter Reinholdtsen <pere-weblate@hungry.com>\n"
+"PO-Revision-Date: 2024-06-13 04:25+0000\n"
+"Last-Translator: hugoalh <hugoalh@users.noreply.hosted.weblate.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
@@ -1868,7 +1868,7 @@ msgstr "故障: 沒有 針腳/信號/參數  名字\n"
 #, c-format
 msgid ""
 "ERROR: -s option requires a probe type and a pin/signal/parameter name\n"
-msgstr "故障: -s 選項需要一個探頭類型和 針/信號​​/參數 名稱\n"
+msgstr "錯誤：-s 選項需要一個探頭類型和 針/信號/參數 名稱\n"
 
 #: src/hal/utils/meter.c:243 tcl/tklinuxcnc.tcl:793
 msgid "Hal Meter"
@@ -4241,9 +4241,9 @@ msgid "Set RTS=%d\n"
 msgstr ""
 
 #: src/hal/classicladder/serial_linux.c:193
-#, c-format, fuzzy
+#, c-format
 msgid "Serial writing...\n"
-msgstr "序列寫入中…"
+msgstr "序列寫入中…\n"
 
 #: src/hal/classicladder/serial_linux.c:196
 #, c-format
@@ -4251,9 +4251,9 @@ msgid "Writing done!\n"
 msgstr ""
 
 #: src/hal/classicladder/serial_linux.c:216
-#, c-format, fuzzy
+#, c-format
 msgid "Serial config...\n"
-msgstr "序列配置…"
+msgstr "序列配置…\n"
 
 #: src/hal/classicladder/serial_linux.c:237
 #, c-format
@@ -4261,9 +4261,9 @@ msgid "select() for serial reading...\n"
 msgstr ""
 
 #: src/hal/classicladder/serial_linux.c:242
-#, c-format, fuzzy
+#, c-format
 msgid "Serial reading...\n"
-msgstr "序列讀取中…"
+msgstr "序列讀取中…\n"
 
 #: src/hal/classicladder/serial_linux.c:245
 #, c-format
@@ -4958,9 +4958,8 @@ msgid "Pin"
 msgstr "針"
 
 #: tcl/bin/halshow.tcl:265
-#, fuzzy
 msgid "Add signal"
-msgstr " 信號​​(_S) "
+msgstr "新增信號"
 
 #: tcl/bin/halshow.tcl:266
 #, fuzzy
@@ -5070,9 +5069,8 @@ msgid "Add as Pin(s)"
 msgstr " 信號​​(_S) "
 
 #: tcl/bin/halshow.tcl:977
-#, fuzzy
 msgid "Add as Signal(s)"
-msgstr " 信號​​(_S) "
+msgstr "新增為信號"
 
 #: tcl/bin/halshow.tcl:978
 msgid "Add as Param(s)"
