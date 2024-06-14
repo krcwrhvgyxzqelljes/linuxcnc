@@ -39,6 +39,8 @@ ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/../../../src/emc/motion/emcmotutil.c
     ${SRC_DIR}/../../../src/emc/motion/stashf.c
     ${SRC_DIR}/../../../src/emc/motion/dbuf.c
+
+    ${SRC_DIR}/../../../src/emc/nml_intf/motion_types.h
 )
 
 # Set path to eigen3, for install $ sudo apt-get install libeigen3-dev

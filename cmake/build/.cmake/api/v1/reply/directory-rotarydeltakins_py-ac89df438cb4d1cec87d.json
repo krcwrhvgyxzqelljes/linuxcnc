@@ -1,0 +1,59 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"rotarydeltakins_py/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 41,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/rotarydeltakins_py",
+			"paths" : 
+			[
+				"rotarydeltakins_py/rotarydeltakins.so.0"
+			],
+			"targetId" : "rotarydeltakins::@4994e271654b74d39745",
+			"targetIndex" : 34,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/user/linuxcnc/cmake/rotarydeltakins_py",
+			"paths" : 
+			[
+				"rotarydeltakins_py/rotarydeltakins.so"
+			],
+			"targetId" : "rotarydeltakins::@4994e271654b74d39745",
+			"targetIndex" : 34,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "rotarydeltakins_py",
+		"source" : "rotarydeltakins_py"
+	}
+}

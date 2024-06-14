@@ -43,7 +43,7 @@
 #ifdef TC_DEBUG
 #define tc_debug_print(...) rtapi_print(__VA_ARGS__)
 #else
-#define tc_debug_print(...) 
+#define tc_debug_print(...)
 #endif
 
 /** TP position data output to debug acceleration spikes */
@@ -57,7 +57,7 @@
 #ifdef TP_INFO_LOGGING
 #define tp_info_print(...) rtapi_print(__VA_ARGS__)
 #else
-#define tp_info_print(...)
+#define tprintf...)
 #endif
 
 int gdb_fake_catch(int condition);

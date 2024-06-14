@@ -883,56 +883,66 @@ int tpAddGeneralMotion(TP_STRUCT *
                        unsigned char enables,
                        char atspeed,
                        int indexer_jnum,
-                       struct state_tag_t tag){
+                       struct state_tag_t tag, double a, double b, double c, double d, double e, double f){
 
     printf("tpAddGeneralMotion \n");
+    printf("test value a: %f \n",a);
+    printf("test value b: %f \n",b);
 
-    struct tp_segment b;
-    b.primitive_id=sc_line;
-    b.motion_type=canon_motion_type;
-    b.pnt_s=emc_pose_to_sc_pnt(tp->gcode_lastPos);
-    b.pnt_c.x=0;
-    b.pnt_c.y=0;
-    b.pnt_c.z=0;
-    b.angle_begin=0;
-    b.angle_end=0;
-    b.acs=0;
-    b.ace=0;
-    b.radius=0;
+    struct tp_segment seg;
 
-    b.pnt_e=emc_pose_to_sc_pnt(end);
+    seg.a=a;
+    seg.b=b;
+    seg.c=c;
+    seg.d=d;
+    seg.e=e;
+    seg.f=f;
 
-    b.pnt_w=tp_lines_midpoint(b.pnt_s,b.pnt_e);
+    seg.primitive_id=sc_line;
+    seg.motion_type=canon_motion_type;
+    seg.pnt_s=emc_pose_to_sc_pnt(tp->gcode_lastPos);
+    seg.pnt_c.x=0;
+    seg.pnt_c.y=0;
+    seg.pnt_c.z=0;
+    seg.angle_begin=0;
+    seg.angle_end=0;
+    seg.acs=0;
+    seg.ace=0;
+    seg.radius=0;
 
-    b.dir_s=emc_pose_to_sc_dir(tp->gcode_lastPos);
-    b.dir_e=emc_pose_to_sc_dir(end);
+    seg.pnt_e=emc_pose_to_sc_pnt(end);
 
-    b.ext_s=emc_pose_to_sc_ext(tp->gcode_lastPos);
-    b.ext_e=emc_pose_to_sc_ext(end);
+    seg.pnt_w=tp_lines_midpoint(seg.pnt_s,seg.pnt_e);
 
-    b.gcode_line_nr=tp->gcode_upcoming_line_nr;
+    seg.dir_s=emc_pose_to_sc_dir(tp->gcode_lastPos);
+    seg.dir_e=emc_pose_to_sc_dir(end);
 
-    b.path_lenght=line_lenght_c(b.pnt_s,b.pnt_e);
+    seg.ext_s=emc_pose_to_sc_ext(tp->gcode_lastPos);
+    seg.ext_e=emc_pose_to_sc_ext(end);
 
-    b.vo=0;
-    b.vm=vel;
-    b.vm_gcode=vel;
-    b.ve=0;
-    b.is_fillet_segment=0;
+    seg.gcode_line_nr=tp->gcode_upcoming_line_nr;
+
+    seg.path_lenght=line_lenght_c(seg.pnt_s,seg.pnt_e);
+
+    seg.vo=0;
+    seg.vm=vel;
+    seg.vm_gcode=vel;
+    seg.ve=0;
+    seg.is_fillet_segment=0;
 
     //! Calculate previous segment to current segment path transition corners in degrees.
     if(vector_size_c(vector_ptr)>0){
         struct tp_segment previous=vector_at(vector_ptr,vector_size_c(vector_ptr)-1);
-        double angle_deg=segment_angle(previous,b);
+        double angle_deg=segment_angle(previous,seg);
 
-        b.angle_begin=angle_deg;
+        seg.angle_begin=angle_deg;
         vector_set_end_angle(vector_ptr,vector_size_c(vector_ptr)-1,angle_deg);
 
-        int res=tpIsTangent(previous,b);
+        int res=tpIsTangent(previous,seg);
         vector_set_tangent_or_colineair(vector_ptr,vector_size_c(vector_ptr)-1,res);
     }
 
-    vector_add_segment(vector_ptr,b);
+    vector_add_segment(vector_ptr,seg);
     // printf("vector size: %d \n",vector_size_c(vector_ptr));
 
     //if(vector_size_c(vector_ptr)>2){ // Used for cavalier algo.
@@ -1866,6 +1876,9 @@ inline void update_scurve_grotius(TP_STRUCT * const tp){
         }
 
         update_pause_grotius_scurve(tp);
+
+        printf("test value a: %f \n", vector_at(vector_ptr,tp->vector_current_exec).a );
+
 
         // if(sc.endvel==0){
         sc=axis_update(sc);

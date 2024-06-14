@@ -257,7 +257,9 @@ void STRAIGHT_TRAVERSE( int line_number,
 #include <iomanip> // for std::setprecision
 void GENERAL_MOTION(int lineno, double x, double y, double z,
                     double a, double b, double c,
-                    double u, double v, double w){
+                    double u, double v, double w,
+                    double p, double q, double r,
+                    double e, double l, double test){
 
     ECHO_WITH_ARGS("%.4f, %.4f, %.4f"
                    ", %.4f" /*AA*/

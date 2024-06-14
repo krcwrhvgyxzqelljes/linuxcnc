@@ -1,5 +1,10 @@
-G0 X0 Y0 (rapid move)
+G0 X0 Y0 Z0 (rapid move)
 F5000 (set feed rate)
-G9 X10 Y10 Z10 
-G1 X100 Y100
+G9 X50 P1.22 Q3.66
+G9 X0
+G1 X10 Y10 Z10 
+G1 X0 Y0 Z0
+G1 X10
+G1 Y10
+G1 X0 Y0
 M30

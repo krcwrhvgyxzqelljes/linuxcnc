@@ -380,6 +380,7 @@ static EMC_TRAJ_SET_SPINDLE_SCALE *emcTrajSetSpindleScaleMsg;
 static EMC_TRAJ_SET_VELOCITY *emcTrajSetVelocityMsg;
 static EMC_TRAJ_SET_ACCELERATION *emcTrajSetAccelerationMsg;
 static EMC_TRAJ_LINEAR_MOVE *emcTrajLinearMoveMsg;
+static EMC_TRAJ_GENERAL_MOVE *emcTrajGeneralMoveMsg;
 static EMC_TRAJ_CIRCULAR_MOVE *emcTrajCircularMoveMsg;
 static EMC_TRAJ_DELAY *emcTrajDelayMsg;
 static EMC_TRAJ_SET_TERM_COND *emcTrajSetTermCondMsg;
@@ -473,6 +474,9 @@ static int checkInterpList(NML_INTERP_LIST * il, EMC_STAT * stat)
 
 	case EMC_TRAJ_CIRCULAR_MOVE_TYPE:
 	    break;
+
+    case EMC_TRAJ_GENERAL_MOVE_TYPE:
+        break;
 
 	default:
 	    break;
@@ -1514,6 +1518,7 @@ static EMC_TASK_EXEC emcTaskCheckPreconditions(NMLmsg * cmd)
 	break;
 
     case EMC_TRAJ_LINEAR_MOVE_TYPE:
+    case EMC_TRAJ_GENERAL_MOVE_TYPE:
     case EMC_TRAJ_CIRCULAR_MOVE_TYPE:
     case EMC_TRAJ_SET_VELOCITY_TYPE:
     case EMC_TRAJ_SET_ACCELERATION_TYPE:
@@ -1821,6 +1826,15 @@ static int emcTaskIssueCommand(NMLmsg * cmd)
                                    emcTrajLinearMoveMsg->ini_maxvel, emcTrajLinearMoveMsg->acc,
                                    emcTrajLinearMoveMsg->indexer_jnum);
 	break;
+
+    case EMC_TRAJ_GENERAL_MOVE_TYPE:
+    emcTrajUpdateTag(((EMC_TRAJ_GENERAL_MOVE *) cmd)->tag);
+    emcTrajGeneralMoveMsg = (EMC_TRAJ_GENERAL_MOVE *) cmd;
+        retval = emcTrajGeneralMove(emcTrajGeneralMoveMsg->end,
+                                   emcTrajGeneralMoveMsg->type, emcTrajGeneralMoveMsg->vel,
+                                   emcTrajGeneralMoveMsg->ini_maxvel, emcTrajGeneralMoveMsg->acc,
+                                  emcTrajGeneralMoveMsg->indexer_jnum);
+    break;
 
     case EMC_TRAJ_CIRCULAR_MOVE_TYPE:
 	emcTrajUpdateTag(((EMC_TRAJ_LINEAR_MOVE *) cmd)->tag);
@@ -2446,6 +2460,7 @@ static EMC_TASK_EXEC emcTaskCheckPostconditions(NMLmsg * cmd)
 
     case EMC_TRAJ_LINEAR_MOVE_TYPE:
     case EMC_TRAJ_CIRCULAR_MOVE_TYPE:
+    case EMC_TRAJ_GENERAL_MOVE_TYPE:
     case EMC_TRAJ_SET_VELOCITY_TYPE:
     case EMC_TRAJ_SET_ACCELERATION_TYPE:
     case EMC_TRAJ_SET_TERM_COND_TYPE:

@@ -111,7 +111,7 @@ struct PM_CARTESIAN;
 #define EMC_TRAJ_SET_SO_ENABLE_TYPE                  ((NMLTYPE) 235)
 #define EMC_TRAJ_SET_FH_ENABLE_TYPE                  ((NMLTYPE) 236)
 #define EMC_TRAJ_RIGID_TAP_TYPE                      ((NMLTYPE) 237)
-#define EMC_TRAJ_GENERAL_MOVE_TYPE                   ((NMLTYPE) 238)
+#define EMC_TRAJ_GENERAL_MOVE_TYPE                   ((NMLTYPE) 239) // 238 is above rapic_scale_type already..
 
 #define EMC_TRAJ_STAT_TYPE                           ((NMLTYPE) 299)
 
@@ -367,6 +367,8 @@ extern int emcTrajStep();
 extern int emcTrajResume();
 extern int emcTrajDelay(double delay);
 extern int emcTrajLinearMove(EmcPose end, int type, double vel,
+                             double ini_maxvel, double acc, int indexer_jnum);
+extern int emcTrajGeneralMove(EmcPose end, int type, double vel,
                              double ini_maxvel, double acc, int indexer_jnum);
 extern int emcTrajCircularMove(EmcPose end, PM_CARTESIAN center, PM_CARTESIAN
         normal, int turn, int type, double vel, double ini_maxvel, double acc);

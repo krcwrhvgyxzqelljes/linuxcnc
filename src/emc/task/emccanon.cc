@@ -943,6 +943,74 @@ static void flush_segments(void) {
     drop_segments();
 }
 
+static void flush_segments_general_motion(void) {
+    if(chained_points.empty()) return;
+
+    struct pt &pos = chained_points.back();
+
+    double x = pos.x, y = pos.y, z = pos.z;
+    double a = pos.a, b = pos.b, c = pos.c;
+    double u = pos.u, v = pos.v, w = pos.w;
+
+    int line_no = pos.line_no;
+
+#ifdef SHOW_JOINED_SEGMENTS
+    for(unsigned int i=0; i != chained_points.size(); i++) { printf("."); }
+    printf("\n");
+#endif
+
+    VelData linedata = getStraightVelocity(x, y, z, a, b, c, u, v, w);
+    double vel = linedata.vel;
+
+    if (canon.cartesian_move && !canon.angular_move) {
+        if (vel > canon.linearFeedRate) {
+            vel = canon.linearFeedRate;
+        }
+    } else if (!canon.cartesian_move && canon.angular_move) {
+        if (vel > canon.angularFeedRate) {
+            vel = canon.angularFeedRate;
+        }
+    } else if (canon.cartesian_move && canon.angular_move) {
+        if (vel > canon.linearFeedRate) {
+            vel = canon.linearFeedRate;
+        }
+    }
+
+
+    auto linearMoveMsg = std::make_unique<EMC_TRAJ_GENERAL_MOVE>();
+    linearMoveMsg->feed_mode = canon.feed_mode;
+
+    // now x, y, z, and b are in absolute mm or degree units
+    linearMoveMsg->end.tran.x = TO_EXT_LEN(x);
+    linearMoveMsg->end.tran.y = TO_EXT_LEN(y);
+    linearMoveMsg->end.tran.z = TO_EXT_LEN(z);
+
+    linearMoveMsg->end.u = TO_EXT_LEN(u);
+    linearMoveMsg->end.v = TO_EXT_LEN(v);
+    linearMoveMsg->end.w = TO_EXT_LEN(w);
+
+    // fill in the orientation
+    linearMoveMsg->end.a = TO_EXT_ANG(a);
+    linearMoveMsg->end.b = TO_EXT_ANG(b);
+    linearMoveMsg->end.c = TO_EXT_ANG(c);
+
+    linearMoveMsg->vel = toExtVel(vel);
+    linearMoveMsg->ini_maxvel = toExtVel(linedata.vel);
+    AccelData lineaccdata = getStraightAcceleration(x, y, z, a, b, c, u, v, w);
+    double acc = lineaccdata.acc;
+    linearMoveMsg->acc = toExtAcc(acc);
+
+    linearMoveMsg->type = EMC_MOTION_TYPE_FEED;
+    linearMoveMsg->indexer_jnum = -1;
+    if ((vel && acc) || canon.spindle[canon.spindle_num].synched) {
+        interp_list.set_line_number(line_no);
+        tag_and_send(std::move(linearMoveMsg), pos.tag);
+    }
+    canonUpdateEndPoint(x, y, z, a, b, c, u, v, w);
+
+    drop_segments();
+}
+
 static void get_last_pos(double &lx, double &ly, double &lz) {
     if(chained_points.empty()) {
         lx = canon.endPoint.x;
@@ -990,6 +1058,31 @@ linkable(double x, double y, double z,
         if(D > canon.naivecamTolerance) return false;
     }
     return true;
+}
+
+static void
+see_segment_general_motion(int line_number,
+            StateTag tag,
+            double x, double y, double z,
+            double a, double b, double c,
+            double u, double v, double w,
+            double p, double q, double r, double e, double l, double test ) {
+    bool changed_abc = (a != canon.endPoint.a)
+            || (b != canon.endPoint.b)
+            || (c != canon.endPoint.c);
+
+    bool changed_uvw = (u != canon.endPoint.u)
+            || (v != canon.endPoint.v)
+            || (w != canon.endPoint.w);
+
+    if(!chained_points.empty() && !linkable(x, y, z, a, b, c, u, v, w)) {
+        flush_segments_general_motion();
+    }
+    pt pos = {x, y, z, a, b, c, u, v, w, line_number, tag};
+    chained_points.push_back(pos);
+    if(changed_abc || changed_uvw) {
+        flush_segments_general_motion();
+    }
 }
 
 static void
@@ -1076,41 +1169,13 @@ void STRAIGHT_TRAVERSE(int line_number,
 // G9 X11 Y22 Z33 P0.1 Q0.2 R44.5 L321 E123.33 (L=integer type)
 void GENERAL_MOTION(int lineno, double x, double y, double z,
                     double a, double b, double c,
-                    double u, double v, double w){
+                    double u, double v, double w, double p, double q, double r, double e, double l,
+                    double test){
 
     printf("calling GENERAL_MOTION from milltask. \n \n");
-
     from_prog(x,y,z,a,b,c,u,v,w);
     rotate_and_offset_pos(x,y,z,a,b,c,u,v,w);
-    see_segment(lineno, _tag, x, y, z, a, b, c, u, v, w);
-
-//    double vel, acc;
-
-//    flush_segments();
-
-//    auto generalMoveMsg = std::make_unique<EMC_TRAJ_GENERAL_MOVE>();
-
-//    from_prog(x,y,z,a,b,c,u,v,w);
-//    rotate_and_offset_pos(x,y,z,a,b,c,u,v,w);
-
-//    VelData veldata = getStraightVelocity(x, y, z, a, b, c, u, v, w);
-//    AccelData accdata = getStraightAcceleration(x, y, z, a, b, c, u, v, w);
-
-//    vel = veldata.vel;
-//    acc = accdata.acc;
-
-//    generalMoveMsg->end = to_ext_pose(x,y,z,a,b,c,u,v,w);
-//    generalMoveMsg->vel = generalMoveMsg->ini_maxvel = toExtVel(vel);
-//    generalMoveMsg->acc = toExtAcc(acc);
-//    generalMoveMsg->indexer_jnum = canon.rotary_unlock_for_traverse;
-
-
-//    if(vel && acc)  {
-//        interp_list.set_line_number(lineno);
-//        tag_and_send(std::move(generalMoveMsg), _tag);
-//    }
-
-//    canonUpdateEndPoint(x, y, z, a, b, c, u, v, w);
+    see_segment_general_motion(lineno, _tag, x, y, z, a, b, c, u, v, w, p,q,r,e,l,test);
 }
 
 void STRAIGHT_FEED(int line_number, double x, double y, double z, double a, double b, double c, double u, double v, double w)

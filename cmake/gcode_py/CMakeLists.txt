@@ -5,6 +5,25 @@ project(${PROJECT} VERSION 0 LANGUAGES CXX C)
 # Set variables.
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(BUILD_DIR "${CMAKE_CURRENT_BINARY_DIR}")
+#set(INCLUDE_DIR " ${SRC_DIR}/../../include")
+
+## Define the header file to be copied
+#set(HEADER_FILE "${SRC_DIR}/../../src/emc/nml_intf/canon.hh")
+
+## Ensure the include directory exists
+#file(MAKE_DIRECTORY ${INCLUDE_DIR})
+
+## Custom command to copy the header file
+#add_custom_command(
+#    OUTPUT ${INCLUDE_DIR}/canon.hh
+#    COMMAND ${CMAKE_COMMAND} -E copy ${HEADER_FILE} ${INCLUDE_DIR}/canon.hh
+#    DEPENDS ${HEADER_FILE}
+#    COMMENT "Copying header file to include directory"
+#)
+
+## Custom target to ensure the command is executed
+#add_custom_target(copy_header ALL DEPENDS ${INCLUDE_DIR}/canon.hh)
+
 
 # Set includepaths.
 include_directories(${SRC_DIR})
@@ -39,6 +58,7 @@ set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/../../src/emc/rs274ngc/gcodemodule.cc
+    ${SRC_DIR}/../../src/emc/nml_intf/canon.hh
     )
 
 if (BUILD_USPACE)

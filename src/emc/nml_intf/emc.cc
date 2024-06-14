@@ -260,7 +260,10 @@ int emcFormat(NMLTYPE type, void *buffer, CMS * cms)
 	break;
     case EMC_TRAJ_LINEAR_MOVE_TYPE:
 	((EMC_TRAJ_LINEAR_MOVE *) buffer)->update(cms);
-	break;
+    break;
+    case EMC_TRAJ_GENERAL_MOVE_TYPE:
+    ((EMC_TRAJ_GENERAL_MOVE *) buffer)->update(cms);
+    break;
     case EMC_TRAJ_CIRCULAR_MOVE_TYPE:
 	((EMC_TRAJ_CIRCULAR_MOVE *) buffer)->update(cms);
 	break;
@@ -497,6 +500,8 @@ const char *emc_symbol_lookup(uint32_t type)
 	return "EMC_TRAJ_DELAY";
     case EMC_TRAJ_LINEAR_MOVE_TYPE:
 	return "EMC_TRAJ_LINEAR_MOVE";
+    case EMC_TRAJ_GENERAL_MOVE_TYPE:
+    return "EMC_TRAJ_GENERAL_MOVE";
     case EMC_TRAJ_PAUSE_TYPE:
 	return "EMC_TRAJ_PAUSE";
     case EMC_TRAJ_PROBE_TYPE:
@@ -1023,6 +1028,18 @@ void EMC_COOLANT_MIST_ON::update(CMS * cms)
 *	Manually revised 2004/05/24
 */
 void EMC_TRAJ_LINEAR_MOVE::update(CMS * cms)
+{
+    EMC_TRAJ_CMD_MSG::update(cms);
+    EmcPose_update(cms, &end);
+    cms->update(type);
+    cms->update(vel);
+    cms->update(ini_maxvel);
+    cms->update(acc);
+    cms->update(feed_mode);
+    cms->update(indexer_jnum);
+}
+
+void EMC_TRAJ_GENERAL_MOVE::update(CMS * cms)
 {
     EMC_TRAJ_CMD_MSG::update(cms);
     EmcPose_update(cms, &end);

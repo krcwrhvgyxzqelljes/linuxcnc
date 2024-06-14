@@ -504,17 +504,17 @@ int tcConnectBlendArc(TC_STRUCT * const prev_tc, TC_STRUCT * const tc,
     //Shorten next line
     pmCartLineInit(&tc->coords.line.xyz, circ_end, &tc->coords.line.xyz.end);
 
-    tp_info_print(" L2: old target = %f\n", tc->target);
+    //printf(" L2: old target = %f\n", tc->target);
     tc->target = tc->coords.line.xyz.tmag;
-    tp_info_print(" L2: new target = %f\n", tc->target);
+    //printf(" L2: new target = %f\n", tc->target);
     tp_debug_print(" L2 start  : %f %f %f\n",tc->coords.line.xyz.start.x,
             tc->coords.line.xyz.start.y,
             tc->coords.line.xyz.start.z);
 
     tcSetTermCond(prev_tc, tc, TC_TERM_COND_TANGENT);
 
-    tp_info_print("       Q1: %f %f %f\n",circ_start->x,circ_start->y,circ_start->z);
-    tp_info_print("       Q2: %f %f %f\n",circ_end->x,circ_end->y,circ_end->z);
+    //printf("       Q1: %f %f %f\n",circ_start->x,circ_start->y,circ_start->z);
+    //printf("       Q2: %f %f %f\n",circ_end->x,circ_end->y,circ_end->z);
 
     return 0;
 }

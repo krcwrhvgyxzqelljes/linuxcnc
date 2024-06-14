@@ -1,0 +1,338 @@
+{
+	"BUILD_DIR" : "/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller/qt_lcnc_controller_autogen",
+	"CMAKE_BINARY_DIR" : "/home/user/linuxcnc/cmake/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/user/linuxcnc/cmake/projects/qt_lcnc_controller",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/CMakeLists.txt",
+		"/usr/share/cmake-3.25/Modules/FindOpenGL.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/share/cmake-3.25/Modules/FindGLUT.cmake",
+		"/usr/share/cmake-3.25/Modules/SelectLibraryConfigurations.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPkgConfig.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.25/Modules/FindPackageMessage.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEConfigVersion.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEConfig.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADECompileDefinitionsAndFlags-release.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEFoundationClassesTargets.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEFoundationClassesTargets-release.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEModelingDataTargets.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEModelingDataTargets-release.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEModelingAlgorithmsTargets.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEModelingAlgorithmsTargets-release.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEVisualizationTargets.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEVisualizationTargets-release.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEApplicationFrameworkTargets.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEApplicationFrameworkTargets-release.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEDataExchangeTargets.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEDataExchangeTargets-release.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEDrawTargets.cmake",
+		"/usr/local/lib/cmake/opencascade/OpenCASCADEDrawTargets-release.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeParseArguments.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QGtk3ThemePlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandEglPlatformIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeEglPlatformIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeGlxPlatformIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"/usr/share/cmake-3.25/Modules/CMakeParseArguments.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5OpenGL/Qt5OpenGLConfigVersion.cmake",
+		"/opt/qt-creator/5.15.1/gcc_64/lib/cmake/Qt5OpenGL/Qt5OpenGLConfig.cmake",
+		"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/icons.qrc"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/user/linuxcnc/cmake",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/OcctQtViewer.h",
+			"MU",
+			"EWIEGA46WW/moc_OcctQtViewer.cpp",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/QGCodeEditor.h",
+			"MU",
+			"EWIEGA46WW/moc_QGCodeEditor.cpp",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/QGCodeSyntaxHighlighter.h",
+			"MU",
+			"EWIEGA46WW/moc_QGCodeSyntaxHighlighter.cpp",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/common.h",
+			"MU",
+			"EWIEGA46WW/moc_common.cpp",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/form.h",
+			"MU",
+			"EWIEGA46WW/moc_form.cpp",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/mainwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/nml.h",
+			"MU",
+			"EWIEGA46WW/moc_nml.cpp",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/vendor/cavalier_contours/cavalier_3d.h",
+			"MU",
+			"SIF52OIMGZ/moc_cavalier_3d.cpp",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/vendor/cavalier_contours/cavalier_offset.h",
+			"MU",
+			"SIF52OIMGZ/moc_cavalier_offset.cpp",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/vendor/occ_draw/draw_clothoids.h",
+			"MU",
+			"BR346FHSYD/moc_draw_clothoids.cpp",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/vendor/occ_draw/draw_primitives.h",
+			"MU",
+			"BR346FHSYD/moc_draw_primitives.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller/qt_lcnc_controller_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller/qt_lcnc_controller_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"BOOST_ALL_NO_LIB",
+		"BOOST_PYTHON_DYN_LINK",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NO_DEBUG",
+		"QT_OPENGL_LIB",
+		"QT_WIDGETS_LIB",
+		"RTAPI"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller",
+		"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller",
+		"/usr/include/tirpc",
+		"/usr/include/boost",
+		"/home/user/linuxcnc/src",
+		"/home/user/linuxcnc/src/emc/sai",
+		"/home/user/linuxcnc/src/emc/task",
+		"/home/user/linuxcnc/src/emc/pythonplugin",
+		"/home/user/linuxcnc/src/hal",
+		"/home/user/linuxcnc/src/rtapi",
+		"/home/user/linuxcnc/src/emc",
+		"/home/user/linuxcnc/src/emc/kinematics",
+		"/home/user/linuxcnc/src/emc/motion-logger",
+		"/home/user/linuxcnc/src/emc/tooldata",
+		"/home/user/linuxcnc/src/emc/iotask",
+		"/home/user/linuxcnc/src/emc/nml_intf",
+		"/home/user/linuxcnc/src/emc/motion",
+		"/home/user/linuxcnc/src/emc/rs274ngc",
+		"/home/user/linuxcnc/src/emc/tp",
+		"/home/user/linuxcnc/src/emc/ini",
+		"/home/user/linuxcnc/src/libnml/rcs",
+		"/home/user/linuxcnc/src/libnml/nml",
+		"/home/user/linuxcnc/src/libnml/cms",
+		"/home/user/linuxcnc/src/libnml/buffer",
+		"/home/user/linuxcnc/src/libnml/posemath",
+		"/home/user/linuxcnc/src/libnml/inifile",
+		"/home/user/linuxcnc/src/libnml/os_intf",
+		"/home/user/linuxcnc/cmake/vendor",
+		"/home/user/linuxcnc/cmake/vendor/occ_draw",
+		"/home/user/linuxcnc/cmake/vendor/oce-upstream-V7_5_0beta/inc",
+		"/home/user/linuxcnc/cmake/vendor/oce-upstream-V7_5_0beta/src",
+		"/home/user/linuxcnc/cmake/vendor/cavalier_contours/c_api_include",
+		"/home/user/linuxcnc/cmake/vendor/cavalier_contours/include/cavc",
+		"/home/user/linuxcnc/cmake/vendor/cavalier_contours/include",
+		"/home/user/linuxcnc/cmake/vendor/cavalier_contours/src",
+		"/home/user/linuxcnc/cmake/vendor/Clothoids/src",
+		"/home/user/linuxcnc/cmake/vendor/Clothoids/src/Clothoids",
+		"/home/user/linuxcnc/cmake/vendor/Clothoids/build",
+		"/home/user/linuxcnc/cmake/vendor/Clothoids/lib3rd/include/Utils",
+		"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/usr/include",
+		"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/usr/local/lib",
+		"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/usr/local/include",
+		"/usr/include/python3.11",
+		"/usr/include/eigen3",
+		"/home/user/linuxcnc/cmake/vendor/Clothoids/lib3rd/include",
+		"/opt/qt-creator/5.15.1/gcc_64/include/QtWidgets",
+		"/opt/qt-creator/5.15.1/gcc_64/include/QtGui",
+		"/opt/qt-creator/5.15.1/gcc_64/include",
+		"/opt/qt-creator/5.15.1/gcc_64/include/QtCore",
+		"/opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++",
+		"/opt/qt-creator/5.15.1/gcc_64/include/QtOpenGL",
+		"/home/user/linuxcnc/include",
+		"/home/user/linuxcnc/cmake/vendor/Clothoids/lib/include",
+		"/usr/include",
+		"/usr/include/c++/12",
+		"/usr/include/x86_64-linux-gnu/c++/12",
+		"/usr/include/c++/12/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/12/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller/qt_lcnc_controller_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/opt/qt-creator/5.15.1/gcc_64/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/opt/qt-creator/5.15.1/gcc_64/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/OcctQtViewer.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/QGCodeEditor.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/QGCodeSyntaxHighlighter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/form.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/interpreter.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/projects/qt_lcnc_controller/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/vendor/cavalier_contours/cavalier_3d.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/vendor/cavalier_contours/cavalier_offset.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/vendor/occ_draw/draw_clothoids.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/user/linuxcnc/cmake/vendor/occ_draw/draw_primitives.cpp",
+			"MU",
+			null
+		],
+		[ "/home/user/linuxcnc/src/emc/sai/saicanon.cc", "MU", null ],
+		[ "/home/user/linuxcnc/src/emc/task/taskclass.cc", "MU", null ]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

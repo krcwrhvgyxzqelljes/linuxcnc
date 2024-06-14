@@ -1,0 +1,28 @@
+Do a make clean & make if you edit header files.
+
+If you edit gcodemodule.cc overwrite the header file canon.hh in the /include dir.
+
+/home/user/linuxcnc/src/emc/rs274ngc/canonmodule.cc Line 19.
+Set max function input's to a higher value.
+#define BOOST_PYTHON_MAX_ARITY 20
+
+/home/user/linuxcnc/src/emc/nml_intf/canon.hh
+Function global decleration :
+	extern void GENERAL_MOTION(..)
+
+Interpreter rs274ngc section:
+/home/user/linuxcnc/src/emc/rs274ngc/interp_convert.cc
+	Interp::convert_general_motion. 
+
+Milltask:
+/home/user/linuxcnc/src/emc/task/emccanon.cc
+	void GENERAL_MOTION(..)
+                    
+Interpreter calls function in Milltask:
+	Interp::convert_general_motion calls function GENERAL_MOTION(....) 
+
+
+/home/user/linuxcnc/src/emc/rs274ngc/gcodemodule.cc
+Python interface function decleration
+	void GENERAL_MOTION(....)
+

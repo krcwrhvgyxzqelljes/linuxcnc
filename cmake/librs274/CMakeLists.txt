@@ -27,28 +27,28 @@ set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_arc.cc
-    ${SRC_DIR}/../../src/emc/rs274ngc/interp_array_types.hh
+    ${SRC_DIR}/../../src/emc/rs274ngc/interp_array_types.hh # must be installed in /include
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_array.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_base.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_check.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_convert.cc
-    ${SRC_DIR}/../../src/emc/rs274ngc/interp_queue.hh
+    ${SRC_DIR}/../../src/emc/rs274ngc/interp_queue.hh # must be installed in /include
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_queue.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_cycles.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_execute.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_find.cc
-    ${SRC_DIR}/../../src/emc/rs274ngc/interp_internal.hh
+    ${SRC_DIR}/../../src/emc/rs274ngc/interp_internal.hh # must be installed in /include
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_internal.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_inverse.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_read.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_write.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_o_word.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_g7x.cc
-    ${SRC_DIR}/../../src/emc/rs274ngc/modal_state.hh
+    ${SRC_DIR}/../../src/emc/rs274ngc/modal_state.hh # must be installed in /include
     ${SRC_DIR}/../../src/emc/rs274ngc/modal_state.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/nurbs_additional_functions.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_namedparams.cc
-    ${SRC_DIR}/../../src/emc/rs274ngc/interp_python.hh
+    ${SRC_DIR}/../../src/emc/rs274ngc/interp_python.hh # must be installed in /include
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_python.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_remap.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_setup.cc
@@ -60,12 +60,12 @@ ADD_LIBRARY(${PROJECT} SHARED
     ${SRC_DIR}/../../src/emc/rs274ngc/pyarrays.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/interpmodule.cc
     ${SRC_DIR}/../../src/emc/rs274ngc/rs274ngc_pre.cc
-    ${SRC_DIR}/../../src/emc/rs274ngc/interp_inspection.hh
+    ${SRC_DIR}/../../src/emc/rs274ngc/interp_inspection.hh # must be installed in /include
     ${SRC_DIR}/../../src/emc/rs274ngc/interp_inspection.cc
-    ${SRC_DIR}/../../src/emc/rs274ngc/interp_parameter_def.hh
-    ${SRC_DIR}/../../src/emc/rs274ngc/rs274ngc_interp.hh
-     ${SRC_DIR}/../../src/emc/rs274ngc/rs274ngc.hh
-    ${SRC_DIR}/../../src/emc/nml_intf/canon.hh
+    ${SRC_DIR}/../../src/emc/rs274ngc/interp_parameter_def.hh # must be installed in /include
+    ${SRC_DIR}/../../src/emc/rs274ngc/rs274ngc_interp.hh # must be installed in /include
+    ${SRC_DIR}/../../src/emc/rs274ngc/rs274ngc.hh # must be installed in /include
+    ${SRC_DIR}/../../src/emc/nml_intf/canon.hh # must be installed in /include
 
     )
 
@@ -113,9 +113,19 @@ set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${PROJECT_VERSION})
 # set_property(TARGET  ${PROJECT} PROPERTY OUTPUT_NAME thename)
 
 # Make install
-install(TARGETS ${PROJECT} DESTINATION ${BUILD_DIR}/../../../lib)
+#install(TARGETS ${PROJECT} DESTINATION ${BUILD_DIR}/../../../lib)
+#install(FILES ${SRC_DIR}/../../src/emc/nml_intf/canon.hh DESTINATION ${BUILD_DIR}/../../../include)
+#install(FILES ${SRC_DIR}/../../src/emc/rs274ngc/rs274ngc_interp.hh DESTINATION ${BUILD_DIR}/../../../include)
+#install(FILES ${SRC_DIR}/../../src/emc/rs274ngc/interp_parameter_def.hh DESTINATION ${BUILD_DIR}/../../../include)
+#install(FILES ${SRC_DIR}/../../src/emc/rs274ngc/interp_queue.hh DESTINATION ${BUILD_DIR}/../../../include)
+#install(FILES ${SRC_DIR}/../../src/emc/rs274ngc/interp_internal.hh DESTINATION ${BUILD_DIR}/../../../include)
+#install(FILES ${SRC_DIR}/../../src/emc/rs274ngc/rs274ngc.hh DESTINATION ${BUILD_DIR}/../../../include)
+#install(FILES ${SRC_DIR}/../../src/emc/rs274ngc/interp_python.hh  DESTINATION ${BUILD_DIR}/../../../include)
+#install(FILES ${SRC_DIR}/../../src/emc/rs274ngc/interp_inspection.hh DESTINATION ${BUILD_DIR}/../../../include)
+#install(FILES ${SRC_DIR}/../../src/emc/rs274ngc/modal_state.hh  DESTINATION ${BUILD_DIR}/../../../include)
+#install(FILES ${SRC_DIR}/../../src/emc/rs274ngc/interp_array_types.hh DESTINATION ${BUILD_DIR}/../../../include)
 
-# Notes.
+
 
 
 

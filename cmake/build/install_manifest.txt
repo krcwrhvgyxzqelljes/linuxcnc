@@ -13,12 +13,9 @@
 /home/user/linuxcnc/cmake/build/libposemath/../../../lib/libposemath.so
 /home/user/linuxcnc/cmake/build/libpyplugin/../../../lib/libpyplugin.so.0
 /home/user/linuxcnc/cmake/build/libpyplugin/../../../lib/libpyplugin.so
-/home/user/linuxcnc/cmake/build/librs274/../../../lib/librs274.so.0
-/home/user/linuxcnc/cmake/build/librs274/../../../lib/librs274.so
 /home/user/linuxcnc/cmake/build/libcanterp/../../../lib/libcanterp.so.0
 /home/user/linuxcnc/cmake/build/libcanterp/../../../lib/libcanterp.so
 /home/user/linuxcnc/cmake/build/components/tpmod/../../../../rtlib/tpmod.so
-/home/user/linuxcnc/cmake/build/components/tpmod_scurve_grotius/../../../../rtlib/tpmod_scurve_grotius.so
 /home/user/linuxcnc/cmake/build/components/motmod/../../../../rtlib/motmod.so
 /home/user/linuxcnc/cmake/build/inivar/../../../bin/inivar
 /home/user/linuxcnc/cmake/build/halcmd/../../../bin/halcmd
@@ -52,4 +49,5 @@
 /home/user/linuxcnc/cmake/linuxcnc_py/../../lib/python/linuxcnc.so
 /home/user/linuxcnc/cmake/gcode_py/../../lib/python/gcode.so.0
 /home/user/linuxcnc/cmake/gcode_py/../../lib/python/gcode.so
+/home/user/linuxcnc/cmake/build/projects/qt_lcnc_controller/../../../../bin/qt_lcnc_controller
 /home/user/linuxcnc/cmake/build/projects/qt_sai/../../../../bin/qt_sai

@@ -93,7 +93,7 @@ add_subdirectory(${SRC_DIR}/components/tpmod) # Rob Ellenberg's motion planner.
 
 # In development, based on the tpmod_scurve_skynet.
 # Known bug : jogging before program start, solves a position jump when pressing program stop.
- add_subdirectory(${SRC_DIR}/components/tpmod_scurve_grotius)
+# add_subdirectory(${SRC_DIR}/components/tpmod_scurve_grotius)
 # add_subdirectory(${SRC_DIR}/components/tpmod_scurve_c++)
 
 ##add_subdirectory(${SRC_DIR}/components/tpmod_T800) # experimental scurve lib using ruckig-dev, enabling velocity ends.
@@ -178,7 +178,7 @@ add_subdirectory(${SRC_DIR}/gcode_py)
 
 # Requires qt & opencascade installed, opencascade version: ~/cmake/vendor/oce-upstream-V7_5_0beta
 # add_subdirectory(${SRC_DIR}/projects/qt_gremlin)
-# add_subdirectory(${SRC_DIR}/projects/qt_lcnc_controller)
+add_subdirectory(${SRC_DIR}/projects/qt_lcnc_controller)
 add_subdirectory(${SRC_DIR}/projects/qt_sai)
 # add_subdirectory(${SRC_DIR}/projects/qt_occ_draw)
 # add_subdirectory(${SRC_DIR}/projects/qt_occ_cavalier)

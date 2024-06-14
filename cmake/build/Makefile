@@ -318,19 +318,6 @@ tpmod/fast:
 .PHONY : tpmod/fast
 
 #=============================================================================
-# Target rules for targets named tpmod_scurve_grotius
-
-# Build rule for target.
-tpmod_scurve_grotius: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tpmod_scurve_grotius
-.PHONY : tpmod_scurve_grotius
-
-# fast build rule for target.
-tpmod_scurve_grotius/fast:
-	$(MAKE) $(MAKESILENT) -f components/tpmod_scurve_grotius/CMakeFiles/tpmod_scurve_grotius.dir/build.make components/tpmod_scurve_grotius/CMakeFiles/tpmod_scurve_grotius.dir/build
-.PHONY : tpmod_scurve_grotius/fast
-
-#=============================================================================
 # Target rules for targets named motmod
 
 # Build rule for target.
@@ -630,6 +617,32 @@ gcode/fast:
 .PHONY : gcode/fast
 
 #=============================================================================
+# Target rules for targets named qt_lcnc_controller
+
+# Build rule for target.
+qt_lcnc_controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qt_lcnc_controller
+.PHONY : qt_lcnc_controller
+
+# fast build rule for target.
+qt_lcnc_controller/fast:
+	$(MAKE) $(MAKESILENT) -f projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/build.make projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller.dir/build
+.PHONY : qt_lcnc_controller/fast
+
+#=============================================================================
+# Target rules for targets named qt_lcnc_controller_autogen
+
+# Build rule for target.
+qt_lcnc_controller_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qt_lcnc_controller_autogen
+.PHONY : qt_lcnc_controller_autogen
+
+# fast build rule for target.
+qt_lcnc_controller_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/build.make projects/qt_lcnc_controller/CMakeFiles/qt_lcnc_controller_autogen.dir/build
+.PHONY : qt_lcnc_controller_autogen/fast
+
+#=============================================================================
 # Target rules for targets named qt_sai
 
 # Build rule for target.
@@ -667,6 +680,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... qt_lcnc_controller_autogen"
 	@echo "... qt_sai_autogen"
 	@echo "... _hal"
 	@echo "... _togl"
@@ -698,13 +712,13 @@ help:
 	@echo "... motmod"
 	@echo "... pci_read"
 	@echo "... pci_write"
+	@echo "... qt_lcnc_controller"
 	@echo "... qt_sai"
 	@echo "... rotarydeltakins"
 	@echo "... rs274"
 	@echo "... rtapi_app"
 	@echo "... schedrmt"
 	@echo "... tpmod"
-	@echo "... tpmod_scurve_grotius"
 .PHONY : help
 
 

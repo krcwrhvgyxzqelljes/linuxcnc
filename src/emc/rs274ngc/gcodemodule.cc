@@ -345,19 +345,33 @@ void STRAIGHT_FEED(int line_number,
 }
 
 void GENERAL_MOTION(int line_number,
-                   double x, double y, double z,
-                   double a, double b, double c,
-                   double u, double v, double w) {
-    _pos_x=x; _pos_y=y; _pos_z=z;
-    _pos_a=a; _pos_b=b; _pos_c=c;
-    _pos_u=u; _pos_v=v; _pos_w=w;
-    if(metric) { x /= 25.4; y /= 25.4; z /= 25.4; u /= 25.4; v /= 25.4; w /= 25.4; }
+                    double x, double y, double z,
+                    double a, double b, double c,
+                    double u, double v, double w,
+                    double p, double q, double r,
+                    double e, double l, double test) {
+
+    // Update position variables
+    _pos_x = x; _pos_y = y; _pos_z = z;
+    _pos_a = a; _pos_b = b; _pos_c = c;
+    _pos_u = u; _pos_v = v; _pos_w = w;
+
+    // Convert units if metric
+    if (metric) {
+        x /= 25.4; y /= 25.4; z /= 25.4;
+        u /= 25.4; v /= 25.4; w /= 25.4;
+    }
+
+    // Ensure maybe_new_line and interp_error are properly handled
     maybe_new_line(line_number);
-    if(interp_error) return;
-    PyObject *result =
-        callmethod(callback, "straight_feed", "fffffffff",
-                            x, y, z, a, b, c, u, v, w);
-    if(result == NULL) interp_error ++;
+    if (interp_error) return;
+
+    // Call the Python method
+    PyObject *result = callmethod(callback, "general_motion", "fffffffffffffff",
+                                  x, y, z, a, b, c, u, v, w, p, q, r, e, l, test);
+    if (result == NULL) {
+        interp_error++;
+    }
     Py_XDECREF(result);
 }
 

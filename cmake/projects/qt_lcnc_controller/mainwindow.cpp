@@ -701,6 +701,7 @@ void MainWindow::on_toolButton_reload_pressed()
     nml->close();
     nml->load(filename);
 
+    load_gcode_text(filename);
 }
 
 void MainWindow::on_toolButton_machine_on_pressed()

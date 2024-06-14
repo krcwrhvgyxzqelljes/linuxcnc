@@ -478,7 +478,8 @@ extern void STRAIGHT_FEED(int lineno,
                           double u, double v, double w);
 
 // G9 X11 Y22 Z33 P0.1 Q0.2 R44.5 L321 E123.33 (L=integer type)
-extern void GENERAL_MOTION(int lineno, double x, double y, double z, double a, double b, double c, double u, double v, double w);
+extern void GENERAL_MOTION(int lineno, double x, double y, double z, double a, double b, double c, double u, double v, double w,
+                           double p, double q, double r, double e, double l, double test);
 
 /* Additional functions needed to calculate nurbs G5 points */
 extern std::vector<unsigned int> nurbs_G5_knot_vector_creator(unsigned int n, unsigned int k);

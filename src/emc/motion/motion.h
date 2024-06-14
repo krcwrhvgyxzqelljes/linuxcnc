@@ -267,6 +267,8 @@ extern "C" {
     double maxFeedScale;
     double ext_offset_vel;	/* velocity for an external axis offset */
     double ext_offset_acc;	/* acceleration for an external axis offset */
+    double a,b,c,d,e,f;
+
     struct state_tag_t tag;
     } emcmot_command_t;
 
